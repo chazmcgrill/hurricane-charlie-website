@@ -1,8 +1,9 @@
+* {
+  border: 1px solid red !important; }
+
 html {
   font-family: sans-serif;
-  font-size: 20px;
-  text-align: center;
-  border: 1px solid red !important; }
+  font-size: 20px; }
   @media screen and (min-width: 640px) {
     html {
       font-size: 16px; } }
@@ -17,40 +18,26 @@ a {
 button {
   outline: none; }
 
-nav li {
-  display: inline-block;
-  padding: 5px;
-  text-transform: uppercase; }
-
 header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 15px 10px;
-  background-color: pink; }
+  display: grid;
+  position: relative; }
   header img {
     width: 50px;
-    margin: 20px auto 10px; }
-  header h2 {
-    margin: 0; }
-  header li {
-    list-style: none;
-    margin: 5px 0 5px; }
-  header a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    opacity: 1; }
-    header a:hover {
-      opacity: 0.7; }
+    justify-self: center;
+    padding: 10px; }
   header nav {
-    text-align: center;
-    display: flex;
-    flex-direction: column; }
-
-.hidden {
-  display: none; }
+    text-transform: uppercase;
+    justify-self: center; }
+    header nav li {
+      display: block;
+      text-align: center;
+      padding: 10px; }
+  header .hamburger-container {
+    position: absolute;
+    right: 0;
+    top: 20px; }
+  header .hidden {
+    display: none; }
 
 .hamburger {
   cursor: pointer;
@@ -116,23 +103,6 @@ header {
   transform: rotate(-90deg);
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
-.hamburger-container {
-  position: absolute;
-  right: 8px;
-  top: 50px; }
-
-@media screen and (min-width: 640px) {
-  .hamburger {
-    display: none; }
-  header, nav {
-    flex-direction: row; }
-  header {
-    align-items: center; }
-    header li {
-      margin: 0 5px; }
-      header li:last-of-type {
-        margin-right: 0; } }
-
 .section-hero {
   background: rgba(0, 0, 0, 0.7) url("../img/hero.jpg");
   background-size: cover;
@@ -175,7 +145,12 @@ footer {
   background-color: limegreen;
   padding: 20px 0; }
   footer nav, footer p, footer .footer-icons {
-    align-self: center; }
+    align-self: center;
+    justify-self: center; }
+    footer nav li, footer p li, footer .footer-icons li {
+      text-transform: uppercase;
+      list-style: none;
+      display: inline-block; }
   footer p {
     margin: 0;
     font-size: 0.6em; }
