@@ -1,0 +1,40 @@
+html
+  font-family: sans-serif
+  font-size: 20px
+  text-align: center
+  border: 1px solid red !important
+
+  @media screen and (min-width: 640px)
+    font-size: 16px
+
+body
+  margin: 0
+
+a
+  text-decoration: none
+  color: black
+
+button
+  outline: none
+
+nav li
+  display: inline-block
+  padding: 5px
+  text-transform: uppercase
+
+@import './header'
+
+.section-hero
+  background: rgba(0,0,0,0.7) url('../img/hero.jpg')
+  background-size: cover
+  background-position: top center
+  background-attachment: fixed
+  height: 300px
+  margin-bottom: 50px
+
+  h2
+    color: white
+
+@import './gallery'
+
+@import './footer'
