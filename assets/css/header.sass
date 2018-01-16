@@ -24,5 +24,19 @@ header
   .hidden
     display: none
 
-
 @import './hamburger'
+
+@media screen and (min-width: 640px)
+
+  header
+    grid-template-columns: 70px 1fr
+
+    nav
+      align-self: center
+      justify-self: right
+
+      li
+        display: inline-block
+
+  .hamburger
+    display: none

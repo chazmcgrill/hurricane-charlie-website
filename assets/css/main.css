@@ -103,6 +103,17 @@ header {
   transform: rotate(-90deg);
   transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
+@media screen and (min-width: 640px) {
+  header {
+    grid-template-columns: 70px 1fr; }
+    header nav {
+      align-self: center;
+      justify-self: right; }
+      header nav li {
+        display: inline-block; }
+  .hamburger {
+    display: none; } }
+
 .section-hero {
   background: rgba(0, 0, 0, 0.7) url("../img/hero.jpg");
   background-size: cover;
@@ -158,4 +169,5 @@ footer {
     margin: 0 auto;
     width: 120px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); }
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center; }
