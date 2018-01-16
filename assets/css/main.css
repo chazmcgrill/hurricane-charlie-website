@@ -16,17 +16,19 @@ button {
   outline: none; }
 
 nav li {
+  list-style: none;
+  text-transform: uppercase;
   font-weight: bold; }
 
 header {
   display: grid;
   position: relative; }
   header img {
-    width: 50px;
+    height: 50px;
     justify-self: center;
     padding: 15px; }
   header nav {
-    text-transform: uppercase;
+    padding: 10px 0;
     justify-self: center; }
     header nav li {
       display: block;
@@ -35,7 +37,8 @@ header {
   header .hamburger-container {
     position: absolute;
     right: 5px;
-    top: 35px; }
+    top: 40px;
+    transform: translateY(-50%); }
   header .hidden {
     display: none; }
 
@@ -109,6 +112,7 @@ header {
     header img {
       padding: 10px; }
     header nav {
+      padding: 0;
       align-self: center;
       justify-self: right; }
       header nav li {
@@ -160,10 +164,11 @@ footer {
   footer nav, footer p, footer .footer-icons {
     align-self: center;
     justify-self: center; }
-    footer nav li, footer p li, footer .footer-icons li {
-      text-transform: uppercase;
-      list-style: none;
-      display: inline-block; }
+  footer nav li {
+    margin-right: 5px;
+    display: inline-block; }
+  footer nav:last-child {
+    margin-right: 0; }
   footer p {
     margin: 0;
     font-size: 0.6em; }
