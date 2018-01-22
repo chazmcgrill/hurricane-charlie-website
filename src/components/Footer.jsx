@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-class HCHeader extends Component {
+class Footer extends Component {
   render() {
     return (
-      <h1>Header</h1>
+      <h1>Footer</h1>
     )
   }
 }
 
-export default HCHeader
+export default Footer

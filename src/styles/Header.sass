@@ -1,0 +1,47 @@
+header
+  display: grid
+  position: relative
+
+  img
+    height: 50px
+    justify-self: center
+    padding: 15px
+
+  nav
+    padding: 10px 0
+    justify-self: center
+
+    li
+      display: block
+      text-align: center
+      padding: 10px
+
+  .hamburger-container
+    position: absolute
+    right: 5px
+    top: 40px
+    transform: translateY(-50%)
+
+  .hidden
+    display: none
+
+@import './hamburger'
+
+@media screen and (min-width: 640px)
+
+  header
+    grid-template-columns: 70px 1fr
+
+    img
+      padding: 10px
+
+    nav
+      padding: 0
+      align-self: center
+      justify-self: right
+
+      li
+        display: inline-block
+
+  .hamburger
+    display: none
