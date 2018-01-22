@@ -1,0 +1,31 @@
+{
+  "name": "hurricane-charlie-website",
+  "version": "2.0.0",
+  "description": "Hurricane Charlie illustration portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chazmcgrill/hurricane-charlie-website.git"
+  },
+  "keywords": [
+    "illustration",
+    "portfolio",
+    "css-grid",
+    "react",
+    "jest",
+    "webpack"
+  ],
+  "author": "Charlie Taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chazmcgrill/hurricane-charlie-website/issues"
+  },
+  "homepage": "http://www.hurricanecharlie.co.uk",
+  "devDependencies": {
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
