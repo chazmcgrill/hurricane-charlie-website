@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import HCHeader from './HCHeader.jsx';
+import HCFooter from './HCFooter.jsx';
 
 class HurricaneCharlieSite extends Component {
   render() {
-    return <h1>Working</h1>
+    return (
+      <div>
+        <HCHeader />
+        <HCFooter />
+      </div>
+    ) 
   }
 }
 
