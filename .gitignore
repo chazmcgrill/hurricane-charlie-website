@@ -28,6 +28,7 @@ Temporary Items
 # Other Folders
 old-site
 design
+node_modules
 
 #codekit config
 config.codekit3
