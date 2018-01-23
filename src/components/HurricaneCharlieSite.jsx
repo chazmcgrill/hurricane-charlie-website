@@ -6,7 +6,10 @@ import Footer from './Footer.jsx';
 class HurricaneCharlieSite extends Component {
   constructor(props) {
     super(props)
-    this.state = {width: 0}
+    this.state = { 
+      width: 0, 
+      gallery: []
+    }
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
