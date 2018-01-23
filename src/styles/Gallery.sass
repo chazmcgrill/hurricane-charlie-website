@@ -1,0 +1,30 @@
+.gallery
+  padding: 0.3em
+
+  .gallery-grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(10, 1fr)
+    grid-gap: 0.3em
+
+    @media screen and (min-width: 480px)
+      grid-template-columns: repeat(4, 1fr)
+      grid-template-rows: repeat(5, 1fr)
+
+    @media screen and (min-width: 760px)
+      grid-template-columns: repeat(6, 1fr)
+      grid-template-rows: repeat(5, 1fr)
+
+  .grid-item
+    min-height: 200px
+    background-color: coral
+
+    &.large
+      grid-column: span 2
+      grid-row: span 2
+
+    &.wide
+      grid-column: span 2
+
+    &.tall
+      grid-row: span 2
