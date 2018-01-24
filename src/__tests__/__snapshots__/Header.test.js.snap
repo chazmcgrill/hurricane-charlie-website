@@ -1,0 +1,517 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          alt="Hurricane Charlie Logo"
+          src="assets/img/hclogo.png"
+        />,
+        <nav
+          className=""
+        >
+          <li>
+            <a
+              href="#"
+            >
+              gallery
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              contact
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              shop
+            </a>
+          </li>
+        </nav>,
+        <div
+          className="hamburger-container"
+          onClick={[Function]}
+        >
+          <button
+            className="hamburger hamburger--spin ham-handle "
+          >
+            <span
+              className="hamburger-box"
+            >
+              <span
+                className="hamburger-inner"
+              />
+            </span>
+          </button>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "Hurricane Charlie Logo",
+          "src": "assets/img/hclogo.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              <a
+                href="#"
+              >
+                gallery
+              </a>
+            </li>,
+            <li>
+              <a
+                href="#"
+              >
+                contact
+              </a>
+            </li>,
+            <li>
+              <a
+                href="#"
+              >
+                shop
+              </a>
+            </li>,
+          ],
+          "className": "",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="#"
+              >
+                gallery
+              </a>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "gallery",
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": "gallery",
+              "type": "a",
+            },
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="#"
+              >
+                contact
+              </a>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "contact",
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": "contact",
+              "type": "a",
+            },
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="#"
+              >
+                shop
+              </a>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "shop",
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": "shop",
+              "type": "a",
+            },
+            "type": "li",
+          },
+        ],
+        "type": "nav",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <button
+            className="hamburger hamburger--spin ham-handle "
+          >
+            <span
+              className="hamburger-box"
+            >
+              <span
+                className="hamburger-inner"
+              />
+            </span>
+          </button>,
+          "className": "hamburger-container",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <span
+              className="hamburger-box"
+            >
+              <span
+                className="hamburger-inner"
+              />
+            </span>,
+            "className": "hamburger hamburger--spin ham-handle ",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <span
+                className="hamburger-inner"
+              />,
+              "className": "hamburger-box",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "hamburger-inner",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "span",
+            },
+            "type": "span",
+          },
+          "type": "button",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "header",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="Hurricane Charlie Logo"
+            src="assets/img/hclogo.png"
+          />,
+          <nav
+            className=""
+          >
+            <li>
+              <a
+                href="#"
+              >
+                gallery
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                shop
+              </a>
+            </li>
+          </nav>,
+          <div
+            className="hamburger-container"
+            onClick={[Function]}
+          >
+            <button
+              className="hamburger hamburger--spin ham-handle "
+            >
+              <span
+                className="hamburger-box"
+              >
+                <span
+                  className="hamburger-inner"
+                />
+              </span>
+            </button>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "Hurricane Charlie Logo",
+            "src": "assets/img/hclogo.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                <a
+                  href="#"
+                >
+                  gallery
+                </a>
+              </li>,
+              <li>
+                <a
+                  href="#"
+                >
+                  contact
+                </a>
+              </li>,
+              <li>
+                <a
+                  href="#"
+                >
+                  shop
+                </a>
+              </li>,
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  href="#"
+                >
+                  gallery
+                </a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "gallery",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "gallery",
+                "type": "a",
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  href="#"
+                >
+                  contact
+                </a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "contact",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "contact",
+                "type": "a",
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  href="#"
+                >
+                  shop
+                </a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "shop",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "shop",
+                "type": "a",
+              },
+              "type": "li",
+            },
+          ],
+          "type": "nav",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <button
+              className="hamburger hamburger--spin ham-handle "
+            >
+              <span
+                className="hamburger-box"
+              >
+                <span
+                  className="hamburger-inner"
+                />
+              </span>
+            </button>,
+            "className": "hamburger-container",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <span
+                className="hamburger-box"
+              >
+                <span
+                  className="hamburger-inner"
+                />
+              </span>,
+              "className": "hamburger hamburger--spin ham-handle ",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <span
+                  className="hamburger-inner"
+                />,
+                "className": "hamburger-box",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "hamburger-inner",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "span",
+              },
+              "type": "span",
+            },
+            "type": "button",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "header",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Footer />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <nav>
+          <li>
+            <a
+              href="#"
+            >
+              gallery
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              contact
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+            >
+              shop
+            </a>
+          </li>
+        </nav>,
+        <div
+          className="footer-icons"
+        >
+          <a
+            href="http://twitter.com/hurricanechaz"
+          >
+            <i
+              className="fa fa-twitter"
+            />
+          </a>
+          <a
+            href="http://www.instagram.com/chazhurricane"
+          >
+            <i
+              className="fa fa-instagram"
+            />
+          </a>
+          <a
+            href="http://www.behance.net/chazhurricane"
+          >
+            <i
+              className="fa fa-behance"
+            />
+          </a>
+        </div>,
+        <p>
+          © 2018 Charlie Taylor all rights reserved.
+        </p>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              <a
+                href="#"
+              >
+                gallery
+              </a>
+            </li>,
+            <li>
+              <a
+                href="#"
+              >
+                contact
+              </a>
+            </li>,
+            <li>
+              <a
+                href="#"
+              >
+                shop
+              </a>
+            </li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="#"
+              >
+                gallery
+              </a>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "gallery",
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": "gallery",
+              "type": "a",
+            },
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="#"
+              >
+                contact
+              </a>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "contact",
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": "contact",
+              "type": "a",
+            },
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <a
+                href="#"
+              >
+                shop
+              </a>,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "shop",
+                "href": "#",
+              },
+              "ref": null,
+              "rendered": "shop",
+              "type": "a",
+            },
+            "type": "li",
+          },
+        ],
+        "type": "nav",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <a
+              href="http://twitter.com/hurricanechaz"
+            >
+              <i
+                className="fa fa-twitter"
+              />
+            </a>,
+            <a
+              href="http://www.instagram.com/chazhurricane"
+            >
+              <i
+                className="fa fa-instagram"
+              />
+            </a>,
+            <a
+              href="http://www.behance.net/chazhurricane"
+            >
+              <i
+                className="fa fa-behance"
+              />
+            </a>,
+          ],
+          "className": "footer-icons",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <i
+                className="fa fa-twitter"
+              />,
+              "href": "http://twitter.com/hurricanechaz",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fa fa-twitter",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <i
+                className="fa fa-instagram"
+              />,
+              "href": "http://www.instagram.com/chazhurricane",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fa fa-instagram",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <i
+                className="fa fa-behance"
+              />,
+              "href": "http://www.behance.net/chazhurricane",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fa fa-behance",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": "a",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "© 2018 Charlie Taylor all rights reserved.",
+        },
+        "ref": null,
+        "rendered": "© 2018 Charlie Taylor all rights reserved.",
+        "type": "p",
+      },
+    ],
+    "type": "footer",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <nav>
+            <li>
+              <a
+                href="#"
+              >
+                gallery
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+              >
+                shop
+              </a>
+            </li>
+          </nav>,
+          <div
+            className="footer-icons"
+          >
+            <a
+              href="http://twitter.com/hurricanechaz"
+            >
+              <i
+                className="fa fa-twitter"
+              />
+            </a>
+            <a
+              href="http://www.instagram.com/chazhurricane"
+            >
+              <i
+                className="fa fa-instagram"
+              />
+            </a>
+            <a
+              href="http://www.behance.net/chazhurricane"
+            >
+              <i
+                className="fa fa-behance"
+              />
+            </a>
+          </div>,
+          <p>
+            © 2018 Charlie Taylor all rights reserved.
+          </p>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                <a
+                  href="#"
+                >
+                  gallery
+                </a>
+              </li>,
+              <li>
+                <a
+                  href="#"
+                >
+                  contact
+                </a>
+              </li>,
+              <li>
+                <a
+                  href="#"
+                >
+                  shop
+                </a>
+              </li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  href="#"
+                >
+                  gallery
+                </a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "gallery",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "gallery",
+                "type": "a",
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  href="#"
+                >
+                  contact
+                </a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "contact",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "contact",
+                "type": "a",
+              },
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <a
+                  href="#"
+                >
+                  shop
+                </a>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "shop",
+                  "href": "#",
+                },
+                "ref": null,
+                "rendered": "shop",
+                "type": "a",
+              },
+              "type": "li",
+            },
+          ],
+          "type": "nav",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <a
+                href="http://twitter.com/hurricanechaz"
+              >
+                <i
+                  className="fa fa-twitter"
+                />
+              </a>,
+              <a
+                href="http://www.instagram.com/chazhurricane"
+              >
+                <i
+                  className="fa fa-instagram"
+                />
+              </a>,
+              <a
+                href="http://www.behance.net/chazhurricane"
+              >
+                <i
+                  className="fa fa-behance"
+                />
+              </a>,
+            ],
+            "className": "footer-icons",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fa fa-twitter"
+                />,
+                "href": "http://twitter.com/hurricanechaz",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fa fa-twitter",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fa fa-instagram"
+                />,
+                "href": "http://www.instagram.com/chazhurricane",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fa fa-instagram",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fa fa-behance"
+                />,
+                "href": "http://www.behance.net/chazhurricane",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fa fa-behance",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "a",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "© 2018 Charlie Taylor all rights reserved.",
+          },
+          "ref": null,
+          "rendered": "© 2018 Charlie Taylor all rights reserved.",
+          "type": "p",
+        },
+      ],
+      "type": "footer",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
