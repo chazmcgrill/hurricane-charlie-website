@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import Header from './Header.jsx';
-import Gallery from './Gallery.jsx';
-import Footer from './Footer.jsx';
+import Header from './Header';
+import Gallery from './Gallery';
+import Footer from './Footer';
 
 class HurricaneCharlieSite extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { 
-      width: 0, 
-      gallery: []
-    }
+  constructor() {
+    super()
+    this.state = { width: 0, gallery: [] };
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
