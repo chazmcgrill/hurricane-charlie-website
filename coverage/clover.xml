@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1516808886367" clover="3.2.0">
-  <project timestamp="1516808886367" name="All files">
-    <metrics statements="19" coveredstatements="17" conditionals="6" coveredconditionals="3" methods="10" coveredmethods="8" elements="35" coveredelements="28" complexity="0" loc="19" ncloc="19" packages="2" files="5" classes="5">
+<coverage generated="1516820230982" clover="3.2.0">
+  <project timestamp="1516820230982" name="All files">
+    <metrics statements="19" coveredstatements="18" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="9" elements="35" coveredelements="33" complexity="0" loc="19" ncloc="19" packages="2" files="5" classes="5">
       <package name="src">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <file name="setupTests.js" path="/Users/hurricanecharlie/Documents/Coding/Projects/hurricane-charlie-website/src/setupTests.js">
@@ -10,7 +10,7 @@
         </file>
       </package>
       <package name="src.components">
-        <metrics statements="18" coveredstatements="16" conditionals="6" coveredconditionals="3" methods="10" coveredmethods="8"/>
+        <metrics statements="18" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="10" coveredmethods="9"/>
         <file name="Footer.js" path="/Users/hurricanecharlie/Documents/Coding/Projects/hurricane-charlie-website/src/components/Footer.js">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="5" count="1" type="stmt"/>
@@ -20,15 +20,15 @@
           <line num="5" count="1" type="stmt"/>
         </file>
         <file name="Header.js" path="/Users/hurricanecharlie/Documents/Coding/Projects/hurricane-charlie-website/src/components/Header.js">
-          <metrics statements="8" coveredstatements="7" conditionals="6" coveredconditionals="3" methods="3" coveredmethods="2"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="6" count="1" type="stmt"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="11" count="0" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="16" count="1" type="cond" truecount="1" falsecount="1"/>
-          <line num="17" count="1" type="cond" truecount="2" falsecount="2"/>
-          <line num="19" count="1" type="stmt"/>
+          <metrics statements="8" coveredstatements="8" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="6" count="2" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="11" count="3" type="stmt"/>
+          <line num="15" count="5" type="stmt"/>
+          <line num="16" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="17" count="5" type="cond" truecount="4" falsecount="0"/>
+          <line num="19" count="5" type="stmt"/>
         </file>
         <file name="HurricaneCharlieSite.js" path="/Users/hurricanecharlie/Documents/Coding/Projects/hurricane-charlie-website/src/components/HurricaneCharlieSite.js">
           <metrics statements="8" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>

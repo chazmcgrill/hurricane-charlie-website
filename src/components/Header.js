@@ -8,11 +8,11 @@ class Header extends Component {
   }
 
   hamburgerClick() {
-    this.setState({hamburgerOpen: !this.state.hamburgerOpen});
+    this.setState({ hamburgerOpen: !this.state.hamburgerOpen });
   }
 
   render() {
-    const {hamburgerOpen} = this.state;
+    const { hamburgerOpen } = this.state;
     let hamburgerClass = `hamburger hamburger--spin ham-handle ${hamburgerOpen ? 'is-active' : ''}`;
     let navClass = this.props.width < 640 && !hamburgerOpen ? "hidden" : "";
 
