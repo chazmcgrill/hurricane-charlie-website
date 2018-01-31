@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import Gallery from './Gallery';
+import Content from './Content';
 import Footer from './Footer';
 
 class HurricaneCharlieSite extends Component {
@@ -27,7 +27,7 @@ class HurricaneCharlieSite extends Component {
     return (
       <div>
         <Header width={this.state.width}/>
-        <Gallery />
+        <Content />
         <Footer />
       </div>
     ) 
