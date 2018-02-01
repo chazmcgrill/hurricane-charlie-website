@@ -1,7 +1,6 @@
 import React from "react";
-import { shallow, configure } from "enzyme";
+import { shallow, mount } from "enzyme";
 import Header from "../components/Header";
-import { clearLine } from "readline";
 
 const app = shallow(<Header />);
 
@@ -10,39 +9,33 @@ describe("Header", () => {
     expect(app).toMatchSnapshot();
   });
 
-  it("initializes the hamburgerOpen `state` as false", () => {
-    expect(app.state().hamburgerOpen).toBe(false);
-  });
-
-  describe("When clicking the hamburger", () => {
-    beforeEach(() => {
-      app.find(".hamburger-container").simulate("click");
+  describe("screen at full width", () => {
+    it("nav showing", () => {
+      expect(app.find('nav').exists()).toEqual(true)
     });
 
-    afterEach(() => {
-      app.find(".hamburger-container").simulate("click");
-    });
-
-    it("hamburgerOpen `state` set to true", () => {
-      expect(app.state().hamburgerOpen).toBe(true);
+    it("hamburger hidden", () => {
+      expect(app.find('.hamburger-container').exists()).toEqual(false)
     });
   });
+  
+  describe("screen at mobile width", () => {  
+    global.innerWidth = 600;
+    global.dispatchEvent(new Event('resize'));
 
-  describe("screen width", () => {
-    
-    it('above 640 nav showing', () => {
-      expect(app.find("nav").hasClass("hidden")).toBe(false);
-    });
-    
-    const wrapper = shallow(<Header width={639} />);
-    
-    it('below 640 nav hidden', () => {
-      expect(wrapper.find("nav").hasClass("hidden")).toBe(true);
+    const wrapper = shallow(<Header />);
+
+    it("nav hidden", () => {
+      expect(wrapper.find('nav').exists()).toEqual(false)
     });
 
-    it('hamburger click nav should be showing', () => {
-      wrapper.find(".hamburger-container").simulate("click");
-      expect(wrapper.find("nav").hasClass("hidden")).toBe(false);
+    it("hamburger showing", () => {
+      expect(wrapper.find('.hamburger-container').exists()).toEqual(true)
+    });
+
+    it("hamburger clicked nav showing", () => {
+      wrapper.find('.hamburger-container').simulate('click');
+      expect(wrapper.find('nav').exists()).toEqual(true)
     });
   });
 
