@@ -4,7 +4,7 @@ exports[`Site renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <HurricaneCharlieSite />,
+  Symbol(enzyme.__unrendered__): <Site />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -18,7 +18,9 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Header />,
+        <Header
+          nav={undefined}
+        />,
         <Content />,
         <Footer />,
       ],
@@ -29,7 +31,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "nav": undefined,
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -62,7 +66,9 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Header />,
+          <Header
+            nav={undefined}
+          />,
           <Content />,
           <Footer />,
         ],
@@ -73,7 +79,9 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "nav": undefined,
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

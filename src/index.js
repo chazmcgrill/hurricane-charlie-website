@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import HurricaneCharlieSite from './components/HurricaneCharlieSite';
+import { render } from 'react-dom';
+import Site from './components/Site';
 import './main.sass';
 
-ReactDOM.render(<HurricaneCharlieSite />, document.getElementById('root'))
+render(<Site />, document.getElementById('root'))

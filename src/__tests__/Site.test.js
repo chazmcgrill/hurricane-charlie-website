@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
-import HurricaneCharlieSite from '../components/HurricaneCharlieSite';
+import { shallow } from 'enzyme';
+import Site from '../components/Site';
 
-const app = shallow(<HurricaneCharlieSite />);
+const app = shallow(<Site />);
 
 describe('Site', () => {
   it('renders correctly', () => {

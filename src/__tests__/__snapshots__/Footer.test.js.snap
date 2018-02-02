@@ -20,25 +20,13 @@ ShallowWrapper {
       "children": Array [
         <nav>
           <li>
-            <a
-              href="#"
-            >
-              gallery
-            </a>
+            gallery
           </li>
           <li>
-            <a
-              href="#"
-            >
-              contact
-            </a>
+            contact
           </li>
           <li>
-            <a
-              href="#"
-            >
-              shop
-            </a>
+            shop
           </li>
         </nav>,
         <div
@@ -80,25 +68,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <li>
-              <a
-                href="#"
-              >
-                gallery
-              </a>
+              gallery
             </li>,
             <li>
-              <a
-                href="#"
-              >
-                contact
-              </a>
+              contact
             </li>,
             <li>
-              <a
-                href="#"
-              >
-                shop
-              </a>
+              shop
             </li>,
           ],
         },
@@ -109,25 +85,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <a
-                href="#"
-              >
-                gallery
-              </a>,
+              "children": "gallery",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "gallery",
-                "href": "#",
-              },
-              "ref": null,
-              "rendered": "gallery",
-              "type": "a",
-            },
+            "rendered": "gallery",
             "type": "li",
           },
           Object {
@@ -135,25 +96,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <a
-                href="#"
-              >
-                contact
-              </a>,
+              "children": "contact",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "contact",
-                "href": "#",
-              },
-              "ref": null,
-              "rendered": "contact",
-              "type": "a",
-            },
+            "rendered": "contact",
             "type": "li",
           },
           Object {
@@ -161,25 +107,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": <a
-                href="#"
-              >
-                shop
-              </a>,
+              "children": "shop",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "shop",
-                "href": "#",
-              },
-              "ref": null,
-              "rendered": "shop",
-              "type": "a",
-            },
+            "rendered": "shop",
             "type": "li",
           },
         ],
@@ -315,25 +246,13 @@ ShallowWrapper {
         "children": Array [
           <nav>
             <li>
-              <a
-                href="#"
-              >
-                gallery
-              </a>
+              gallery
             </li>
             <li>
-              <a
-                href="#"
-              >
-                contact
-              </a>
+              contact
             </li>
             <li>
-              <a
-                href="#"
-              >
-                shop
-              </a>
+              shop
             </li>
           </nav>,
           <div
@@ -375,25 +294,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <li>
-                <a
-                  href="#"
-                >
-                  gallery
-                </a>
+                gallery
               </li>,
               <li>
-                <a
-                  href="#"
-                >
-                  contact
-                </a>
+                contact
               </li>,
               <li>
-                <a
-                  href="#"
-                >
-                  shop
-                </a>
+                shop
               </li>,
             ],
           },
@@ -404,25 +311,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <a
-                  href="#"
-                >
-                  gallery
-                </a>,
+                "children": "gallery",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "gallery",
-                  "href": "#",
-                },
-                "ref": null,
-                "rendered": "gallery",
-                "type": "a",
-              },
+              "rendered": "gallery",
               "type": "li",
             },
             Object {
@@ -430,25 +322,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <a
-                  href="#"
-                >
-                  contact
-                </a>,
+                "children": "contact",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "contact",
-                  "href": "#",
-                },
-                "ref": null,
-                "rendered": "contact",
-                "type": "a",
-              },
+              "rendered": "contact",
               "type": "li",
             },
             Object {
@@ -456,25 +333,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": <a
-                  href="#"
-                >
-                  shop
-                </a>,
+                "children": "shop",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "shop",
-                  "href": "#",
-                },
-                "ref": null,
-                "rendered": "shop",
-                "type": "a",
-              },
+              "rendered": "shop",
               "type": "li",
             },
           ],

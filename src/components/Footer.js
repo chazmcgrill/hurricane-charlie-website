@@ -5,9 +5,9 @@ class Footer extends Component {
     return (
       <footer>
         <nav>
-          <li><a href="#">gallery</a></li>
-          <li><a href="#">contact</a></li>
-          <li><a href="#">shop</a></li>
+          <li>gallery</li>
+          <li>contact</li>
+          <li>shop</li>
         </nav>
         <div className="footer-icons">
           <a href="http://twitter.com/hurricanechaz"><i className="fa fa-twitter"></i></a>

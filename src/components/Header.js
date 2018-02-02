@@ -4,46 +4,46 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = { hamburgerOpen: false, width: 0 }
-    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    this.hamburgerClick = this.hamburgerClick.bind(this);
+    this.updateWindowSize = this.updateWindowSize.bind(this);
+    this.burgerClick = this.burgerClick.bind(this);
   }
 
-  hamburgerClick() {
-    this.setState({ hamburgerOpen: !this.state.hamburgerOpen });
+  burgerClick() {
+    this.setState({ burgerOpen: !this.state.burgerOpen });
   }
 
   componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions);
+    this.updateWindowSize();
+    window.addEventListener('resize', this.updateWindowSize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions);
+    window.removeEventListener('resize', this.updateWindowSize);
   }
 
-  updateWindowDimensions() {
+  updateWindowSize() {
     this.setState({ width: window.innerWidth })
   }
 
   render() {
-    const { hamburgerOpen, width } = this.state;
-    let hamburgerClass = `hamburger hamburger-spin ham-handle ${hamburgerOpen ? 'is-active' : ''}`;
+    const { burgerOpen, width } = this.state;
+    const burgerClass = `hamburger hamburger-spin ${burgerOpen ? 'is-active' : ''}`;
 
-    const hamburger = width < 640 ? (
-      <div onClick={this.hamburgerClick} className="hamburger-container">
-        <button className={hamburgerClass}>
+    const burger = width < 640 ? (
+      <div onClick={this.burgerClick} className="hamburger-container">
+        <div className={burgerClass}>
           <span className="hamburger-box">
             <span className="hamburger-inner"></span>
           </span>
-        </button>
+        </div>
       </div>
     ) : null;
 
-    const nav = width > 640 || hamburgerOpen ? (
+    const nav = width > 640 || burgerOpen ? (
       <nav>
-        <li><a href="#">gallery</a></li>
-        <li><a href="#">contact</a></li>
-        <li><a href="#">shop</a></li>
+        <li>gallery</li>
+        <li>contact</li>
+        <li>shop</li>
       </nav> 
     ) : null;
     
@@ -51,7 +51,7 @@ class Header extends Component {
       <header>
         <img src="assets/img/hclogo.png" alt="Hurricane Charlie Logo" />
         {nav}
-        {hamburger}
+        {burger}
       </header>
     )
   }

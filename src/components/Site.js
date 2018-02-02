@@ -3,7 +3,7 @@ import Header from './Header';
 import Content from './Content';
 import Footer from './Footer';
 
-class HurricaneCharlieSite extends Component {
+class Site extends Component {
   constructor() {
     super()
     this.state = { gallery: [] };
@@ -12,7 +12,7 @@ class HurricaneCharlieSite extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <Header nav={this.state.nav}/>
         <Content />
         <Footer />
       </div>
@@ -20,4 +20,4 @@ class HurricaneCharlieSite extends Component {
   }
 }
 
-export default HurricaneCharlieSite
+export default Site
