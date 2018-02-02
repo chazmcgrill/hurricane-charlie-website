@@ -6,15 +6,21 @@ import Footer from './Footer';
 class Site extends Component {
   constructor() {
     super()
-    this.state = { gallery: [] };
+    this.state = { 
+      navData: [
+        {id: 0, name: 'gallery'}, 
+        {id: 1, name: 'contact'}, 
+        {id: 2, name: 'shop'}
+      ] 
+    };
   }
 
   render() {
     return (
       <div>
-        <Header nav={this.state.nav}/>
+        <Header navData={this.state.navData} />
         <Content />
-        <Footer />
+        <Footer navData={this.state.navData} />
       </div>
     ) 
   }

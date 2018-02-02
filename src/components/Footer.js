@@ -1,14 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Navbar from './Navbar';
 
 class Footer extends Component {
   render() {
     return (
       <footer>
-        <nav>
-          <li>gallery</li>
-          <li>contact</li>
-          <li>shop</li>
-        </nav>
+        <Navbar navData={this.props.navData} />
         <div className="footer-icons">
           <a href="http://twitter.com/hurricanechaz"><i className="fa fa-twitter"></i></a>
           <a href="http://www.instagram.com/chazhurricane"><i className="fa fa-instagram"></i></a>

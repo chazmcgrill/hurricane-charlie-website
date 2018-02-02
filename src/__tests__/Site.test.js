@@ -8,8 +8,4 @@ describe('Site', () => {
   it('renders correctly', () => {
     expect(app).toMatchSnapshot();
   });
-  
-  it('initializes the `state` with an empty gallery', () => {
-    expect(app.state().gallery).toEqual([]);
-  });
 });

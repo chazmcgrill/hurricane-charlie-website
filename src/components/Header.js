@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Navbar from './Navbar';
 
 class Header extends Component {
   constructor(props) {
@@ -40,11 +41,7 @@ class Header extends Component {
     ) : null;
 
     const nav = width > 640 || burgerOpen ? (
-      <nav>
-        <li>gallery</li>
-        <li>contact</li>
-        <li>shop</li>
-      </nav> 
+      <Navbar navData={this.props.navData} />
     ) : null;
     
     return (

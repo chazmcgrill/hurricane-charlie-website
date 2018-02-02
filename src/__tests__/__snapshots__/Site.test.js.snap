@@ -19,10 +19,42 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Header
-          nav={undefined}
+          navData={
+            Array [
+              Object {
+                "id": 0,
+                "name": "gallery",
+              },
+              Object {
+                "id": 1,
+                "name": "contact",
+              },
+              Object {
+                "id": 2,
+                "name": "shop",
+              },
+            ]
+          }
         />,
         <Content />,
-        <Footer />,
+        <Footer
+          navData={
+            Array [
+              Object {
+                "id": 0,
+                "name": "gallery",
+              },
+              Object {
+                "id": 1,
+                "name": "contact",
+              },
+              Object {
+                "id": 2,
+                "name": "shop",
+              },
+            ]
+          }
+        />,
       ],
     },
     "ref": null,
@@ -32,7 +64,20 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "nav": undefined,
+          "navData": Array [
+            Object {
+              "id": 0,
+              "name": "gallery",
+            },
+            Object {
+              "id": 1,
+              "name": "contact",
+            },
+            Object {
+              "id": 2,
+              "name": "shop",
+            },
+          ],
         },
         "ref": null,
         "rendered": null,
@@ -51,7 +96,22 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "navData": Array [
+            Object {
+              "id": 0,
+              "name": "gallery",
+            },
+            Object {
+              "id": 1,
+              "name": "contact",
+            },
+            Object {
+              "id": 2,
+              "name": "shop",
+            },
+          ],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -67,10 +127,42 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Header
-            nav={undefined}
+            navData={
+              Array [
+                Object {
+                  "id": 0,
+                  "name": "gallery",
+                },
+                Object {
+                  "id": 1,
+                  "name": "contact",
+                },
+                Object {
+                  "id": 2,
+                  "name": "shop",
+                },
+              ]
+            }
           />,
           <Content />,
-          <Footer />,
+          <Footer
+            navData={
+              Array [
+                Object {
+                  "id": 0,
+                  "name": "gallery",
+                },
+                Object {
+                  "id": 1,
+                  "name": "contact",
+                },
+                Object {
+                  "id": 2,
+                  "name": "shop",
+                },
+              ]
+            }
+          />,
         ],
       },
       "ref": null,
@@ -80,7 +172,20 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "nav": undefined,
+            "navData": Array [
+              Object {
+                "id": 0,
+                "name": "gallery",
+              },
+              Object {
+                "id": 1,
+                "name": "contact",
+              },
+              Object {
+                "id": 2,
+                "name": "shop",
+              },
+            ],
           },
           "ref": null,
           "rendered": null,
@@ -99,7 +204,22 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
-          "props": Object {},
+          "props": Object {
+            "navData": Array [
+              Object {
+                "id": 0,
+                "name": "gallery",
+              },
+              Object {
+                "id": 1,
+                "name": "contact",
+              },
+              Object {
+                "id": 2,
+                "name": "shop",
+              },
+            ],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],

@@ -4,7 +4,16 @@ exports[`Header renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Header />,
+  Symbol(enzyme.__unrendered__): <Header
+    navData={
+      Array [
+        Object {
+          "id": 0,
+          "name": [Function],
+        },
+      ]
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -22,17 +31,16 @@ ShallowWrapper {
           alt="Hurricane Charlie Logo"
           src="assets/img/hclogo.png"
         />,
-        <nav>
-          <li>
-            gallery
-          </li>
-          <li>
-            contact
-          </li>
-          <li>
-            shop
-          </li>
-        </nav>,
+        <Navbar
+          navData={
+            Array [
+              Object {
+                "id": 0,
+                "name": [Function],
+              },
+            ]
+          }
+        />,
         null,
       ],
     },
@@ -53,57 +61,18 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
-          "children": Array [
-            <li>
-              gallery
-            </li>,
-            <li>
-              contact
-            </li>,
-            <li>
-              shop
-            </li>,
+          "navData": Array [
+            Object {
+              "id": 0,
+              "name": [Function],
+            },
           ],
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "gallery",
-            },
-            "ref": null,
-            "rendered": "gallery",
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "contact",
-            },
-            "ref": null,
-            "rendered": "contact",
-            "type": "li",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "shop",
-            },
-            "ref": null,
-            "rendered": "shop",
-            "type": "li",
-          },
-        ],
-        "type": "nav",
+        "rendered": null,
+        "type": [Function],
       },
       null,
     ],
@@ -120,17 +89,16 @@ ShallowWrapper {
             alt="Hurricane Charlie Logo"
             src="assets/img/hclogo.png"
           />,
-          <nav>
-            <li>
-              gallery
-            </li>
-            <li>
-              contact
-            </li>
-            <li>
-              shop
-            </li>
-          </nav>,
+          <Navbar
+            navData={
+              Array [
+                Object {
+                  "id": 0,
+                  "name": [Function],
+                },
+              ]
+            }
+          />,
           null,
         ],
       },
@@ -151,57 +119,18 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "children": Array [
-              <li>
-                gallery
-              </li>,
-              <li>
-                contact
-              </li>,
-              <li>
-                shop
-              </li>,
+            "navData": Array [
+              Object {
+                "id": 0,
+                "name": [Function],
+              },
             ],
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "gallery",
-              },
-              "ref": null,
-              "rendered": "gallery",
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "contact",
-              },
-              "ref": null,
-              "rendered": "contact",
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "shop",
-              },
-              "ref": null,
-              "rendered": "shop",
-              "type": "li",
-            },
-          ],
-          "type": "nav",
+          "rendered": null,
+          "type": [Function],
         },
         null,
       ],
