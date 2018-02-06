@@ -1,10 +1,10 @@
 import React from 'react';
 import Gallery from './Gallery'
 
-const Content = () => {
+const Content = ({ galleryData }) => {
   return (
     <section className="content-section">
-      <Gallery />
+      <Gallery galleryData={galleryData} />
     </section>
   )
 }

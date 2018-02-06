@@ -17,7 +17,9 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <Gallery />,
+      "children": <Gallery
+        galleryData={undefined}
+      />,
       "className": "content-section",
     },
     "ref": null,
@@ -25,7 +27,9 @@ ShallowWrapper {
       "instance": null,
       "key": undefined,
       "nodeType": "class",
-      "props": Object {},
+      "props": Object {
+        "galleryData": undefined,
+      },
       "ref": null,
       "rendered": null,
       "type": [Function],
@@ -38,7 +42,9 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <Gallery />,
+        "children": <Gallery
+          galleryData={undefined}
+        />,
         "className": "content-section",
       },
       "ref": null,
@@ -46,7 +52,9 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
-        "props": Object {},
+        "props": Object {
+          "galleryData": undefined,
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],

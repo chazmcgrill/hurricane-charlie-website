@@ -36,7 +36,27 @@ ShallowWrapper {
             ]
           }
         />,
-        <Content />,
+        <Content
+          galleryData={
+            Array [
+              Object {
+                "id": 0,
+                "size": "small",
+                "src": "assets/img/gallery1.jpg",
+              },
+              Object {
+                "id": 1,
+                "size": "small",
+                "src": "assets/img/gallery1.jpg",
+              },
+              Object {
+                "id": 2,
+                "size": "small",
+                "src": "assets/img/gallery1.jpg",
+              },
+            ]
+          }
+        />,
         <Footer
           navData={
             Array [
@@ -87,7 +107,25 @@ ShallowWrapper {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
-        "props": Object {},
+        "props": Object {
+          "galleryData": Array [
+            Object {
+              "id": 0,
+              "size": "small",
+              "src": "assets/img/gallery1.jpg",
+            },
+            Object {
+              "id": 1,
+              "size": "small",
+              "src": "assets/img/gallery1.jpg",
+            },
+            Object {
+              "id": 2,
+              "size": "small",
+              "src": "assets/img/gallery1.jpg",
+            },
+          ],
+        },
         "ref": null,
         "rendered": null,
         "type": [Function],
@@ -144,7 +182,27 @@ ShallowWrapper {
               ]
             }
           />,
-          <Content />,
+          <Content
+            galleryData={
+              Array [
+                Object {
+                  "id": 0,
+                  "size": "small",
+                  "src": "assets/img/gallery1.jpg",
+                },
+                Object {
+                  "id": 1,
+                  "size": "small",
+                  "src": "assets/img/gallery1.jpg",
+                },
+                Object {
+                  "id": 2,
+                  "size": "small",
+                  "src": "assets/img/gallery1.jpg",
+                },
+              ]
+            }
+          />,
           <Footer
             navData={
               Array [
@@ -195,7 +253,25 @@ ShallowWrapper {
           "instance": null,
           "key": undefined,
           "nodeType": "function",
-          "props": Object {},
+          "props": Object {
+            "galleryData": Array [
+              Object {
+                "id": 0,
+                "size": "small",
+                "src": "assets/img/gallery1.jpg",
+              },
+              Object {
+                "id": 1,
+                "size": "small",
+                "src": "assets/img/gallery1.jpg",
+              },
+              Object {
+                "id": 2,
+                "size": "small",
+                "src": "assets/img/gallery1.jpg",
+              },
+            ],
+          },
           "ref": null,
           "rendered": null,
           "type": [Function],
