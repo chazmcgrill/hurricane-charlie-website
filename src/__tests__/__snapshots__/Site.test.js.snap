@@ -41,17 +41,17 @@ ShallowWrapper {
             Array [
               Object {
                 "id": 0,
-                "size": "small",
+                "size": "wide",
                 "src": "assets/img/gallery1.jpg",
               },
               Object {
                 "id": 1,
-                "size": "small",
+                "size": "wide",
                 "src": "assets/img/gallery1.jpg",
               },
               Object {
                 "id": 2,
-                "size": "small",
+                "size": "wide",
                 "src": "assets/img/gallery1.jpg",
               },
             ]
@@ -111,17 +111,17 @@ ShallowWrapper {
           "galleryData": Array [
             Object {
               "id": 0,
-              "size": "small",
+              "size": "wide",
               "src": "assets/img/gallery1.jpg",
             },
             Object {
               "id": 1,
-              "size": "small",
+              "size": "wide",
               "src": "assets/img/gallery1.jpg",
             },
             Object {
               "id": 2,
-              "size": "small",
+              "size": "wide",
               "src": "assets/img/gallery1.jpg",
             },
           ],
@@ -187,17 +187,17 @@ ShallowWrapper {
               Array [
                 Object {
                   "id": 0,
-                  "size": "small",
+                  "size": "wide",
                   "src": "assets/img/gallery1.jpg",
                 },
                 Object {
                   "id": 1,
-                  "size": "small",
+                  "size": "wide",
                   "src": "assets/img/gallery1.jpg",
                 },
                 Object {
                   "id": 2,
-                  "size": "small",
+                  "size": "wide",
                   "src": "assets/img/gallery1.jpg",
                 },
               ]
@@ -257,17 +257,17 @@ ShallowWrapper {
             "galleryData": Array [
               Object {
                 "id": 0,
-                "size": "small",
+                "size": "wide",
                 "src": "assets/img/gallery1.jpg",
               },
               Object {
                 "id": 1,
-                "size": "small",
+                "size": "wide",
                 "src": "assets/img/gallery1.jpg",
               },
               Object {
                 "id": 2,
-                "size": "small",
+                "size": "wide",
                 "src": "assets/img/gallery1.jpg",
               },
             ],

@@ -17,11 +17,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Item",
-      "className": "grid-item",
+      "className": "grid-item null",
     },
     "ref": null,
-    "rendered": "Item",
+    "rendered": null,
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -30,11 +29,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Item",
-        "className": "grid-item",
+        "className": "grid-item null",
       },
       "ref": null,
-      "rendered": "Item",
+      "rendered": null,
       "type": "div",
     },
   ],

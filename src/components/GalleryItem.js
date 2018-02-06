@@ -1,7 +1,8 @@
 import React from 'react';
 
-const GalleryItem = () => {
-  return <div className="grid-item">Item</div>;
+const GalleryItem = ({ galleryItemData }) => {
+  const itemClass = `grid-item ${galleryItemData ? galleryItemData.size : null}`;
+  return <div className={itemClass} />;
 }
 
 export default GalleryItem;

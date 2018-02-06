@@ -19,35 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": <div
         className="gallery-grid"
-      >
-        <div
-          className="grid-item large"
-        />
-        <div
-          className="grid-item wide"
-        />
-        <div
-          className="grid-item wide"
-        />
-        <div
-          className="grid-item tall"
-        />
-        <div
-          className="grid-item tall"
-        />
-        <div
-          className="grid-item small"
-        />
-        <div
-          className="grid-item small"
-        />
-        <div
-          className="grid-item large"
-        />
-        <div
-          className="grid-item wide"
-        />
-      </div>,
+      />,
       "className": "gallery",
     },
     "ref": null,
@@ -56,139 +28,11 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <div
-            className="grid-item large"
-          />,
-          <div
-            className="grid-item wide"
-          />,
-          <div
-            className="grid-item wide"
-          />,
-          <div
-            className="grid-item tall"
-          />,
-          <div
-            className="grid-item tall"
-          />,
-          <div
-            className="grid-item small"
-          />,
-          <div
-            className="grid-item small"
-          />,
-          <div
-            className="grid-item large"
-          />,
-          <div
-            className="grid-item wide"
-          />,
-        ],
+        "children": null,
         "className": "gallery-grid",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "grid-item large",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "grid-item wide",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "grid-item wide",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "grid-item tall",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "grid-item tall",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "grid-item small",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "grid-item small",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "grid-item large",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "className": "grid-item wide",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "div",
-        },
-      ],
+      "rendered": null,
       "type": "div",
     },
     "type": "section",
@@ -201,35 +45,7 @@ ShallowWrapper {
       "props": Object {
         "children": <div
           className="gallery-grid"
-        >
-          <div
-            className="grid-item large"
-          />
-          <div
-            className="grid-item wide"
-          />
-          <div
-            className="grid-item wide"
-          />
-          <div
-            className="grid-item tall"
-          />
-          <div
-            className="grid-item tall"
-          />
-          <div
-            className="grid-item small"
-          />
-          <div
-            className="grid-item small"
-          />
-          <div
-            className="grid-item large"
-          />
-          <div
-            className="grid-item wide"
-          />
-        </div>,
+        />,
         "className": "gallery",
       },
       "ref": null,
@@ -238,139 +54,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <div
-              className="grid-item large"
-            />,
-            <div
-              className="grid-item wide"
-            />,
-            <div
-              className="grid-item wide"
-            />,
-            <div
-              className="grid-item tall"
-            />,
-            <div
-              className="grid-item tall"
-            />,
-            <div
-              className="grid-item small"
-            />,
-            <div
-              className="grid-item small"
-            />,
-            <div
-              className="grid-item large"
-            />,
-            <div
-              className="grid-item wide"
-            />,
-          ],
+          "children": null,
           "className": "gallery-grid",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "grid-item large",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "grid-item wide",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "grid-item wide",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "grid-item tall",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "grid-item tall",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "grid-item small",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "grid-item small",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "grid-item large",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "className": "grid-item wide",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "div",
-          },
-        ],
+        "rendered": null,
         "type": "div",
       },
       "type": "section",
