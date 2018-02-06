@@ -4,7 +4,7 @@ import Navbar from './Navbar';
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = { hamburgerOpen: false, width: 0 }
+    this.state = { burgerOpen: false, width: 0 }
     this.updateWindowSize = this.updateWindowSize.bind(this);
     this.burgerClick = this.burgerClick.bind(this);
   }
