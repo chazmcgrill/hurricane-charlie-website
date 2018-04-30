@@ -9,8 +9,8 @@ class Site extends Component {
     super()
     this.state = { 
       navData: [
-        { id: 0, name: 'gallery', active: true }, 
-        { id: 1, name: 'contact', active: false }, 
+        { id: 0, name: 'gallery', active: false }, 
+        { id: 1, name: 'contact', active: true }, 
         { id: 2, name: 'shop', active: false }
       ] 
     };
