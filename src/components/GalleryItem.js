@@ -4,8 +4,9 @@ const GalleryItem = ({ galleryItemData }) => {
   const itemClass = `grid-item ${galleryItemData ? galleryItemData.size : null}`;
   return (
     <div 
-      className={itemClass} 
-      style={{ backgroundImage: `url('${galleryItemData.src}')`}}
+      className={ itemClass } 
+      style={{ backgroundImage: `url('assets/img/thumbs/${galleryItemData.src}')`}}
+      alt={galleryItemData.name }
     />
   );
 }

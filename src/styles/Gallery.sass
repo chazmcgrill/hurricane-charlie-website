@@ -15,9 +15,14 @@
       grid-template-columns: repeat(6, 1fr)
       grid-template-rows: repeat(5, 1fr)
 
+    @media screen and (min-width: 900px)
+      grid-template-columns: repeat(8, 1fr)
+      grid-template-rows: repeat(5, 1fr)
+
   .grid-item
     min-height: 200px
     background-color: coral
+    background-size: cover
 
     &.large
       grid-column: span 2
