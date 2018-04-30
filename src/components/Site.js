@@ -9,15 +9,19 @@ class Site extends Component {
     super()
     this.state = { 
       navData: [
-        { id: 0, name: 'gallery' }, 
-        { id: 1, name: 'contact' }, 
-        { id: 2, name: 'shop' }
+        { id: 0, name: 'gallery', active: true }, 
+        { id: 1, name: 'contact', active: false }, 
+        { id: 2, name: 'shop', active: false }
       ] 
     };
+    this.navHandler = this.navHandler.bind(this);
   }
 
-  navHandler() {
-    console.log("nav click");
+  navHandler(e) {
+    const navData = this.state.navData.map(n => (
+      { ...n, active: e.target.id === n.name }
+    ));
+    this.setState({navData});
   }
 
   render() {
