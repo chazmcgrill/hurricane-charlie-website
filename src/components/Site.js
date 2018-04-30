@@ -23,9 +23,15 @@ class Site extends Component {
   render() {
     return (
       <div>
-        <Header navClick={this.navHandler} navData={this.state.navData} />
+        <Header 
+          navClick={this.navHandler} 
+          navData={this.state.navData} 
+        />
         <Content galleryData={galleryData} />
-        <Footer navData={this.state.navData} />
+        <Footer 
+          navClick={this.navHandler} 
+          navData={this.state.navData} 
+        />
       </div>
     );
   }

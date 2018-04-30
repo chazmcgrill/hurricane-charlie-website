@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-        <Navbar navData={this.props.navData} />
+        <Navbar navClick={this.props.navClick} navData={this.props.navData} />
         <div className="footer-icons">
           <a href="http://twitter.com/hurricanechaz"><i className="fa fa-twitter"></i></a>
           <a href="http://www.instagram.com/chazhurricane"><i className="fa fa-instagram"></i></a>
