@@ -25,13 +25,17 @@ class Site extends Component {
   }
 
   render() {
+    const activeName = this.state.navData.filter(n => n.active)[0].name;
     return (
       <div>
         <Header 
           navClick={this.navHandler} 
           navData={this.state.navData} 
         />
-        <Content galleryData={galleryData} />
+        <Content 
+          galleryData={galleryData}
+          activeContent={activeName} 
+        />
         <Footer 
           navClick={this.navHandler} 
           navData={this.state.navData} 
