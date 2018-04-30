@@ -13,15 +13,6 @@ class Gallery extends Component {
       <section className="gallery">
         <div className="gallery-grid">
           {gallery}
-          {/* <div className="grid-item large"></div>
-          <div className="grid-item wide"></div>
-          <div className="grid-item wide"></div>
-          <div className="grid-item tall"></div>
-          <div className="grid-item tall"></div>
-          <div className="grid-item small"></div>
-          <div className="grid-item small"></div>
-          <div className="grid-item large"></div>
-          <div className="grid-item wide"></div> */}
         </div>
       </section>
     )

@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import NavItem from './NavItem';
 
 class Navbar extends Component {
-
   render() {
     const nav = this.props.navData.map(item => (
-      <NavItem name={ item.name } key={ item.id } />
+      <li key={item.id} onClick={this.props.navClick}>{item.name}</li>
     ));
   
     return(

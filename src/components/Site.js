@@ -16,14 +16,18 @@ class Site extends Component {
     };
   }
 
+  navHandler() {
+    console.log("nav click");
+  }
+
   render() {
     return (
       <div>
-        <Header navData={this.state.navData} />
+        <Header navClick={this.navHandler} navData={this.state.navData} />
         <Content galleryData={galleryData} />
         <Footer navData={this.state.navData} />
       </div>
-    ) 
+    );
   }
 }
 
