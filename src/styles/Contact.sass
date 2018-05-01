@@ -1,19 +1,19 @@
-.form-container
+.contact-box
   display: flex
   flex-direction: column
-  background: lime
-  padding: 50px
+  font-size: 0.8rem
+  padding: 10px 50px
   max-width: 900px
   margin: 0 auto
-
-  @media screen and (min-width: 720px)
+  @media screen and (min-width: 640px)
     flex-direction: row
     justify-content: space-around
 
 form
   display: flex
   flex-direction: column
-
+  margin-bottom: 20px
+    
 form > *
   outline: none
   background: white
@@ -24,4 +24,13 @@ form > *
 
 form button
   max-width: 100px
+  padding-left: 0
+
+.contact-item
+  ul 
+    padding-left: 10px 
+    list-style: none
+  @media screen and (min-width: 640px)
+    max-width: 50%
+
 
