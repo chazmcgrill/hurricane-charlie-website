@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import Gallery from './Gallery'
-import Contact from './Contact'
+import Gallery from './Gallery';
+import Contact from './Contact';
+import Shop from './Shop';
 
 class Content extends Component {
-
   contentSwitch(name) {
     switch (name) {
       case 'gallery':
         return <Gallery galleryData={this.props.galleryData} />;
       case 'contact':
         return <Contact />;
+      case 'shop':
+        return <Shop />;
       default:
         return null;
     }
@@ -23,6 +25,5 @@ class Content extends Component {
     )
   }
 }
-
 
 export default Content;

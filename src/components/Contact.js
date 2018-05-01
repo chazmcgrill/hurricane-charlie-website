@@ -20,11 +20,23 @@ class Contact extends Component {
             <h2>say hello...</h2>
             <p>Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.</p>
             <h2>social</h2>
-            <p>You will find me on these social platforms:</p>
+            <p>You can find me on these social platforms:</p>
             <ul>
-              <li>Instagram</li>
-              <li>Twitter</li>
-              <li>Behance</li>
+              <li>
+                <a target="_blank" href="http://www.instagram.com/hurricane.charlie">
+                  <i className="fa fa-instagram"></i>Instagram
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="http://twitter.com/hurricanechaz">
+                  <i className="fa fa-twitter"></i>Twitter
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="http://www.behance.net/chazhurricane">
+                  <i className="fa fa-behance"></i>Behance
+                </a>
+              </li>
             </ul>
             <h2>coding</h2>
             <p>I designed and coded this website. For more information please visit my web development portfolio <a target="_blank" href="http://charlietaylorcoder.com">here</a></p>
