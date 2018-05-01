@@ -26,6 +26,12 @@ class Site extends Component {
 
   render() {
     const activeName = this.state.navData.filter(n => n.active)[0].name;
+    const callToAction = activeName === "shop" ? null : (
+      <div className="shop-cta">
+        <h1 id="shop" onClick={this.navHandler} >artwork you can buy</h1>
+      </div>
+    );
+
     return (
       <div>
         <Header 
@@ -36,9 +42,7 @@ class Site extends Component {
           galleryData={galleryData}
           activeContent={activeName} 
         />
-        <div className="shop-cta" >
-          <h1 id="shop" onClick={this.navHandler}>artwork you can buy</h1>
-        </div>
+        {callToAction}
         <Footer 
           navClick={this.navHandler} 
           navData={this.state.navData} 
