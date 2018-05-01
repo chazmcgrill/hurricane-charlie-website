@@ -4,12 +4,15 @@ class Contact extends Component {
   render() {
     return (
       <div className="form-container">
-        <form>
-          <input type="text" placeholder="name" />
-          <input type="email" placeholder="email" />
-          <textarea name="" id="" cols="30" rows="10" placeholder="message" />
-          <button>send</button>
-        </form>
+        <div>
+          <h2>Message</h2>
+          <form>
+            <input type="text" placeholder="name" />
+            <input type="email" placeholder="email" />
+            <textarea name="" id="" cols="30" rows="10" placeholder="message" />
+            <button>send</button>
+          </form>
+        </div>
 
         <div>
           <div>
@@ -22,7 +25,7 @@ class Contact extends Component {
             </ul>
           </div>
         </div>
-        
+
       </div>
     );
   }
