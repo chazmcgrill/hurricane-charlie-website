@@ -36,6 +36,9 @@ class Site extends Component {
           galleryData={galleryData}
           activeContent={activeName} 
         />
+        <div className="shop-cta" >
+          <h1 id="shop" onClick={this.navHandler}>artwork you can buy</h1>
+        </div>
         <Footer 
           navClick={this.navHandler} 
           navData={this.state.navData} 
