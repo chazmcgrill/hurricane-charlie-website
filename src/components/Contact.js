@@ -6,7 +6,7 @@ class Contact extends Component {
       <div className="contact-box">
         
         <div className="contact-item">
-          <h2>message me</h2>
+          <h2>say hello...</h2>
           <form>
             <input type="text" placeholder="your name" />
             <input type="email" placeholder="your email" />
@@ -17,7 +17,6 @@ class Contact extends Component {
 
         <div className="contact-item contact-text">
           <div>
-            <h2>say hello...</h2>
             <p>Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.</p>
             <h2>social</h2>
             <p>You can find me on these social platforms:</p>

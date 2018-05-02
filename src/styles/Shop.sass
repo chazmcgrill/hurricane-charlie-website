@@ -1,10 +1,8 @@
 .mailer-cta
-  // height: 200px
   background: lime
   display: flex
   flex-direction: column
   padding: 50px 20px
-  // justify-content: space-around
   text-align: center
 
   h2
@@ -17,5 +15,17 @@
     border: 3px solid black
     font-size: inherit
     outline: none
+    
   input
     margin-right: 20px
+    &::placeholder
+      font-family: serif
+      font-style: italic
+      color: black
+
+  button
+    cursor: pointer
+    transition: color 0.3s ease-in, background 0.3s ease-in
+    &:hover
+      background: black
+      color: lime
