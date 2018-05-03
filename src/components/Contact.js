@@ -34,31 +34,37 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      email: '',
-      message: ''
+      data: {
+        name: '',
+        email: '',
+        message: ''
+      },
+      errors: null
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInput(e) {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({ 
+      data: { 
+        ...this.state.data, 
+        [e.target.name]: e.target.value 
+      } 
+    });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const formErrors = formValidator(this.state);
+    const formErrors = formValidator(this.state.data);
+    console.log(formErrors);
     if (!formErrors) {
-      this.setState({
-        name: '',
-        email: '',
-        message: ''
-      });
+      this.setState({ data: { name: '', email: '', message: '' } });
     }
   }
 
   render() {
+    const { name, email, message } = this.state.data;
     return (
       <div className="contact-box">
         
@@ -67,19 +73,19 @@ class Contact extends Component {
           <form>
             <input 
               name="name"
-              value={this.state.name} 
+              value={name} 
               placeholder="your name" 
               onChange={this.handleInput} 
             />
             <input 
               name="email"
-              value={this.state.email} 
+              value={email} 
               placeholder="your email" 
               onChange={this.handleInput} 
             />
             <textarea 
               name="message"
-              value={this.state.message}
+              value={message}
               cols="30" rows="10" 
               placeholder="type your message here..." 
               onChange={this.handleInput} 
