@@ -5,7 +5,7 @@ function formValidator(data) {
   const emailRegx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const nameRegx = /^[a-zA-Z ]/;
   // const msgRegx = '';
-  let errors = {};
+  let errors = { name: null, email: null, message: null };
 
   // check name
   if (name.length === 0) {
@@ -19,7 +19,7 @@ function formValidator(data) {
     errors.email = "email is required";
   } else if (!email.match(emailRegx)) {
     errors.email = "incorrect email format";
-  }
+  } 
 
   // check message
   if (message.length < 10) {
@@ -34,12 +34,8 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {
-        name: '',
-        email: '',
-        message: ''
-      },
-      errors: null
+      data: { name: '', email: '', message: '' },
+      formErrors: { name: null, email: null, message: null }
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -60,29 +56,35 @@ class Contact extends Component {
     console.log(formErrors);
     if (!formErrors) {
       this.setState({ data: { name: '', email: '', message: '' } });
+    } else {
+      this.setState({ formErrors });
     }
   }
 
   render() {
     const { name, email, message } = this.state.data;
+    let { formErrors } = this.state;
+
     return (
       <div className="contact-box">
-        
         <div className="contact-item">
           <h2>say hello...</h2>
           <form>
+            {formErrors.name ? <p>{formErrors.name}</p> : null}
             <input 
               name="name"
               value={name} 
               placeholder="your name" 
               onChange={this.handleInput} 
             />
+            {formErrors.email ? <p>{formErrors.email}</p> : null}
             <input 
               name="email"
               value={email} 
               placeholder="your email" 
               onChange={this.handleInput} 
             />
+            {formErrors.message ? <p>{formErrors.message}</p> : null}
             <textarea 
               name="message"
               value={message}
