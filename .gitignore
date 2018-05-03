@@ -32,3 +32,5 @@ node_modules
 
 #codekit config
 config.codekit3
+
+.env
