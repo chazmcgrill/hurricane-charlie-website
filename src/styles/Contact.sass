@@ -17,18 +17,23 @@ form
 textarea
   resize: vertical
     
-form > *
-  outline: none
-  background: white
-  border: 1px solid black
-  border-radius: 3px
-  font-size: inherit
-  margin: 5px 0
-  padding: 10px
-  &::placeholder
-    font-family: serif
-    font-style: italic
-    color: black
+form
+  input, textarea, button
+    outline: none
+    background: white
+    border: 1px solid black
+    border-radius: 3px
+    font-size: inherit
+    margin: 5px 0
+    padding: 10px
+    &::placeholder
+      font-family: serif
+      font-style: italic
+      color: black
+      
+  p
+    font-size: 0.6rem
+    color: red
 
 form button
   max-width: 100px
