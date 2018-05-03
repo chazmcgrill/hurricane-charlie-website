@@ -24,10 +24,17 @@ function formValidator(data) {
   // check message
   if (message.length < 10) {
     errors.message = "message is too short min length 10 characters";
-  } 
+  }
+
+  const isValid = (() => {
+    for (let e in errors) {
+      if (errors[e]) return false;
+    }
+    return true;
+  })();
 
   // return
-  return Object.keys(errors).length === 0 ? false : errors; 
+  return { errMsgs: errors, isValid }; 
 }
 
 class Contact extends Component {
@@ -35,7 +42,7 @@ class Contact extends Component {
     super(props);
     this.state = {
       data: { name: '', email: '', message: '' },
-      formErrors: { name: null, email: null, message: null }
+      errMsgs: { name: null, email: null, message: null }
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -52,39 +59,40 @@ class Contact extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const formErrors = formValidator(this.state.data);
-    console.log(formErrors);
-    if (!formErrors) {
-      this.setState({ data: { name: '', email: '', message: '' } });
+    const errors = formValidator(this.state.data);
+    const { errMsgs, isValid } = errors;
+    console.log(errMsgs);
+    if (isValid) {
+      this.setState({ data: { name: '', email: '', message: '' }, errMsgs });
     } else {
-      this.setState({ formErrors });
+      this.setState({ errMsgs });
     }
   }
 
   render() {
     const { name, email, message } = this.state.data;
-    let { formErrors } = this.state;
+    let { errMsgs } = this.state;
 
     return (
       <div className="contact-box">
         <div className="contact-item">
           <h2>say hello...</h2>
           <form>
-            {formErrors.name ? <p>{formErrors.name}</p> : null}
+            {errMsgs.name ? <p>{errMsgs.name}</p> : null}
             <input 
               name="name"
               value={name} 
               placeholder="your name" 
               onChange={this.handleInput} 
             />
-            {formErrors.email ? <p>{formErrors.email}</p> : null}
+            {errMsgs.email ? <p>{errMsgs.email}</p> : null}
             <input 
               name="email"
               value={email} 
               placeholder="your email" 
               onChange={this.handleInput} 
             />
-            {formErrors.message ? <p>{formErrors.message}</p> : null}
+            {errMsgs.message ? <p>{errMsgs.message}</p> : null}
             <textarea 
               name="message"
               value={message}
