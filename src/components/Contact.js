@@ -1,6 +1,21 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      email: '',
+      message: ''
+    };
+    this.handleInput = this.handleInput.bind(this);
+  }
+
+  handleInput(e) {
+    console.log(e.target.name);
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
   render() {
     return (
       <div className="contact-box">
@@ -8,9 +23,25 @@ class Contact extends Component {
         <div className="contact-item">
           <h2>say hello...</h2>
           <form>
-            <input type="text" placeholder="your name" />
-            <input type="email" placeholder="your email" />
-            <textarea name="" id="" cols="30" rows="10" placeholder="type your message here..." />
+            <input 
+              name="name"
+              value={this.state.name} 
+              placeholder="your name" 
+              onChange={this.handleInput} 
+            />
+            <input 
+              name="email"
+              value={this.state.email} 
+              placeholder="your email" 
+              onChange={this.handleInput} 
+            />
+            <textarea 
+              name="message"
+              value={this.state.message}
+              cols="30" rows="10" 
+              placeholder="type your message here..." 
+              onChange={this.handleInput} 
+            />
             <button>send</button>
           </form>
         </div>
