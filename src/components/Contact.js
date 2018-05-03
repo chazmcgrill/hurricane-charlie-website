@@ -1,5 +1,35 @@
 import React, { Component } from 'react';
 
+function formValidator(data) {
+  const { name, email, message } = data;
+  const emailRegx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const nameRegx = /^[a-zA-Z ]/;
+  const msgRegx = '';
+  let errors = {};
+
+  // check name
+  if (name.length === 0) {
+    errors.name = "name is required";
+  } else if (!name.match(nameRegx)) {
+    errors.name = "invalid characters entered";
+  }
+
+  // check email
+  if (email.length === 0) {
+    errors.email = "email is required";
+  } else if (!email.match(emailRegx)) {
+    errors.email = "incorrect email format";
+  }
+
+  // check message
+  if (message.length < 10) {
+    errors.message = "message is too short min length 10 characters";
+  } 
+
+  // return
+  return errors; 
+}
+
 class Contact extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +48,12 @@ class Contact extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.state)
+    console.log(formValidator(this.state));
+    this.setState({
+      name: '',
+      email: '',
+      message: ''
+    });
   }
 
   render() {
