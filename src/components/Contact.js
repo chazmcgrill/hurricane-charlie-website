@@ -4,7 +4,7 @@ function formValidator(data) {
   const { name, email, message } = data;
   const emailRegx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const nameRegx = /^[a-zA-Z ]/;
-  const msgRegx = '';
+  // const msgRegx = '';
   let errors = {};
 
   // check name
@@ -27,7 +27,7 @@ function formValidator(data) {
   } 
 
   // return
-  return errors; 
+  return Object.keys(errors).length === 0 ? false : errors; 
 }
 
 class Contact extends Component {
@@ -48,12 +48,14 @@ class Contact extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(formValidator(this.state));
-    this.setState({
-      name: '',
-      email: '',
-      message: ''
-    });
+    const formErrors = formValidator(this.state);
+    if (!formErrors) {
+      this.setState({
+        name: '',
+        email: '',
+        message: ''
+      });
+    }
   }
 
   render() {
