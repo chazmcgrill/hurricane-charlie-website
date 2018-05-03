@@ -9,11 +9,16 @@ class Contact extends Component {
       message: ''
     };
     this.handleInput = this.handleInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInput(e) {
-    console.log(e.target.name);
     this.setState({ [e.target.name]: e.target.value });
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log(this.state)
   }
 
   render() {
@@ -42,7 +47,9 @@ class Contact extends Component {
               placeholder="type your message here..." 
               onChange={this.handleInput} 
             />
-            <button>send</button>
+            <button
+              onClick={this.handleSubmit}
+            >send</button>
           </form>
         </div>
 
