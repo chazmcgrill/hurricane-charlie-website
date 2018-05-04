@@ -42,7 +42,8 @@ class Contact extends Component {
     super(props);
     this.state = {
       data: { name: 'test', email: 'test@test.com', message: 'testingtesting123' },
-      errMsgs: { name: null, email: null, message: null }
+      errMsgs: { name: null, email: null, message: null },
+      msgStatus: { msg: null, status: null }
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -57,25 +58,34 @@ class Contact extends Component {
     });
   }
 
-  handleSubmit(e) {
+  async handleSubmit(e) {
     e.preventDefault();
     const errors = formValidator(this.state.data);
     const { errMsgs, isValid } = errors;
     
     if (isValid) {
-      const { data } = this.state;
-      fetch('https://hc-mail.herokuapp.com/mail', {
+      let { data, msgStatus } = this.state;
+
+      await fetch('https://hc-mail.herokuapp.com/mail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
       }).then(resp => {
-        console.log(resp.status);
+        if (resp.ok) {
+          msgStatus.msg = "message sent, speak to you soon...";
+          msgStatus.status = "green";
+        }
       }).catch(err => {
-        console.log(err);
+        msgStatus.msg = "message failed! please retry.";
+        msgStatus.status = "red";
       });
-      this.setState({ data: { name: '', email: '', message: '' }, errMsgs });
+
+      this.setState({ 
+        data: { name: '', email: '', message: '' }, 
+        errMsgs, msgStatus 
+      });
     } else {
       this.setState({ errMsgs });
     }
@@ -83,12 +93,13 @@ class Contact extends Component {
 
   render() {
     const { name, email, message } = this.state.data;
-    let { errMsgs } = this.state;
+    let { errMsgs, msgStatus } = this.state;
     return (
       <div className="contact-box">
         <div className="contact-item">
           <h2>say hello...</h2>
           <form>
+            {msgStatus.msg ? <p style={{ color: msgStatus.status }}>{ msgStatus.msg }</p> : null}
             {errMsgs.name ? <p>{errMsgs.name}</p> : null}
             <input 
               name="name"
