@@ -1,6 +1,6 @@
-var path = require("path");
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var DashboardPlugin = require('webpack-dashboard/plugin');
+const path = require("path");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   entry: './src/index.js',

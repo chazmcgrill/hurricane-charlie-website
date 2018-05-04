@@ -41,7 +41,7 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: { name: '', email: '', message: '' },
+      data: { name: 'test', email: 'test@test.com', message: 'testingtesting123' },
       errMsgs: { name: null, email: null, message: null }
     };
     this.handleInput = this.handleInput.bind(this);
@@ -61,8 +61,20 @@ class Contact extends Component {
     e.preventDefault();
     const errors = formValidator(this.state.data);
     const { errMsgs, isValid } = errors;
-    console.log(errMsgs);
+    
     if (isValid) {
+      const { data } = this.state;
+      fetch('https://hc-mail.herokuapp.com/mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      }).then(resp => {
+        console.log(resp.status);
+      }).catch(err => {
+        console.log(err);
+      });
       this.setState({ data: { name: '', email: '', message: '' }, errMsgs });
     } else {
       this.setState({ errMsgs });
@@ -72,7 +84,6 @@ class Contact extends Component {
   render() {
     const { name, email, message } = this.state.data;
     let { errMsgs } = this.state;
-
     return (
       <div className="contact-box">
         <div className="contact-item">

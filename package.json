@@ -4,7 +4,7 @@
   "description": "Hurricane Charlie illustration portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dashboard -- webpack-dev-server",
+    "start": "webpack-dev-server",
     "test": "jest --setupTestFrameworkScriptFile ./src/setupTests.js --watchAll"
   },
   "repository": {
@@ -40,7 +40,6 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.19.1",
     "webpack": "^3.11.0",
-    "webpack-dashboard": "^1.1.1",
     "webpack-dev-server": "^2.11.2"
   },
   "dependencies": {
