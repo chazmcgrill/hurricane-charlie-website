@@ -5,6 +5,11 @@ class Shop extends Component {
     super();
     this.state = { email: '' };
     this.mailListChange = this.mailListChange.bind(this);
+    this.mailListSubmit = this.mailListSubmit.bind(this);
+  }
+
+  mailListSubmit() {
+    console.log(this.state.email);
   }
 
   mailListChange(e) {
@@ -24,7 +29,7 @@ class Shop extends Component {
               onChange={this.mailListChange} 
               type="email" placeholder="your email" 
             />
-            <button>join</button>
+            <button onClick={this.mailListSubmit}>join</button>
           </div>
         </div>
       </div>
