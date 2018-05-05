@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 
+function emailErrorCheck(email) {
+  const emailRegx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (email.length === 0) {
+    return "email is required";
+  } else if (!email.match(emailRegx)) {
+    return "incorrect email format";
+  }
+  return null
+}
+
 class Shop extends Component {
   constructor() {
     super();
-    this.state = { email: '' };
+    this.state = { email: '', status: null };
     this.mailListChange = this.mailListChange.bind(this);
     this.mailListSubmit = this.mailListSubmit.bind(this);
   }
 
   mailListSubmit() {
-    console.log(this.state.email);
+    // email validation
+    let status = emailErrorCheck(this.state.email);
+    console.log(status);
+    // post to database
   }
 
   mailListChange(e) {
