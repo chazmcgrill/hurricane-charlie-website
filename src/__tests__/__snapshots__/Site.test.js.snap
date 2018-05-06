@@ -19,17 +19,21 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Header
+          navClick={[Function]}
           navData={
             Array [
               Object {
+                "active": false,
                 "id": 0,
                 "name": "gallery",
               },
               Object {
+                "active": false,
                 "id": 1,
                 "name": "contact",
               },
               Object {
+                "active": true,
                 "id": 2,
                 "name": "shop",
               },
@@ -37,38 +41,149 @@ ShallowWrapper {
           }
         />,
         <Content
+          activeContent="shop"
           galleryData={
             Array [
               Object {
-                "id": 0,
-                "size": "wide",
-                "src": "assets/img/gallery1.jpg",
-              },
-              Object {
                 "id": 1,
-                "size": "wide",
-                "src": "assets/img/gallery1.jpg",
+                "name": "leaf insect",
+                "size": "large",
+                "src": "thumbs-001.jpg",
               },
               Object {
                 "id": 2,
+                "name": "desert eyes",
                 "size": "wide",
-                "src": "assets/img/gallery1.jpg",
+                "src": "thumbs-002.jpg",
+              },
+              Object {
+                "id": 3,
+                "name": "bardo pond",
+                "size": "wide",
+                "src": "thumbs-003.jpg",
+              },
+              Object {
+                "id": 4,
+                "name": "angled pike",
+                "size": "small",
+                "src": "thumbs-004.jpg",
+              },
+              Object {
+                "id": 5,
+                "name": "mission of burma",
+                "size": "small",
+                "src": "thumbs-005.jpg",
+              },
+              Object {
+                "id": 6,
+                "name": "bass overload",
+                "size": "tall",
+                "src": "thumbs-006.jpg",
+              },
+              Object {
+                "id": 7,
+                "name": "folläkzoid",
+                "size": "tall",
+                "src": "thumbs-007.jpg",
+              },
+              Object {
+                "id": 8,
+                "name": "robot workshop",
+                "size": "large",
+                "src": "thumbs-008.jpg",
+              },
+              Object {
+                "id": 9,
+                "name": "angler fish",
+                "size": "wide",
+                "src": "thumbs-009.jpg",
+              },
+              Object {
+                "id": 10,
+                "name": "geometric bug",
+                "size": "wide",
+                "src": "thumbs-010.jpg",
+              },
+              Object {
+                "id": 11,
+                "name": "you mug",
+                "size": "small",
+                "src": "thumbs-011.jpg",
+              },
+              Object {
+                "id": 12,
+                "name": "mutant bmx",
+                "size": "small",
+                "src": "thumbs-012.jpg",
+              },
+              Object {
+                "id": 13,
+                "name": "nf fly",
+                "size": "tall",
+                "src": "thumbs-013.jpg",
+              },
+              Object {
+                "id": 14,
+                "name": "desert smoker",
+                "size": "tall",
+                "src": "thumbs-014.jpg",
+              },
+              Object {
+                "id": 15,
+                "name": "geometric butterfly",
+                "size": "large",
+                "src": "thumbs-015.jpg",
+              },
+              Object {
+                "id": 16,
+                "name": "dylan carlson",
+                "size": "wide",
+                "src": "thumbs-016.jpg",
+              },
+              Object {
+                "id": 17,
+                "name": "octopsss",
+                "size": "wide",
+                "src": "thumbs-017.jpg",
+              },
+              Object {
+                "id": 18,
+                "name": "collapse",
+                "size": "small",
+                "src": "thumbs-018.jpg",
+              },
+              Object {
+                "id": 19,
+                "name": "rat race",
+                "size": "small",
+                "src": "thumbs-019.jpg",
+              },
+              Object {
+                "id": 20,
+                "name": "papa m house",
+                "size": "tall",
+                "src": "thumbs-020.jpg",
               },
             ]
           }
         />,
+        null,
         <Footer
+          navClick={[Function]}
           navData={
             Array [
               Object {
+                "active": false,
                 "id": 0,
                 "name": "gallery",
               },
               Object {
+                "active": false,
                 "id": 1,
                 "name": "contact",
               },
               Object {
+                "active": true,
                 "id": 2,
                 "name": "shop",
               },
@@ -84,16 +199,20 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "navClick": [Function],
           "navData": Array [
             Object {
+              "active": false,
               "id": 0,
               "name": "gallery",
             },
             Object {
+              "active": false,
               "id": 1,
               "name": "contact",
             },
             Object {
+              "active": true,
               "id": 2,
               "name": "shop",
             },
@@ -106,23 +225,129 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
+          "activeContent": "shop",
           "galleryData": Array [
             Object {
-              "id": 0,
-              "size": "wide",
-              "src": "assets/img/gallery1.jpg",
-            },
-            Object {
               "id": 1,
-              "size": "wide",
-              "src": "assets/img/gallery1.jpg",
+              "name": "leaf insect",
+              "size": "large",
+              "src": "thumbs-001.jpg",
             },
             Object {
               "id": 2,
+              "name": "desert eyes",
               "size": "wide",
-              "src": "assets/img/gallery1.jpg",
+              "src": "thumbs-002.jpg",
+            },
+            Object {
+              "id": 3,
+              "name": "bardo pond",
+              "size": "wide",
+              "src": "thumbs-003.jpg",
+            },
+            Object {
+              "id": 4,
+              "name": "angled pike",
+              "size": "small",
+              "src": "thumbs-004.jpg",
+            },
+            Object {
+              "id": 5,
+              "name": "mission of burma",
+              "size": "small",
+              "src": "thumbs-005.jpg",
+            },
+            Object {
+              "id": 6,
+              "name": "bass overload",
+              "size": "tall",
+              "src": "thumbs-006.jpg",
+            },
+            Object {
+              "id": 7,
+              "name": "folläkzoid",
+              "size": "tall",
+              "src": "thumbs-007.jpg",
+            },
+            Object {
+              "id": 8,
+              "name": "robot workshop",
+              "size": "large",
+              "src": "thumbs-008.jpg",
+            },
+            Object {
+              "id": 9,
+              "name": "angler fish",
+              "size": "wide",
+              "src": "thumbs-009.jpg",
+            },
+            Object {
+              "id": 10,
+              "name": "geometric bug",
+              "size": "wide",
+              "src": "thumbs-010.jpg",
+            },
+            Object {
+              "id": 11,
+              "name": "you mug",
+              "size": "small",
+              "src": "thumbs-011.jpg",
+            },
+            Object {
+              "id": 12,
+              "name": "mutant bmx",
+              "size": "small",
+              "src": "thumbs-012.jpg",
+            },
+            Object {
+              "id": 13,
+              "name": "nf fly",
+              "size": "tall",
+              "src": "thumbs-013.jpg",
+            },
+            Object {
+              "id": 14,
+              "name": "desert smoker",
+              "size": "tall",
+              "src": "thumbs-014.jpg",
+            },
+            Object {
+              "id": 15,
+              "name": "geometric butterfly",
+              "size": "large",
+              "src": "thumbs-015.jpg",
+            },
+            Object {
+              "id": 16,
+              "name": "dylan carlson",
+              "size": "wide",
+              "src": "thumbs-016.jpg",
+            },
+            Object {
+              "id": 17,
+              "name": "octopsss",
+              "size": "wide",
+              "src": "thumbs-017.jpg",
+            },
+            Object {
+              "id": 18,
+              "name": "collapse",
+              "size": "small",
+              "src": "thumbs-018.jpg",
+            },
+            Object {
+              "id": 19,
+              "name": "rat race",
+              "size": "small",
+              "src": "thumbs-019.jpg",
+            },
+            Object {
+              "id": 20,
+              "name": "papa m house",
+              "size": "tall",
+              "src": "thumbs-020.jpg",
             },
           ],
         },
@@ -130,21 +355,26 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
+      null,
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "navClick": [Function],
           "navData": Array [
             Object {
+              "active": false,
               "id": 0,
               "name": "gallery",
             },
             Object {
+              "active": false,
               "id": 1,
               "name": "contact",
             },
             Object {
+              "active": true,
               "id": 2,
               "name": "shop",
             },
@@ -165,17 +395,21 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Header
+            navClick={[Function]}
             navData={
               Array [
                 Object {
+                  "active": false,
                   "id": 0,
                   "name": "gallery",
                 },
                 Object {
+                  "active": false,
                   "id": 1,
                   "name": "contact",
                 },
                 Object {
+                  "active": true,
                   "id": 2,
                   "name": "shop",
                 },
@@ -183,38 +417,149 @@ ShallowWrapper {
             }
           />,
           <Content
+            activeContent="shop"
             galleryData={
               Array [
                 Object {
-                  "id": 0,
-                  "size": "wide",
-                  "src": "assets/img/gallery1.jpg",
-                },
-                Object {
                   "id": 1,
-                  "size": "wide",
-                  "src": "assets/img/gallery1.jpg",
+                  "name": "leaf insect",
+                  "size": "large",
+                  "src": "thumbs-001.jpg",
                 },
                 Object {
                   "id": 2,
+                  "name": "desert eyes",
                   "size": "wide",
-                  "src": "assets/img/gallery1.jpg",
+                  "src": "thumbs-002.jpg",
+                },
+                Object {
+                  "id": 3,
+                  "name": "bardo pond",
+                  "size": "wide",
+                  "src": "thumbs-003.jpg",
+                },
+                Object {
+                  "id": 4,
+                  "name": "angled pike",
+                  "size": "small",
+                  "src": "thumbs-004.jpg",
+                },
+                Object {
+                  "id": 5,
+                  "name": "mission of burma",
+                  "size": "small",
+                  "src": "thumbs-005.jpg",
+                },
+                Object {
+                  "id": 6,
+                  "name": "bass overload",
+                  "size": "tall",
+                  "src": "thumbs-006.jpg",
+                },
+                Object {
+                  "id": 7,
+                  "name": "folläkzoid",
+                  "size": "tall",
+                  "src": "thumbs-007.jpg",
+                },
+                Object {
+                  "id": 8,
+                  "name": "robot workshop",
+                  "size": "large",
+                  "src": "thumbs-008.jpg",
+                },
+                Object {
+                  "id": 9,
+                  "name": "angler fish",
+                  "size": "wide",
+                  "src": "thumbs-009.jpg",
+                },
+                Object {
+                  "id": 10,
+                  "name": "geometric bug",
+                  "size": "wide",
+                  "src": "thumbs-010.jpg",
+                },
+                Object {
+                  "id": 11,
+                  "name": "you mug",
+                  "size": "small",
+                  "src": "thumbs-011.jpg",
+                },
+                Object {
+                  "id": 12,
+                  "name": "mutant bmx",
+                  "size": "small",
+                  "src": "thumbs-012.jpg",
+                },
+                Object {
+                  "id": 13,
+                  "name": "nf fly",
+                  "size": "tall",
+                  "src": "thumbs-013.jpg",
+                },
+                Object {
+                  "id": 14,
+                  "name": "desert smoker",
+                  "size": "tall",
+                  "src": "thumbs-014.jpg",
+                },
+                Object {
+                  "id": 15,
+                  "name": "geometric butterfly",
+                  "size": "large",
+                  "src": "thumbs-015.jpg",
+                },
+                Object {
+                  "id": 16,
+                  "name": "dylan carlson",
+                  "size": "wide",
+                  "src": "thumbs-016.jpg",
+                },
+                Object {
+                  "id": 17,
+                  "name": "octopsss",
+                  "size": "wide",
+                  "src": "thumbs-017.jpg",
+                },
+                Object {
+                  "id": 18,
+                  "name": "collapse",
+                  "size": "small",
+                  "src": "thumbs-018.jpg",
+                },
+                Object {
+                  "id": 19,
+                  "name": "rat race",
+                  "size": "small",
+                  "src": "thumbs-019.jpg",
+                },
+                Object {
+                  "id": 20,
+                  "name": "papa m house",
+                  "size": "tall",
+                  "src": "thumbs-020.jpg",
                 },
               ]
             }
           />,
+          null,
           <Footer
+            navClick={[Function]}
             navData={
               Array [
                 Object {
+                  "active": false,
                   "id": 0,
                   "name": "gallery",
                 },
                 Object {
+                  "active": false,
                   "id": 1,
                   "name": "contact",
                 },
                 Object {
+                  "active": true,
                   "id": 2,
                   "name": "shop",
                 },
@@ -230,16 +575,20 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "navClick": [Function],
             "navData": Array [
               Object {
+                "active": false,
                 "id": 0,
                 "name": "gallery",
               },
               Object {
+                "active": false,
                 "id": 1,
                 "name": "contact",
               },
               Object {
+                "active": true,
                 "id": 2,
                 "name": "shop",
               },
@@ -252,23 +601,129 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
+            "activeContent": "shop",
             "galleryData": Array [
               Object {
-                "id": 0,
-                "size": "wide",
-                "src": "assets/img/gallery1.jpg",
-              },
-              Object {
                 "id": 1,
-                "size": "wide",
-                "src": "assets/img/gallery1.jpg",
+                "name": "leaf insect",
+                "size": "large",
+                "src": "thumbs-001.jpg",
               },
               Object {
                 "id": 2,
+                "name": "desert eyes",
                 "size": "wide",
-                "src": "assets/img/gallery1.jpg",
+                "src": "thumbs-002.jpg",
+              },
+              Object {
+                "id": 3,
+                "name": "bardo pond",
+                "size": "wide",
+                "src": "thumbs-003.jpg",
+              },
+              Object {
+                "id": 4,
+                "name": "angled pike",
+                "size": "small",
+                "src": "thumbs-004.jpg",
+              },
+              Object {
+                "id": 5,
+                "name": "mission of burma",
+                "size": "small",
+                "src": "thumbs-005.jpg",
+              },
+              Object {
+                "id": 6,
+                "name": "bass overload",
+                "size": "tall",
+                "src": "thumbs-006.jpg",
+              },
+              Object {
+                "id": 7,
+                "name": "folläkzoid",
+                "size": "tall",
+                "src": "thumbs-007.jpg",
+              },
+              Object {
+                "id": 8,
+                "name": "robot workshop",
+                "size": "large",
+                "src": "thumbs-008.jpg",
+              },
+              Object {
+                "id": 9,
+                "name": "angler fish",
+                "size": "wide",
+                "src": "thumbs-009.jpg",
+              },
+              Object {
+                "id": 10,
+                "name": "geometric bug",
+                "size": "wide",
+                "src": "thumbs-010.jpg",
+              },
+              Object {
+                "id": 11,
+                "name": "you mug",
+                "size": "small",
+                "src": "thumbs-011.jpg",
+              },
+              Object {
+                "id": 12,
+                "name": "mutant bmx",
+                "size": "small",
+                "src": "thumbs-012.jpg",
+              },
+              Object {
+                "id": 13,
+                "name": "nf fly",
+                "size": "tall",
+                "src": "thumbs-013.jpg",
+              },
+              Object {
+                "id": 14,
+                "name": "desert smoker",
+                "size": "tall",
+                "src": "thumbs-014.jpg",
+              },
+              Object {
+                "id": 15,
+                "name": "geometric butterfly",
+                "size": "large",
+                "src": "thumbs-015.jpg",
+              },
+              Object {
+                "id": 16,
+                "name": "dylan carlson",
+                "size": "wide",
+                "src": "thumbs-016.jpg",
+              },
+              Object {
+                "id": 17,
+                "name": "octopsss",
+                "size": "wide",
+                "src": "thumbs-017.jpg",
+              },
+              Object {
+                "id": 18,
+                "name": "collapse",
+                "size": "small",
+                "src": "thumbs-018.jpg",
+              },
+              Object {
+                "id": 19,
+                "name": "rat race",
+                "size": "small",
+                "src": "thumbs-019.jpg",
+              },
+              Object {
+                "id": 20,
+                "name": "papa m house",
+                "size": "tall",
+                "src": "thumbs-020.jpg",
               },
             ],
           },
@@ -276,21 +731,26 @@ ShallowWrapper {
           "rendered": null,
           "type": [Function],
         },
+        null,
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "navClick": [Function],
             "navData": Array [
               Object {
+                "active": false,
                 "id": 0,
                 "name": "gallery",
               },
               Object {
+                "active": false,
                 "id": 1,
                 "name": "contact",
               },
               Object {
+                "active": true,
                 "id": 2,
                 "name": "shop",
               },

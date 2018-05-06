@@ -17,10 +17,144 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Shop",
+      "children": Array [
+        <h1>
+          Shop
+        </h1>,
+        <div
+          className="mailer-cta"
+        >
+          <h2>
+            Be the first to know about new items
+          </h2>
+          <div
+            className="mailer-form"
+          >
+            <input
+              onChange={[Function]}
+              placeholder="your email"
+              type="email"
+              value=""
+            />
+            <button
+              onClick={[Function]}
+            >
+              join
+            </button>
+          </div>
+        </div>,
+      ],
     },
     "ref": null,
-    "rendered": "Shop",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Shop",
+        },
+        "ref": null,
+        "rendered": "Shop",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Be the first to know about new items
+            </h2>,
+            <div
+              className="mailer-form"
+            >
+              <input
+                onChange={[Function]}
+                placeholder="your email"
+                type="email"
+                value=""
+              />
+              <button
+                onClick={[Function]}
+              >
+                join
+              </button>
+            </div>,
+          ],
+          "className": "mailer-cta",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Be the first to know about new items",
+            },
+            "ref": null,
+            "rendered": "Be the first to know about new items",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                null,
+                <input
+                  onChange={[Function]}
+                  placeholder="your email"
+                  type="email"
+                  value=""
+                />,
+                <button
+                  onClick={[Function]}
+                >
+                  join
+                </button>,
+              ],
+              "className": "mailer-form",
+            },
+            "ref": null,
+            "rendered": Array [
+              null,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "onChange": [Function],
+                  "placeholder": "your email",
+                  "type": "email",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "join",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "join",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +163,144 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Shop",
+        "children": Array [
+          <h1>
+            Shop
+          </h1>,
+          <div
+            className="mailer-cta"
+          >
+            <h2>
+              Be the first to know about new items
+            </h2>
+            <div
+              className="mailer-form"
+            >
+              <input
+                onChange={[Function]}
+                placeholder="your email"
+                type="email"
+                value=""
+              />
+              <button
+                onClick={[Function]}
+              >
+                join
+              </button>
+            </div>
+          </div>,
+        ],
       },
       "ref": null,
-      "rendered": "Shop",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Shop",
+          },
+          "ref": null,
+          "rendered": "Shop",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                Be the first to know about new items
+              </h2>,
+              <div
+                className="mailer-form"
+              >
+                <input
+                  onChange={[Function]}
+                  placeholder="your email"
+                  type="email"
+                  value=""
+                />
+                <button
+                  onClick={[Function]}
+                >
+                  join
+                </button>
+              </div>,
+            ],
+            "className": "mailer-cta",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Be the first to know about new items",
+              },
+              "ref": null,
+              "rendered": "Be the first to know about new items",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  null,
+                  <input
+                    onChange={[Function]}
+                    placeholder="your email"
+                    type="email"
+                    value=""
+                  />,
+                  <button
+                    onClick={[Function]}
+                  >
+                    join
+                  </button>,
+                ],
+                "className": "mailer-form",
+              },
+              "ref": null,
+              "rendered": Array [
+                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "onChange": [Function],
+                    "placeholder": "your email",
+                    "type": "email",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "join",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "join",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
       "type": "div",
     },
   ],
