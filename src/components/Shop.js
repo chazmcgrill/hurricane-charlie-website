@@ -18,11 +18,20 @@ class Shop extends Component {
     this.mailListSubmit = this.mailListSubmit.bind(this);
   }
 
-  mailListSubmit() {
-    let msg = validateEmail(this.state.email);
-    // post to database
+  async mailListSubmit() {
+    const email = {email: this.state.email};
+    let msg = validateEmail(email.email);
+    
     if (!msg) {
-      console.log(this.state.email);
+      await fetch('http://localhost:5002/mailer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(email)
+      }).then(resp => {
+        if (resp.ok) msg = 'You\'ve been added to the mailing list';
+      })
     }
     this.setState({msg})
   }
