@@ -66,7 +66,7 @@ class Contact extends Component {
     if (isValid) {
       let { data, msgStatus } = this.state;
 
-      await fetch('https://hc-mail.herokuapp.com/mail', {
+      await fetch('http://localhost:5002/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

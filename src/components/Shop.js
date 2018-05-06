@@ -13,7 +13,7 @@ function validateEmail(email) {
 class Shop extends Component {
   constructor() {
     super();
-    this.state = { email: '', msg: null };
+    this.state = { email: 'hello@hello.com', msg: null };
     this.mailListChange = this.mailListChange.bind(this);
     this.mailListSubmit = this.mailListSubmit.bind(this);
   }
@@ -22,7 +22,7 @@ class Shop extends Component {
     let msg = validateEmail(this.state.email);
     // post to database
     if (!msg) {
-      console.log("sending to db");
+      console.log(this.state.email);
     }
     this.setState({msg})
   }
