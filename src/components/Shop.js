@@ -13,15 +13,15 @@ function validateEmail(email) {
 class Shop extends Component {
   constructor() {
     super();
-    this.state = { email: 'hello@hello.com', msg: null };
+    this.state = { email: '', msg: null };
     this.mailListChange = this.mailListChange.bind(this);
     this.mailListSubmit = this.mailListSubmit.bind(this);
   }
 
   async mailListSubmit() {
-    const email = {email: this.state.email};
+    const email = { email: this.state.email };
     let msg = validateEmail(email.email);
-    
+
     if (!msg) {
       await fetch('http://localhost:5002/mailer', {
         method: 'POST',

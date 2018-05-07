@@ -41,7 +41,7 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: { name: 'test', email: 'test@test.com', message: 'testingtesting123' },
+      data: { name: '', email: '', message: '' },
       errMsgs: { name: null, email: null, message: null },
       msgStatus: { msg: null, status: null }
     };
