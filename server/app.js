@@ -53,7 +53,7 @@ app.post('/contact', (req, res) => {
 
 // Mailing List Request Route
 app.post('/mailer', (req, res) => {
-  console.log(req.body)
+  console.log(req.body);
   const output = 'Request to join mailing list \n Email: ' + req.body.email;
 
   // setup email data

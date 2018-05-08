@@ -6,8 +6,10 @@ const GalleryItem = ({ galleryItemData }) => {
     <div 
       className={ itemClass } 
       style={{ backgroundImage: `url('assets/img/thumbs/${galleryItemData.src}')`}}
-      alt={galleryItemData.name }
-    />
+      alt={ galleryItemData.name }
+    >
+      <div className="img-overlay"><p>{galleryItemData.name}</p></div>
+    </div>
   );
 }
 

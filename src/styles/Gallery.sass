@@ -18,8 +18,25 @@
     @media screen and (min-width: 900px)
       grid-template-columns: repeat(8, 1fr)
       grid-template-rows: repeat(5, 1fr)
-
+  
+  .img-overlay
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    opacity: 0
+    text-transform: uppercase
+    background: rgba(0,0,0,0.8)
+    color: white
+    position: absolute
+    left: 0 
+    right: 0
+    top: 0
+    bottom: 0
+    transition: opacity 0.2s ease-in
+  
   .grid-item
+    position: relative
     min-height: 200px
     background-color: coral
     background-size: cover
@@ -34,3 +51,8 @@
 
     &.tall
       grid-row: span 2
+
+    &:hover .img-overlay
+      opacity: 1
+
+
