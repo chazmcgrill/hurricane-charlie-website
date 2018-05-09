@@ -29,9 +29,13 @@ class Shop extends Component {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(email)
-      }).then(resp => {
+      })
+      .then(resp => {
         if (resp.ok) msg = 'You\'ve been added to the mailing list';
       })
+      .catch(err => {
+        msg = 'Something went wrong, please try again.'
+      });
     }
     this.setState({msg})
   }
@@ -45,6 +49,18 @@ class Shop extends Component {
     return (
       <div>
         <h1>Shop</h1>
+        
+        <div className="shop-container">
+          <div>
+            <img src="assets/img/shop/shop01.jpg" alt="shop-test"/>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <img src="assets/img/shop/shop02.jpg" alt="shop-test"/>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <img src="assets/img/shop/shop03.jpg" alt="shop-test"/>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+
         <div className="mailer-cta">
           <h2>Be the first to know about new items</h2>
           <div className="mailer-form">
