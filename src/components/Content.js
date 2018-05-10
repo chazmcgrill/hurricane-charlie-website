@@ -5,16 +5,12 @@ import Shop from './Shop';
 
 class Content extends Component {
   contentSwitch(name) {
-    switch (name) {
-      case 'gallery':
-        return <Gallery galleryData={this.props.galleryData} />;
-      case 'contact':
-        return <Contact />;
-      case 'shop':
-        return <Shop />;
-      default:
-        return null;
-    }
+    const contentMap = {
+      gallery: <Gallery galleryData={this.props.galleryData} />,
+      contact: <Contact />,
+      shop: <Shop />,
+    };
+    return contentMap[name] || null;
   }
   
   render() {
