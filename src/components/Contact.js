@@ -4,7 +4,7 @@ function formValidator(data) {
   const { name, email, message } = data;
   const emailRegx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const nameRegx = /^[a-zA-Z ]/;
-  // const msgRegx = '';
+  const msgRegx = /[^A-Za-z0-9 .'?!,@$#\-_\n\r]/;
   let errors = { name: null, email: null, message: null };
 
   // check name
@@ -24,6 +24,8 @@ function formValidator(data) {
   // check message
   if (message.length < 10) {
     errors.message = "message is too short min length 10 characters";
+  } else if (msgRegx.test(message)) {
+    errors.message = "invalid characters entered"
   }
 
   const isValid = (() => {
@@ -76,16 +78,20 @@ class Contact extends Component {
         if (resp.ok) {
           msgStatus.msg = "message sent, speak to you soon...";
           msgStatus.status = "green";
+          this.setState({
+            data: { name: '', email: '', message: '' },
+            errMsgs, msgStatus
+          });
         }
       }).catch(err => {
         msgStatus.msg = "message failed! please retry.";
         msgStatus.status = "red";
+        this.setState({
+          errMsgs, msgStatus
+        });
       });
 
-      this.setState({ 
-        data: { name: '', email: '', message: '' }, 
-        errMsgs, msgStatus 
-      });
+      
     } else {
       this.setState({ errMsgs });
     }

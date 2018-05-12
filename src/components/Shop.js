@@ -48,16 +48,12 @@ class Shop extends Component {
   render() {
     return (
       <div>
-        <h1>Shop</h1>
         
         <div className="shop-container">
-          <div>
+          <div className="shop-item">
             <img src="assets/img/shop/shop01.jpg" alt="shop-test"/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <img src="assets/img/shop/shop02.jpg" alt="shop-test"/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <img src="assets/img/shop/shop03.jpg" alt="shop-test"/>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Tester title</p>
+            <p><strong>£30.00</strong></p>
           </div>
         </div>
 
