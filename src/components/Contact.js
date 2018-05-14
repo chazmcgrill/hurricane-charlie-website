@@ -66,7 +66,8 @@ class Contact extends Component {
 
     if (isValid) {
       const { data } = this.state;
-      let feedback = {};
+      let { msgStatus } = this.state;
+      
       try {
         const { ok } = await fetch('http://localhost:5002/contact', {
           method: 'POST',
@@ -76,16 +77,15 @@ class Contact extends Component {
           body: JSON.stringify(data),
         });
         if (ok) {
-          feedback = { msg: "message sent, speak to you soon...", state: "green" };
+          msgStatus = { msg: "message sent, speak to you soon...", status: "green" };
         }
       } catch (err) {
-        feedback = { msg: "message failed! please retry.", state: "red" };
+        msgStatus = { msg: "message failed! please retry.", status: "red" };
       }
 
       this.setState({
         data: { name: '', email: '', message: '' },
-        errMsgs,
-        msgStatus: { ...this.state.msgStatus, ...feedback },
+        errMsgs, msgStatus
       });
   
     } else {
