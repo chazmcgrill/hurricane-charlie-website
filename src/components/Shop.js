@@ -51,9 +51,34 @@ class Shop extends Component {
         
         <div className="shop-container">
           <div className="shop-item">
-            <img src="assets/img/shop/shop01.jpg" alt="shop-test"/>
+            <img src="assets/img/shop/shop01.jpg" alt="shop-test1"/>
             <p>Tester title</p>
             <p><strong>£30.00</strong></p>
+          </div>
+          <div className="shop-item">
+            <img src="assets/img/shop/shop02.jpg" alt="shop-test2"/>
+            <p>Tester title</p>
+            <p><strong>£10.00</strong></p>
+          </div>
+          <div className="shop-item">
+            <img src="assets/img/shop/shop03.jpg" alt="shop-test3"/>
+            <p>Tester title</p>
+            <p><strong>£20.00</strong></p>
+          </div>
+          <div className="shop-item">
+            <img src="assets/img/shop/shop04.jpg" alt="shop-test1"/>
+            <p>Tester title</p>
+            <p><strong>£30.00</strong></p>
+          </div>
+          <div className="shop-item">
+            <img src="assets/img/shop/shop05.jpg" alt="shop-test2"/>
+            <p>Tester title</p>
+            <p><strong>£10.00</strong></p>
+          </div>
+          <div className="shop-item">
+            <img src="assets/img/shop/shop06.jpg" alt="shop-test3"/>
+            <p>Tester title</p>
+            <p><strong>£20.00</strong></p>
           </div>
         </div>
 
