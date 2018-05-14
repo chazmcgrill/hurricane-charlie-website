@@ -62,36 +62,32 @@ class Contact extends Component {
 
   async handleSubmit(e) {
     e.preventDefault();
-    const errors = formValidator(this.state.data);
-    const { errMsgs, isValid } = errors;
-    
+    const { errMsgs, isValid } = formValidator(this.state.data);
+
     if (isValid) {
-      let { data, msgStatus } = this.state;
-
-      await fetch('http://localhost:5002/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      }).then(resp => {
-        if (resp.ok) {
-          msgStatus.msg = "message sent, speak to you soon...";
-          msgStatus.status = "green";
-          this.setState({
-            data: { name: '', email: '', message: '' },
-            errMsgs, msgStatus
-          });
-        }
-      }).catch(err => {
-        msgStatus.msg = "message failed! please retry.";
-        msgStatus.status = "red";
-        this.setState({
-          errMsgs, msgStatus
+      const { data } = this.state;
+      let feedback = {};
+      try {
+        const { ok } = await fetch('http://localhost:5002/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
         });
-      });
+        if (ok) {
+          feedback = { msg: "message sent, speak to you soon...", state: "green" };
+        }
+      } catch (err) {
+        feedback = { msg: "message failed! please retry.", state: "red" };
+      }
 
-      
+      this.setState({
+        data: { name: '', email: '', message: '' },
+        errMsgs,
+        msgStatus: { ...this.state.msgStatus, ...feedback },
+      });
+  
     } else {
       this.setState({ errMsgs });
     }
