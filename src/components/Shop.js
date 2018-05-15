@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ShopItem from './ShopItem';
 
 function validateEmail(email) {
   const emailRegx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -9,6 +10,15 @@ function validateEmail(email) {
   }
   return null
 }
+
+const shopItems = [
+  { id: 1, url: "shop01.jpg", title: "Mushroom Lumberjack", price: 10.00, desc: "monochrome screenprint" },
+  { id: 2, url: "shop02.jpg", title: "Patterned Beetle", price: 30.00, desc: "five colour screenprint" },
+  { id: 3, url: "shop03.jpg", title: "Desert Smoker", price: 5.00, desc: "glossy giclee full colour" },
+  { id: 4, url: "shop04.jpg", title: "Robot Workshop", price: 15.00, desc: "art stock giclee" },
+  { id: 5, url: "shop05.jpg", title: "Patterned Butterfly", price: 30.00, desc: "five colour screenprint" },
+  { id: 6, url: "shop06.jpg", title: "Desert Portrait", price: 5.00, desc: "glossy giclee full colour" },
+];
 
 class Shop extends Component {
   constructor() {
@@ -50,36 +60,9 @@ class Shop extends Component {
       <div>
         
         <div className="shop-container">
-          <div className="shop-item">
-            <img src="assets/img/shop/shop01.jpg" alt="shop-test1"/>
-            <p>Tester title</p>
-            <p><strong>£30.00</strong></p>
-          </div>
-          <div className="shop-item">
-            <img src="assets/img/shop/shop02.jpg" alt="shop-test2"/>
-            <p>Tester title</p>
-            <p><strong>£10.00</strong></p>
-          </div>
-          <div className="shop-item">
-            <img src="assets/img/shop/shop03.jpg" alt="shop-test3"/>
-            <p>Tester title</p>
-            <p><strong>£20.00</strong></p>
-          </div>
-          <div className="shop-item">
-            <img src="assets/img/shop/shop04.jpg" alt="shop-test1"/>
-            <p>Tester title</p>
-            <p><strong>£30.00</strong></p>
-          </div>
-          <div className="shop-item">
-            <img src="assets/img/shop/shop05.jpg" alt="shop-test2"/>
-            <p>Tester title</p>
-            <p><strong>£10.00</strong></p>
-          </div>
-          <div className="shop-item">
-            <img src="assets/img/shop/shop06.jpg" alt="shop-test3"/>
-            <p>Tester title</p>
-            <p><strong>£20.00</strong></p>
-          </div>
+          {shopItems.map((itemData) => (
+            <ShopItem key={itemData.id} product={itemData}/>
+          ))}
         </div>
 
         <div className="mailer-cta">
