@@ -41,7 +41,11 @@ class Header extends Component {
     ) : null;
 
     const nav = width > 640 || burgerOpen ? (
-      <Navbar navClick={this.props.navClick} navData={this.props.navData} />
+      <Navbar 
+        navClick={this.props.navClick} 
+        navData={this.props.navData}
+        burgerOpen={burgerOpen}
+      />
     ) : null;
     
     return (
