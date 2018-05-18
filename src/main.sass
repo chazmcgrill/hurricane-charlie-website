@@ -1,3 +1,8 @@
+$domhue: #08D9D6
+$second: #EAEAEA
+$accent: #FF2E63
+$black: #252A34
+  
 html
   font-family: 'Roboto', sans-serif
   font-size: 20px
@@ -10,24 +15,25 @@ body
 
 a
   text-decoration: none
-  color: black
+  color: $black
 
 button
   outline: none
 
-nav li
-  list-style: none
-  text-transform: uppercase
-  font-weight: bold
-  cursor: pointer
-  &:hover
-    color: coral
+nav 
+  li
+    list-style: none
+    text-transform: uppercase
+    font-weight: bold
+    cursor: pointer
+    &:hover
+      color: $accent
 
 @import './styles/Header'
 
 .shop-cta
   height: 200px
-  background: lime
+  background: $domhue
   display: flex
   flex-direction: column
   justify-content: space-around

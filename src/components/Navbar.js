@@ -5,8 +5,8 @@ class Navbar extends Component {
     const { burgerOpen, navData } = this.props;
     const nav = navData.map(item => {
       const navClickedStyle = {
-        borderBottom: item.active && !burgerOpen ? "3px solid coral" : "none",
-        color: item.active && burgerOpen ? "coral" : "black"
+        borderBottom: item.active && !burgerOpen ? "3px solid #FF2E63" : "none",
+        color: item.active && burgerOpen ? "#FF2E63" : "black"
       };
       return (
         <li 

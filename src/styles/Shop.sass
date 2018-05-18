@@ -1,5 +1,5 @@
 .mailer-cta
-  background: lime
+  background: $domhue
   display: flex
   flex-direction: column
   padding: 50px 20px
@@ -33,7 +33,7 @@
   input, button
     background: none
     padding: 10px 20px
-    border: 3px solid black
+    border: 3px solid $black
     font-size: inherit
     outline: none
     
@@ -42,11 +42,11 @@
     &::placeholder
       font-family: serif
       font-style: italic
-      color: black
+      color: $black
 
   button
     cursor: pointer
     transition: color 0.3s ease-in, background 0.3s ease-in
     &:hover
-      background: black
-      color: lime
+      background: $black
+      color: $accent
