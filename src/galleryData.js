@@ -1,3 +1,5 @@
+// large wide wide small small tall tall
+
 const galleryData = [
   { id: 1, name: "leaf insect", src: "thumbs-001.jpg", size: "large" },
   { id: 2, name: "desert eyes", src: "thumbs-002.jpg", size: "wide" },
@@ -19,6 +21,13 @@ const galleryData = [
   { id: 18, name: "collapse", src: "thumbs-018.jpg", size: "small" },
   { id: 19, name: "rat race", src: "thumbs-019.jpg", size: "small" },
   { id: 20, name: "papa m house", src: "thumbs-020.jpg", size: "tall" },
+  { id: 21, name: "mushroom lumberjack", src: "thumbs-021.jpg", size: "tall" },
+  { id: 22, name: "choose life", src: "thumbs-022.jpg", size: "large" },
+  { id: 23, name: "crab man", src: "thumbs-023.jpg", size: "wide" },
+  { id: 24, name: "tree man", src: "thumbs-024.jpg", size: "large" },
+  { id: 25, name: "cosmic tree", src: "thumbs-025.jpg", size: "small" },
+  { id: 26, name: "stump creep", src: "thumbs-026.jpg", size: "small" },
+  { id: 27, name: "tree head", src: "thumbs-027.jpg", size: "wide" },
 ];
 
 export default galleryData;

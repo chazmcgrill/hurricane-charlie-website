@@ -18,7 +18,6 @@ class Footer extends Component {
           ))}
         </div>
         <p>&copy; 2018 Charlie Taylor all rights reserved.</p>
-        test
       </footer>
     )
   }
