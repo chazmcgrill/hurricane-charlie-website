@@ -9,9 +9,9 @@ class Site extends Component {
     super()
     this.state = { 
       navData: [
-        { id: 0, name: 'gallery', active: false }, 
+        { id: 0, name: 'gallery', active: true }, 
         { id: 1, name: 'contact', active: false }, 
-        { id: 2, name: 'shop', active: true }
+        { id: 2, name: 'shop', active: false }
       ] 
     };
     this.navHandler = this.navHandler.bind(this);
@@ -28,7 +28,9 @@ class Site extends Component {
     const activeName = this.state.navData.filter(n => n.active)[0].name;
     const callToAction = activeName === "shop" ? null : (
       <div className="shop-cta">
-        <h1 id="shop" onClick={this.navHandler} >artwork you can buy</h1>
+        <div class="shop-btn">
+          <h1 id="shop" onClick={this.navHandler} >artwork you can buy</h1>
+        </div>
       </div>
     );
 

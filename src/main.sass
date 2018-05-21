@@ -37,8 +37,15 @@ nav
   display: flex
   flex-direction: column
   justify-content: space-around
+.shop-btn
   text-align: center
-
+  cursor: pointer
+  display: block
+  padding: 5px 10px
+  color: $black
+  &:hover
+    color: darken($domhue, 20%)
+    
 @import './styles/Gallery'
 @import './styles/Contact'
 @import './styles/Shop'
