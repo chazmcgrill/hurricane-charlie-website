@@ -69,7 +69,7 @@ class Contact extends Component {
       let { msgStatus } = this.state;
       
       try {
-        const { ok } = await fetch('http://localhost:5002/contact', {
+        const { ok } = await fetch(process.env.CONTACT, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
