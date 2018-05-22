@@ -32,20 +32,36 @@ nav
 @import './styles/Header'
 
 .shop-cta
-  background: url('./assets/img/hero.jpg')
+  position: relative
+  background-image: url('./assets/img/hero.jpg')
+  background-repeat: no-repeat
+  background-size: cover
   height: 200px
-  // background: $domhue
   display: flex
   flex-direction: column
   justify-content: space-around
+
+  &:after
+    content: ''
+    background-color: $domhue
+    opacity: 0.7
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    position: absolute
+    z-index: 1
+
 .shop-btn
   text-align: center
   cursor: pointer
+  font-weight: 100
   display: block
   padding: 5px 10px
-  color: $black
+  color: white
+  z-index: 2
   &:hover
-    color: darken($domhue, 20%)
+    color: darken(white, 5%)
     
 @import './styles/Gallery'
 @import './styles/Contact'
