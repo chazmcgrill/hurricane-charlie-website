@@ -33,7 +33,7 @@ class Shop extends Component {
     let msg = validateEmail(email.email);
 
     if (!msg) {
-      await fetch('http://localhost:5002/mailer', {
+      await fetch(process.env.MAILER_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

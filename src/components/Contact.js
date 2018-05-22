@@ -69,7 +69,7 @@ class Contact extends Component {
       let { msgStatus } = this.state;
       
       try {
-        const { ok } = await fetch(process.env.CONTACT, {
+        const { ok } = await fetch(process.env.CONTACT_URL, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
