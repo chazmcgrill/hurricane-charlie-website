@@ -14,10 +14,10 @@ function validateEmail(email) {
 const shopItems = [
   { id: 1, url: "shop01.jpg", title: "Mushroom Lumberjack", price: 9.95, desc: "monochrome screenprint" },
   { id: 2, url: "shop02.jpg", title: "Patterned Beetle", price: 22.50, desc: "five colour screenprint" },
-  { id: 3, url: "shop03.jpg", title: "Desert Smoker", price: 3.50, desc: "glossy giclee full colour" },
-  { id: 4, url: "shop04.jpg", title: "Robot Workshop", price: 9.70, desc: "art stock giclee" },
+  { id: 3, url: "shop03.jpg", title: "Desert Smoker", price: 3.95, desc: "glossy giclee full colour" },
+  { id: 4, url: "shop04.jpg", title: "Robot Workshop", price: 12.95, desc: "art stock giclee" },
   { id: 5, url: "shop05.jpg", title: "Patterned Butterfly", price: 22.50, desc: "five colour screenprint" },
-  { id: 6, url: "shop06.jpg", title: "Desert Portrait", price: 5.50, desc: "glossy giclee full colour" },
+  { id: 6, url: "shop06.jpg", title: "Desert Portrait", price: 3.95, desc: "glossy giclee full colour" },
 ];
 
 class Shop extends Component {
