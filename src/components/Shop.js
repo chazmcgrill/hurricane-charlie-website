@@ -56,25 +56,26 @@ class Shop extends Component {
   }
 
   render() {
+    const statusMsg = this.state.msg ? <p>{ this.state.msg }</p> : null;
     return (
       <div>
         
         <div className="shop-container">
           {shopItems.map((itemData) => (
-            <ShopItem key={itemData.id} product={itemData}/>
+            <ShopItem key={ itemData.id } product={ itemData }/>
           ))}
         </div>
 
         <div className="mailer-cta">
           <h2>Be the first to know about new items</h2>
           <div className="mailer-form">
-            { this.state.msg ? <p>{this.state.msg}</p> : null }
+            { statusMsg }
             <input 
-              value={this.state.email} 
-              onChange={this.mailListChange} 
+              value={ this.state.email } 
+              onChange={ this.mailListChange } 
               type="email" placeholder="your email" 
             />
-            <button onClick={this.mailListSubmit}>join</button>
+            <button onClick={ this.mailListSubmit }>join</button>
           </div>
         </div>
 
@@ -82,5 +83,8 @@ class Shop extends Component {
     );
   }
 }
+
+
+
 
 export default Shop;
