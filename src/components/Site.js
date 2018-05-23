@@ -28,8 +28,12 @@ class Site extends Component {
     const activeName = this.state.navData.filter(n => n.active)[0].name;
     const callToAction = activeName === "shop" ? null : (
       <div className="shop-cta">
-        <div className="shop-btn">
-          <h1 id="shop" onClick={this.navHandler} >artwork you can buy</h1>
+        <div className="shop-cta-overlay"></div>
+        <div className="shop-cta-box">
+          <h2>I have artwork for sale</h2>
+          <button id="shop" onClick={this.navHandler} className="shop-btn">
+            visit shop
+          </button>
         </div>
       </div>
     );

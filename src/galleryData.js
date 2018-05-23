@@ -6,7 +6,7 @@ const galleryData = [
   { id: 3, name: "bardo pond", src: "thumbs-003.jpg", size: "wide" },
   { id: 4, name: "angled pike", src: "thumbs-004.jpg", size: "small" },
   { id: 5, name: "mission of burma", src: "thumbs-005.jpg", size: "small" },
-  { id: 21, name: "mushroom lumberjack", src: "thumbs-021.jpg", size: "tall" },
+  { id: 21, name: "mushroomjack", src: "thumbs-021.jpg", size: "tall" },
   { id: 7, name: "folläkzoid", src: "thumbs-007.jpg", size: "tall" },
   { id: 15, name: "geometric butterfly", src: "thumbs-015.jpg", size: "large" },
   { id: 9, name: "angler fish", src: "thumbs-009.jpg", size: "wide" },
