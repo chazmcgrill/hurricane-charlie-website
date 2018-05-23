@@ -1,11 +1,11 @@
 .gallery
-  padding: 0.3em
+  padding: 0.5em
 
   .gallery-grid
     display: grid
     grid-template-columns: repeat(2, 1fr)
     grid-template-rows: repeat(10, 1fr)
-    grid-gap: 0.3em
+    grid-gap: 0.5em
 
     @media screen and (min-width: 480px)
       grid-template-columns: repeat(4, 1fr)
@@ -20,8 +20,8 @@
       grid-template-rows: repeat(5, 1fr)
   
   .img-overlay
-    letter-spacing: 1.5px
-    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px
+    font-family: 'Open Sans', sans-serif
     font-size: 5px
     display: flex
     flex-direction: column
@@ -44,6 +44,7 @@
     background-color: $accent
     background-size: cover
     background-position: center
+    transition: 0.3s ease-in-out, transform 0.3s ease-in-out
 
     &.large
       grid-column: span 2
@@ -55,8 +56,14 @@
     &.tall
       grid-row: span 2
 
-    &:hover .img-overlay
-      opacity: 1
-      font-size: 14px
+    &:hover 
+      transform: scale(1.01)
+      border-radius: 0.5em
+      
+      .img-overlay
+        opacity: 1
+        font-size: 14px
+        border-radius: 0.5em
+
 
 

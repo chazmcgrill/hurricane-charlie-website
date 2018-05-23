@@ -2,6 +2,8 @@ $domhue: #08D9D6
 $second: #EAEAEA
 $accent: #FF2E63
 $black: #252A34
+
+@import url('https://fonts.googleapis.com/css?family=Roboto|Lato:300')
   
 html
   font-family: 'Roboto', sans-serif
@@ -32,6 +34,9 @@ nav
 @import './styles/Header'
 
 .shop-cta
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+  letter-spacing: 1px
   position: relative
   background-image: url('./assets/img/hero.jpg')
   background-repeat: no-repeat
@@ -40,6 +45,9 @@ nav
   display: flex
   flex-direction: column
   justify-content: space-around
+
+  @media screen and (min-width: 640px)
+    height: 300px
 
   &:after
     content: ''
@@ -55,10 +63,9 @@ nav
 .shop-btn
   text-align: center
   cursor: pointer
-  font-weight: 100
   display: block
   padding: 5px 10px
-  color: white
+  color: $black
   z-index: 2
   &:hover
     color: darken(white, 5%)
