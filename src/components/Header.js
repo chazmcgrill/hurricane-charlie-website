@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import logo from '../assets/img/hclogo.png';
 import Navbar from './Navbar';
 
 class Header extends Component {
@@ -50,7 +51,7 @@ class Header extends Component {
     
     return (
       <header>
-        <img src="assets/img/hclogo.png" alt="Hurricane Charlie Logo" />
+        <img src={logo} alt="Hurricane Charlie Logo" />
         {nav}
         {burger}
       </header>
