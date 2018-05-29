@@ -1,13 +1,3 @@
-.mailer-cta
-  background: $domhue
-  display: flex
-  flex-direction: column
-  padding: 50px 20px
-  text-align: center
-
-  h2
-    margin: 0 20px 10px
-
 .shop-container
   padding: 10px
   display: grid
@@ -47,8 +37,19 @@
     left: 50%
     transform: translate(-50%, -50%)
 
+.mailer-cta
+  background: $domhue
+  display: flex
+  flex-direction: column
+  padding: 50px 20px
+  text-align: center
+
+  h2
+    margin: 0 20px 10px
+
 .mailer-form
   input, button
+    max-width: 300px
     background: none
     padding: 10px 20px
     border: 3px solid $black
@@ -56,10 +57,12 @@
     outline: none
     
   input
-    margin-right: 20px
+    margin: 0 0 10px
     &::placeholder
       font-family: 'Lora', serif
       color: $black
+    @media screen and (min-width: 480px)
+      margin: 0 20px 0 0
 
   button
     cursor: pointer
