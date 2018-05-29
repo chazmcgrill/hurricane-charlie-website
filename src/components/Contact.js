@@ -60,6 +60,10 @@ class Contact extends Component {
     });
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   async handleSubmit(e) {
     e.preventDefault();
     const { errMsgs, isValid } = formValidator(this.state.data);

@@ -50,6 +50,10 @@ class Shop extends Component {
     this.setState({msg})
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   mailListChange(e) {
     const email = e.target.value; 
     this.setState({ email })

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import GalleryItem from './GalleryItem';
 
 class Gallery extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     const gallery = this.props.galleryData ? (
       this.props.galleryData.map(item => (
