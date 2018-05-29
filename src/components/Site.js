@@ -30,7 +30,7 @@ class Site extends Component {
       <div className="shop-cta">
         <div className="shop-cta-overlay"></div>
         <div className="shop-cta-box">
-          <h2>I have artwork for sale</h2>
+          <h2>Prints for your wall...</h2>
           <button id="shop" onClick={this.navHandler} className="shop-btn">
             visit shop
           </button>
