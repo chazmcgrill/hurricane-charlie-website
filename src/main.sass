@@ -3,17 +3,25 @@ $second: #EAEAEA
 $accent: #FF2E63
 $black: #252A34
 
-@import url('https://fonts.googleapis.com/css?family=Roboto|Lora:400i')
-  
-html
-  font-family: 'Roboto', sans-serif
-  font-size: 20px
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Lora:400i')
 
-  @media screen and (min-width: 640px)
-    font-size: 16px
+*
+  -webkit-font-smoothing: antialiased
+  -webkit-text-size-adjust: 100%
 
 body
+  font-family: 'Roboto', sans-serif
+  font-style: normal
+  font-weight: 400
+  font-size: 20px
   margin: 0
+
+  @media screen and (min-width: 640px)
+    font-size: 15px
+
+h1,h2,h3,h4,h5,h6,strong
+  font-size: 1.3em
+  font-weight: 500
 
 a
   text-decoration: none
@@ -26,7 +34,7 @@ nav
   li
     list-style: none
     text-transform: uppercase
-    font-weight: bold
+    font-weight: 500
     cursor: pointer
     &:hover
       color: $accent
@@ -61,6 +69,7 @@ nav
     padding: 30px
 
     h2
+      font-weight: normal
       margin: 0 0 15px
 
     button
