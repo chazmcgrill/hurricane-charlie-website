@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import Header from './Header';
 import Content from './Content';
 import Footer from './Footer';
@@ -9,9 +12,9 @@ class Site extends Component {
     super()
     this.state = { 
       navData: [
-        { id: 0, name: 'gallery', active: true }, 
-        { id: 1, name: 'contact', active: false }, 
-        { id: 2, name: 'shop', active: false }
+        { id: 0, name: 'gallery', url: '/', active: true }, 
+        { id: 1, name: 'contact', url: 'contact', active: false }, 
+        { id: 2, name: 'shop', url: 'shop', active: false }
       ] 
     };
     this.navHandler = this.navHandler.bind(this);
@@ -39,21 +42,23 @@ class Site extends Component {
     );
   
     return (
+      <BrowserRouter>
       <div>
-        <Header 
-          navClick={this.navHandler} 
-          navData={this.state.navData} 
-        />
-        <Content 
-          galleryData={galleryData}
-          activeContent={activeName} 
-        />
-        {callToAction}
-        <Footer 
-          navClick={this.navHandler} 
-          navData={this.state.navData} 
-        />
+          <Header 
+            navClick={this.navHandler} 
+            navData={this.state.navData} 
+          />
+          <Content 
+            galleryData={galleryData}
+            activeContent={activeName} 
+          />
+          {callToAction}
+          <Footer 
+            navClick={this.navHandler} 
+            navData={this.state.navData} 
+          />
       </div>
+      </BrowserRouter>
     );
   }
 }

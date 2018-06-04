@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
@@ -9,13 +10,16 @@ class Navbar extends Component {
         color: item.active && burgerOpen ? "#FF2E63" : "black"
       };
       return (
-        <li 
-          id={item.name} key={item.id} 
-          onClick={this.props.navClick} 
-          style={navClickedStyle} 
-        >{item.name}</li>
+        // <li 
+        //   id={item.name} key={item.id} 
+        //   onClick={this.props.navClick} 
+        //   style={navClickedStyle} 
+        // >{item.name}</li>
+        <NavLink key={item.id} to={item.url}>{item.name}</NavLink>
       );
     });
+
+    // <NavLink to="/">Home</NavLink>
   
     return(
       <nav>
