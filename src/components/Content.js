@@ -4,41 +4,20 @@ import Gallery from './Gallery';
 import Contact from './Contact';
 import Shop from './Shop';
 
-class Content extends Component {
-  // contentSwitch(name) {
-  //   const contentMap = {
-  //     gallery: <Gallery galleryData={this.props.galleryData} />,
-  //     contact: <Contact />,
-  //     shop: <Shop />,
-  //   };
-  //   return contentMap[name] || null;
-  // }
-
-  // render() {
-  //   return (
-  //     <section className="content-section">
-  //       {this.contentSwitch(this.props.activeContent)}
-  //     </section>
-  //   )
-  // }
-
-  render() {
-    return (
-      <section className="content-section">
-        {/* <BrowserRouter> */}
-          <Switch>
-            <Route 
-              path="/" 
-              render={() => <Gallery galleryData={this.props.galleryData}/>}
-              exact 
-            />
-            <Route path="/contact" component={Contact} />
-            <Route path="/shop" component={Shop} />
-          </Switch>
-        {/* </BrowserRouter> */}
-      </section>
-    )
-  }
+const Content = ({ galleryData }) => {
+  return (
+    <section className="content-section">
+      <Switch>
+        <Route
+          path="/"
+          render={() => <Gallery galleryData={galleryData} />}
+          exact
+        />
+        <Route path="/contact" component={Contact} />
+        <Route path="/shop" component={Shop} />
+      </Switch>
+    </section>
+  );
 }
 
 export default Content;
