@@ -13,8 +13,8 @@ class Site extends Component {
     this.state = { 
       navData: [
         { id: 0, name: 'gallery', url: '/', active: true }, 
-        { id: 1, name: 'contact', url: 'contact', active: false }, 
-        { id: 2, name: 'shop', url: 'shop', active: false }
+        { id: 1, name: 'contact', url: '/contact', active: false }, 
+        { id: 2, name: 'shop', url: '/shop', active: false }
       ] 
     };
     this.navHandler = this.navHandler.bind(this);
