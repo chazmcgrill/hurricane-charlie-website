@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ShopItem from './ShopItem';
+import shopItems from '../globals/shopItems';
 
 function validateEmail(email) {
   const emailRegx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -10,15 +11,6 @@ function validateEmail(email) {
   }
   return null
 }
-
-const shopItems = [
-  { id: 1, url: "shop01.jpg", title: "Mushroom Lumberjack", price: 9.95, desc: "monochrome screenprint", soldOut: false, shopUrl: "mushroomjack" },
-  { id: 2, url: "shop02.jpg", title: "Patterned Beetle", price: 22.50, desc: "five colour screenprint", soldOut: false, shopUrl: "patterned-beetle" },
-  { id: 3, url: "shop03.jpg", title: "Desert Smoker", price: 3.95, desc: "glossy giclee full colour", soldOut: false, shopUrl: "desert-smoker" },
-  { id: 4, url: "shop04.jpg", title: "Robot Workshop", price: 12.95, desc: "art stock giclee", soldOut: false, shopUrl: "robot-workshop" },
-  { id: 5, url: "shop05.jpg", title: "Patterned Butterfly", price: 22.50, desc: "five colour screenprint", soldOut: false, shopUrl: "patterned-butterfly" },
-  { id: 6, url: "shop06.jpg", title: "Desert Portrait", price: 3.95, desc: "glossy giclee full colour", soldOut: true, shopUrl: "desert-portrait" },
-];
 
 class Shop extends Component {
   constructor() {
@@ -87,8 +79,5 @@ class Shop extends Component {
     );
   }
 }
-
-
-
 
 export default Shop;
