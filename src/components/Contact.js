@@ -71,21 +71,21 @@ class Contact extends Component {
             <h2>say hello...</h2>
             <form>
               {msgStatus.msg ? <p style={{ color: msgStatus.status }}>{ msgStatus.msg }</p> : null}
-              {errMsgs.name ? <p>{errMsgs.name}</p> : null}
+              {errMsgs.name ? <p className="err-msg">{errMsgs.name}</p> : null}
               <input 
                 name="name"
                 value={name} 
                 placeholder="your name" 
                 onChange={this.handleInput} 
               />
-              {errMsgs.email ? <p>{errMsgs.email}</p> : null}
+              {errMsgs.email ? <p className="err-msg">{errMsgs.email}</p> : null}
               <input 
                 name="email"
                 value={email} 
                 placeholder="your email" 
                 onChange={this.handleInput} 
               />
-              {errMsgs.message ? <p>{errMsgs.message}</p> : null}
+              {errMsgs.message ? <p className="err-msg">{errMsgs.message}</p> : null}
               <textarea 
                 name="message"
                 value={message}

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const activeNav = { borderBottom: "3px solid #FF2E63" };
 
-const Navbar = ({ burgerOpen, navData }) => {
+const Navbar = ({ navData }) => {
   return (
     <nav>
       {navData.map(item => (
