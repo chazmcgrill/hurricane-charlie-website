@@ -106,7 +106,7 @@ class Contact extends Component {
               <p>You can find me on these social platforms:</p>
               <ul>
                 {socialItems.map(s => (
-                  <li>
+                  <li key={s.id}>
                     <a target="_blank" href={s.url}>
                       <i className={`fa fa-${s.name}`}></i>{s.name}
                     </a>
