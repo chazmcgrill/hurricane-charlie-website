@@ -17,10 +17,797 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Form",
+      "children": Array [
+        <div
+          className="contact-box"
+        >
+          <div
+            className="contact-item"
+          >
+            <h2>
+              say hello...
+            </h2>
+            <form>
+              <input
+                name="name"
+                onChange={[Function]}
+                placeholder="your name"
+                value=""
+              />
+              <input
+                name="email"
+                onChange={[Function]}
+                placeholder="your email"
+                value=""
+              />
+              <textarea
+                cols="30"
+                name="message"
+                onChange={[Function]}
+                placeholder="type your message here..."
+                rows="10"
+                value=""
+              />
+              <button
+                onClick={[Function]}
+              >
+                send
+              </button>
+            </form>
+          </div>
+          <div
+            className="contact-item contact-text"
+          >
+            <div>
+              <p>
+                Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.
+              </p>
+              <h2>
+                social
+              </h2>
+              <p>
+                You can find me on these social platforms:
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="http://www.instagram.com/hurricane.charlie"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-instagram"
+                    />
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://twitter.com/hurricanechaz"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-twitter"
+                    />
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="http://www.behance.net/chazhurricane"
+                    target="_blank"
+                  >
+                    <i
+                      className="fa fa-behance"
+                    />
+                    Behance
+                  </a>
+                </li>
+              </ul>
+              <h2>
+                coding
+              </h2>
+              <p>
+                I designed and coded this website. For more information please visit my web development portfolio 
+                <a
+                  href="http://charlietaylorcoder.com"
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>,
+        <CallToAction />,
+      ],
     },
     "ref": null,
-    "rendered": "Form",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="contact-item"
+            >
+              <h2>
+                say hello...
+              </h2>
+              <form>
+                <input
+                  name="name"
+                  onChange={[Function]}
+                  placeholder="your name"
+                  value=""
+                />
+                <input
+                  name="email"
+                  onChange={[Function]}
+                  placeholder="your email"
+                  value=""
+                />
+                <textarea
+                  cols="30"
+                  name="message"
+                  onChange={[Function]}
+                  placeholder="type your message here..."
+                  rows="10"
+                  value=""
+                />
+                <button
+                  onClick={[Function]}
+                >
+                  send
+                </button>
+              </form>
+            </div>,
+            <div
+              className="contact-item contact-text"
+            >
+              <div>
+                <p>
+                  Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.
+                </p>
+                <h2>
+                  social
+                </h2>
+                <p>
+                  You can find me on these social platforms:
+                </p>
+                <ul>
+                  <li>
+                    <a
+                      href="http://www.instagram.com/hurricane.charlie"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-instagram"
+                      />
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://twitter.com/hurricanechaz"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-twitter"
+                      />
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.behance.net/chazhurricane"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-behance"
+                      />
+                      Behance
+                    </a>
+                  </li>
+                </ul>
+                <h2>
+                  coding
+                </h2>
+                <p>
+                  I designed and coded this website. For more information please visit my web development portfolio 
+                  <a
+                    href="http://charlietaylorcoder.com"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                </p>
+              </div>
+            </div>,
+          ],
+          "className": "contact-box",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2>
+                  say hello...
+                </h2>,
+                <form>
+                  <input
+                    name="name"
+                    onChange={[Function]}
+                    placeholder="your name"
+                    value=""
+                  />
+                  <input
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="your email"
+                    value=""
+                  />
+                  <textarea
+                    cols="30"
+                    name="message"
+                    onChange={[Function]}
+                    placeholder="type your message here..."
+                    rows="10"
+                    value=""
+                  />
+                  <button
+                    onClick={[Function]}
+                  >
+                    send
+                  </button>
+                </form>,
+              ],
+              "className": "contact-item",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "say hello...",
+                },
+                "ref": null,
+                "rendered": "say hello...",
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    null,
+                    null,
+                    <input
+                      name="name"
+                      onChange={[Function]}
+                      placeholder="your name"
+                      value=""
+                    />,
+                    null,
+                    <input
+                      name="email"
+                      onChange={[Function]}
+                      placeholder="your email"
+                      value=""
+                    />,
+                    null,
+                    <textarea
+                      cols="30"
+                      name="message"
+                      onChange={[Function]}
+                      placeholder="type your message here..."
+                      rows="10"
+                      value=""
+                    />,
+                    <button
+                      onClick={[Function]}
+                    >
+                      send
+                    </button>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  null,
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "name",
+                      "onChange": [Function],
+                      "placeholder": "your name",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "name": "email",
+                      "onChange": [Function],
+                      "placeholder": "your email",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                  null,
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "cols": "30",
+                      "name": "message",
+                      "onChange": [Function],
+                      "placeholder": "type your message here...",
+                      "rows": "10",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "textarea",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "send",
+                      "onClick": [Function],
+                    },
+                    "ref": null,
+                    "rendered": "send",
+                    "type": "button",
+                  },
+                ],
+                "type": "form",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <div>
+                <p>
+                  Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.
+                </p>
+                <h2>
+                  social
+                </h2>
+                <p>
+                  You can find me on these social platforms:
+                </p>
+                <ul>
+                  <li>
+                    <a
+                      href="http://www.instagram.com/hurricane.charlie"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-instagram"
+                      />
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://twitter.com/hurricanechaz"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-twitter"
+                      />
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.behance.net/chazhurricane"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-behance"
+                      />
+                      Behance
+                    </a>
+                  </li>
+                </ul>
+                <h2>
+                  coding
+                </h2>
+                <p>
+                  I designed and coded this website. For more information please visit my web development portfolio 
+                  <a
+                    href="http://charlietaylorcoder.com"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                </p>
+              </div>,
+              "className": "contact-item contact-text",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.
+                  </p>,
+                  <h2>
+                    social
+                  </h2>,
+                  <p>
+                    You can find me on these social platforms:
+                  </p>,
+                  <ul>
+                    <li>
+                      <a
+                        href="http://www.instagram.com/hurricane.charlie"
+                        target="_blank"
+                      >
+                        <i
+                          className="fa fa-instagram"
+                        />
+                        Instagram
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="http://twitter.com/hurricanechaz"
+                        target="_blank"
+                      >
+                        <i
+                          className="fa fa-twitter"
+                        />
+                        Twitter
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.behance.net/chazhurricane"
+                        target="_blank"
+                      >
+                        <i
+                          className="fa fa-behance"
+                        />
+                        Behance
+                      </a>
+                    </li>
+                  </ul>,
+                  <h2>
+                    coding
+                  </h2>,
+                  <p>
+                    I designed and coded this website. For more information please visit my web development portfolio 
+                    <a
+                      href="http://charlietaylorcoder.com"
+                      target="_blank"
+                    >
+                      here
+                    </a>
+                  </p>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.",
+                  },
+                  "ref": null,
+                  "rendered": "Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "social",
+                  },
+                  "ref": null,
+                  "rendered": "social",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "You can find me on these social platforms:",
+                  },
+                  "ref": null,
+                  "rendered": "You can find me on these social platforms:",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        <a
+                          href="http://www.instagram.com/hurricane.charlie"
+                          target="_blank"
+                        >
+                          <i
+                            className="fa fa-instagram"
+                          />
+                          Instagram
+                        </a>
+                      </li>,
+                      <li>
+                        <a
+                          href="http://twitter.com/hurricanechaz"
+                          target="_blank"
+                        >
+                          <i
+                            className="fa fa-twitter"
+                          />
+                          Twitter
+                        </a>
+                      </li>,
+                      <li>
+                        <a
+                          href="http://www.behance.net/chazhurricane"
+                          target="_blank"
+                        >
+                          <i
+                            className="fa fa-behance"
+                          />
+                          Behance
+                        </a>
+                      </li>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="http://www.instagram.com/hurricane.charlie"
+                          target="_blank"
+                        >
+                          <i
+                            className="fa fa-instagram"
+                          />
+                          Instagram
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <i
+                              className="fa fa-instagram"
+                            />,
+                            "Instagram",
+                          ],
+                          "href": "http://www.instagram.com/hurricane.charlie",
+                          "target": "_blank",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "className": "fa fa-instagram",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "i",
+                          },
+                          "Instagram",
+                        ],
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="http://twitter.com/hurricanechaz"
+                          target="_blank"
+                        >
+                          <i
+                            className="fa fa-twitter"
+                          />
+                          Twitter
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <i
+                              className="fa fa-twitter"
+                            />,
+                            "Twitter",
+                          ],
+                          "href": "http://twitter.com/hurricanechaz",
+                          "target": "_blank",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "className": "fa fa-twitter",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "i",
+                          },
+                          "Twitter",
+                        ],
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="http://www.behance.net/chazhurricane"
+                          target="_blank"
+                        >
+                          <i
+                            className="fa fa-behance"
+                          />
+                          Behance
+                        </a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            <i
+                              className="fa fa-behance"
+                            />,
+                            "Behance",
+                          ],
+                          "href": "http://www.behance.net/chazhurricane",
+                          "target": "_blank",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "className": "fa fa-behance",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "i",
+                          },
+                          "Behance",
+                        ],
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                  ],
+                  "type": "ul",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "coding",
+                  },
+                  "ref": null,
+                  "rendered": "coding",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "I designed and coded this website. For more information please visit my web development portfolio ",
+                      <a
+                        href="http://charlietaylorcoder.com"
+                        target="_blank"
+                      >
+                        here
+                      </a>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "I designed and coded this website. For more information please visit my web development portfolio ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "here",
+                        "href": "http://charlietaylorcoder.com",
+                        "target": "_blank",
+                      },
+                      "ref": null,
+                      "rendered": "here",
+                      "type": "a",
+                    },
+                  ],
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +816,797 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Form",
+        "children": Array [
+          <div
+            className="contact-box"
+          >
+            <div
+              className="contact-item"
+            >
+              <h2>
+                say hello...
+              </h2>
+              <form>
+                <input
+                  name="name"
+                  onChange={[Function]}
+                  placeholder="your name"
+                  value=""
+                />
+                <input
+                  name="email"
+                  onChange={[Function]}
+                  placeholder="your email"
+                  value=""
+                />
+                <textarea
+                  cols="30"
+                  name="message"
+                  onChange={[Function]}
+                  placeholder="type your message here..."
+                  rows="10"
+                  value=""
+                />
+                <button
+                  onClick={[Function]}
+                >
+                  send
+                </button>
+              </form>
+            </div>
+            <div
+              className="contact-item contact-text"
+            >
+              <div>
+                <p>
+                  Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.
+                </p>
+                <h2>
+                  social
+                </h2>
+                <p>
+                  You can find me on these social platforms:
+                </p>
+                <ul>
+                  <li>
+                    <a
+                      href="http://www.instagram.com/hurricane.charlie"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-instagram"
+                      />
+                      Instagram
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://twitter.com/hurricanechaz"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-twitter"
+                      />
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.behance.net/chazhurricane"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-behance"
+                      />
+                      Behance
+                    </a>
+                  </li>
+                </ul>
+                <h2>
+                  coding
+                </h2>
+                <p>
+                  I designed and coded this website. For more information please visit my web development portfolio 
+                  <a
+                    href="http://charlietaylorcoder.com"
+                    target="_blank"
+                  >
+                    here
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>,
+          <CallToAction />,
+        ],
       },
       "ref": null,
-      "rendered": "Form",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="contact-item"
+              >
+                <h2>
+                  say hello...
+                </h2>
+                <form>
+                  <input
+                    name="name"
+                    onChange={[Function]}
+                    placeholder="your name"
+                    value=""
+                  />
+                  <input
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="your email"
+                    value=""
+                  />
+                  <textarea
+                    cols="30"
+                    name="message"
+                    onChange={[Function]}
+                    placeholder="type your message here..."
+                    rows="10"
+                    value=""
+                  />
+                  <button
+                    onClick={[Function]}
+                  >
+                    send
+                  </button>
+                </form>
+              </div>,
+              <div
+                className="contact-item contact-text"
+              >
+                <div>
+                  <p>
+                    Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.
+                  </p>
+                  <h2>
+                    social
+                  </h2>
+                  <p>
+                    You can find me on these social platforms:
+                  </p>
+                  <ul>
+                    <li>
+                      <a
+                        href="http://www.instagram.com/hurricane.charlie"
+                        target="_blank"
+                      >
+                        <i
+                          className="fa fa-instagram"
+                        />
+                        Instagram
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="http://twitter.com/hurricanechaz"
+                        target="_blank"
+                      >
+                        <i
+                          className="fa fa-twitter"
+                        />
+                        Twitter
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.behance.net/chazhurricane"
+                        target="_blank"
+                      >
+                        <i
+                          className="fa fa-behance"
+                        />
+                        Behance
+                      </a>
+                    </li>
+                  </ul>
+                  <h2>
+                    coding
+                  </h2>
+                  <p>
+                    I designed and coded this website. For more information please visit my web development portfolio 
+                    <a
+                      href="http://charlietaylorcoder.com"
+                      target="_blank"
+                    >
+                      here
+                    </a>
+                  </p>
+                </div>
+              </div>,
+            ],
+            "className": "contact-box",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h2>
+                    say hello...
+                  </h2>,
+                  <form>
+                    <input
+                      name="name"
+                      onChange={[Function]}
+                      placeholder="your name"
+                      value=""
+                    />
+                    <input
+                      name="email"
+                      onChange={[Function]}
+                      placeholder="your email"
+                      value=""
+                    />
+                    <textarea
+                      cols="30"
+                      name="message"
+                      onChange={[Function]}
+                      placeholder="type your message here..."
+                      rows="10"
+                      value=""
+                    />
+                    <button
+                      onClick={[Function]}
+                    >
+                      send
+                    </button>
+                  </form>,
+                ],
+                "className": "contact-item",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "say hello...",
+                  },
+                  "ref": null,
+                  "rendered": "say hello...",
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      null,
+                      null,
+                      <input
+                        name="name"
+                        onChange={[Function]}
+                        placeholder="your name"
+                        value=""
+                      />,
+                      null,
+                      <input
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="your email"
+                        value=""
+                      />,
+                      null,
+                      <textarea
+                        cols="30"
+                        name="message"
+                        onChange={[Function]}
+                        placeholder="type your message here..."
+                        rows="10"
+                        value=""
+                      />,
+                      <button
+                        onClick={[Function]}
+                      >
+                        send
+                      </button>,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    null,
+                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "name": "name",
+                        "onChange": [Function],
+                        "placeholder": "your name",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "name": "email",
+                        "onChange": [Function],
+                        "placeholder": "your email",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "input",
+                    },
+                    null,
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "cols": "30",
+                        "name": "message",
+                        "onChange": [Function],
+                        "placeholder": "type your message here...",
+                        "rows": "10",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": "textarea",
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": "send",
+                        "onClick": [Function],
+                      },
+                      "ref": null,
+                      "rendered": "send",
+                      "type": "button",
+                    },
+                  ],
+                  "type": "form",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div>
+                  <p>
+                    Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.
+                  </p>
+                  <h2>
+                    social
+                  </h2>
+                  <p>
+                    You can find me on these social platforms:
+                  </p>
+                  <ul>
+                    <li>
+                      <a
+                        href="http://www.instagram.com/hurricane.charlie"
+                        target="_blank"
+                      >
+                        <i
+                          className="fa fa-instagram"
+                        />
+                        Instagram
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="http://twitter.com/hurricanechaz"
+                        target="_blank"
+                      >
+                        <i
+                          className="fa fa-twitter"
+                        />
+                        Twitter
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="http://www.behance.net/chazhurricane"
+                        target="_blank"
+                      >
+                        <i
+                          className="fa fa-behance"
+                        />
+                        Behance
+                      </a>
+                    </li>
+                  </ul>
+                  <h2>
+                    coding
+                  </h2>
+                  <p>
+                    I designed and coded this website. For more information please visit my web development portfolio 
+                    <a
+                      href="http://charlietaylorcoder.com"
+                      target="_blank"
+                    >
+                      here
+                    </a>
+                  </p>
+                </div>,
+                "className": "contact-item contact-text",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <p>
+                      Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.
+                    </p>,
+                    <h2>
+                      social
+                    </h2>,
+                    <p>
+                      You can find me on these social platforms:
+                    </p>,
+                    <ul>
+                      <li>
+                        <a
+                          href="http://www.instagram.com/hurricane.charlie"
+                          target="_blank"
+                        >
+                          <i
+                            className="fa fa-instagram"
+                          />
+                          Instagram
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="http://twitter.com/hurricanechaz"
+                          target="_blank"
+                        >
+                          <i
+                            className="fa fa-twitter"
+                          />
+                          Twitter
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="http://www.behance.net/chazhurricane"
+                          target="_blank"
+                        >
+                          <i
+                            className="fa fa-behance"
+                          />
+                          Behance
+                        </a>
+                      </li>
+                    </ul>,
+                    <h2>
+                      coding
+                    </h2>,
+                    <p>
+                      I designed and coded this website. For more information please visit my web development portfolio 
+                      <a
+                        href="http://charlietaylorcoder.com"
+                        target="_blank"
+                      >
+                        here
+                      </a>
+                    </p>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.",
+                    },
+                    "ref": null,
+                    "rendered": "Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "social",
+                    },
+                    "ref": null,
+                    "rendered": "social",
+                    "type": "h2",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "You can find me on these social platforms:",
+                    },
+                    "ref": null,
+                    "rendered": "You can find me on these social platforms:",
+                    "type": "p",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <li>
+                          <a
+                            href="http://www.instagram.com/hurricane.charlie"
+                            target="_blank"
+                          >
+                            <i
+                              className="fa fa-instagram"
+                            />
+                            Instagram
+                          </a>
+                        </li>,
+                        <li>
+                          <a
+                            href="http://twitter.com/hurricanechaz"
+                            target="_blank"
+                          >
+                            <i
+                              className="fa fa-twitter"
+                            />
+                            Twitter
+                          </a>
+                        </li>,
+                        <li>
+                          <a
+                            href="http://www.behance.net/chazhurricane"
+                            target="_blank"
+                          >
+                            <i
+                              className="fa fa-behance"
+                            />
+                            Behance
+                          </a>
+                        </li>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <a
+                            href="http://www.instagram.com/hurricane.charlie"
+                            target="_blank"
+                          >
+                            <i
+                              className="fa fa-instagram"
+                            />
+                            Instagram
+                          </a>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <i
+                                className="fa fa-instagram"
+                              />,
+                              "Instagram",
+                            ],
+                            "href": "http://www.instagram.com/hurricane.charlie",
+                            "target": "_blank",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "className": "fa fa-instagram",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "i",
+                            },
+                            "Instagram",
+                          ],
+                          "type": "a",
+                        },
+                        "type": "li",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <a
+                            href="http://twitter.com/hurricanechaz"
+                            target="_blank"
+                          >
+                            <i
+                              className="fa fa-twitter"
+                            />
+                            Twitter
+                          </a>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <i
+                                className="fa fa-twitter"
+                              />,
+                              "Twitter",
+                            ],
+                            "href": "http://twitter.com/hurricanechaz",
+                            "target": "_blank",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "className": "fa fa-twitter",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "i",
+                            },
+                            "Twitter",
+                          ],
+                          "type": "a",
+                        },
+                        "type": "li",
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <a
+                            href="http://www.behance.net/chazhurricane"
+                            target="_blank"
+                          >
+                            <i
+                              className="fa fa-behance"
+                            />
+                            Behance
+                          </a>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              <i
+                                className="fa fa-behance"
+                              />,
+                              "Behance",
+                            ],
+                            "href": "http://www.behance.net/chazhurricane",
+                            "target": "_blank",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "className": "fa fa-behance",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "i",
+                            },
+                            "Behance",
+                          ],
+                          "type": "a",
+                        },
+                        "type": "li",
+                      },
+                    ],
+                    "type": "ul",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "coding",
+                    },
+                    "ref": null,
+                    "rendered": "coding",
+                    "type": "h2",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "I designed and coded this website. For more information please visit my web development portfolio ",
+                        <a
+                          href="http://charlietaylorcoder.com"
+                          target="_blank"
+                        >
+                          here
+                        </a>,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "I designed and coded this website. For more information please visit my web development portfolio ",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "here",
+                          "href": "http://charlietaylorcoder.com",
+                          "target": "_blank",
+                        },
+                        "ref": null,
+                        "rendered": "here",
+                        "type": "a",
+                      },
+                    ],
+                    "type": "p",
+                  },
+                ],
+                "type": "div",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
       "type": "div",
     },
   ],

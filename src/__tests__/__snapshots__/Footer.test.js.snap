@@ -19,6 +19,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Navbar
+          navClick={undefined}
           navData={undefined}
         />,
         <div
@@ -26,13 +27,15 @@ ShallowWrapper {
         >
           <a
             href="http://twitter.com/hurricanechaz"
+            target="_blank"
           >
             <i
               className="fa fa-twitter"
             />
           </a>
           <a
-            href="http://www.instagram.com/chazhurricane"
+            href="http://www.instagram.com/hurricane.charlie"
+            target="_blank"
           >
             <i
               className="fa fa-instagram"
@@ -40,6 +43,7 @@ ShallowWrapper {
           </a>
           <a
             href="http://www.behance.net/chazhurricane"
+            target="_blank"
           >
             <i
               className="fa fa-behance"
@@ -56,8 +60,9 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
+          "navClick": undefined,
           "navData": undefined,
         },
         "ref": null,
@@ -72,13 +77,15 @@ ShallowWrapper {
           "children": Array [
             <a
               href="http://twitter.com/hurricanechaz"
+              target="_blank"
             >
               <i
                 className="fa fa-twitter"
               />
             </a>,
             <a
-              href="http://www.instagram.com/chazhurricane"
+              href="http://www.instagram.com/hurricane.charlie"
+              target="_blank"
             >
               <i
                 className="fa fa-instagram"
@@ -86,6 +93,7 @@ ShallowWrapper {
             </a>,
             <a
               href="http://www.behance.net/chazhurricane"
+              target="_blank"
             >
               <i
                 className="fa fa-behance"
@@ -98,13 +106,14 @@ ShallowWrapper {
         "rendered": Array [
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "0",
             "nodeType": "host",
             "props": Object {
               "children": <i
                 className="fa fa-twitter"
               />,
               "href": "http://twitter.com/hurricanechaz",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": Object {
@@ -122,13 +131,14 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "1",
             "nodeType": "host",
             "props": Object {
               "children": <i
                 className="fa fa-instagram"
               />,
-              "href": "http://www.instagram.com/chazhurricane",
+              "href": "http://www.instagram.com/hurricane.charlie",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": Object {
@@ -146,13 +156,14 @@ ShallowWrapper {
           },
           Object {
             "instance": null,
-            "key": undefined,
+            "key": "2",
             "nodeType": "host",
             "props": Object {
               "children": <i
                 className="fa fa-behance"
               />,
               "href": "http://www.behance.net/chazhurricane",
+              "target": "_blank",
             },
             "ref": null,
             "rendered": Object {
@@ -193,6 +204,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Navbar
+            navClick={undefined}
             navData={undefined}
           />,
           <div
@@ -200,13 +212,15 @@ ShallowWrapper {
           >
             <a
               href="http://twitter.com/hurricanechaz"
+              target="_blank"
             >
               <i
                 className="fa fa-twitter"
               />
             </a>
             <a
-              href="http://www.instagram.com/chazhurricane"
+              href="http://www.instagram.com/hurricane.charlie"
+              target="_blank"
             >
               <i
                 className="fa fa-instagram"
@@ -214,6 +228,7 @@ ShallowWrapper {
             </a>
             <a
               href="http://www.behance.net/chazhurricane"
+              target="_blank"
             >
               <i
                 className="fa fa-behance"
@@ -230,8 +245,9 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
+            "navClick": undefined,
             "navData": undefined,
           },
           "ref": null,
@@ -246,13 +262,15 @@ ShallowWrapper {
             "children": Array [
               <a
                 href="http://twitter.com/hurricanechaz"
+                target="_blank"
               >
                 <i
                   className="fa fa-twitter"
                 />
               </a>,
               <a
-                href="http://www.instagram.com/chazhurricane"
+                href="http://www.instagram.com/hurricane.charlie"
+                target="_blank"
               >
                 <i
                   className="fa fa-instagram"
@@ -260,6 +278,7 @@ ShallowWrapper {
               </a>,
               <a
                 href="http://www.behance.net/chazhurricane"
+                target="_blank"
               >
                 <i
                   className="fa fa-behance"
@@ -272,13 +291,14 @@ ShallowWrapper {
           "rendered": Array [
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "0",
               "nodeType": "host",
               "props": Object {
                 "children": <i
                   className="fa fa-twitter"
                 />,
                 "href": "http://twitter.com/hurricanechaz",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": Object {
@@ -296,13 +316,14 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "1",
               "nodeType": "host",
               "props": Object {
                 "children": <i
                   className="fa fa-instagram"
                 />,
-                "href": "http://www.instagram.com/chazhurricane",
+                "href": "http://www.instagram.com/hurricane.charlie",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": Object {
@@ -320,13 +341,14 @@ ShallowWrapper {
             },
             Object {
               "instance": null,
-              "key": undefined,
+              "key": "2",
               "nodeType": "host",
               "props": Object {
                 "children": <i
                   className="fa fa-behance"
                 />,
                 "href": "http://www.behance.net/chazhurricane",
+                "target": "_blank",
               },
               "ref": null,
               "rendered": Object {

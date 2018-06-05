@@ -34,3 +34,5 @@ node_modules
 config.codekit3
 
 .env
+
+dist
