@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CallToAction from './CallToAction';
 
 function formValidator(data) {
   const { name, email, message } = data;
@@ -101,66 +102,68 @@ class Contact extends Component {
     const { name, email, message } = this.state.data;
     let { errMsgs, msgStatus } = this.state;
     return (
-      <div className="contact-box">
-        <div className="contact-item">
-          <h2>say hello...</h2>
-          <form>
-            {msgStatus.msg ? <p style={{ color: msgStatus.status }}>{ msgStatus.msg }</p> : null}
-            {errMsgs.name ? <p>{errMsgs.name}</p> : null}
-            <input 
-              name="name"
-              value={name} 
-              placeholder="your name" 
-              onChange={this.handleInput} 
-            />
-            {errMsgs.email ? <p>{errMsgs.email}</p> : null}
-            <input 
-              name="email"
-              value={email} 
-              placeholder="your email" 
-              onChange={this.handleInput} 
-            />
-            {errMsgs.message ? <p>{errMsgs.message}</p> : null}
-            <textarea 
-              name="message"
-              value={message}
-              cols="30" rows="10" 
-              placeholder="type your message here..." 
-              onChange={this.handleInput} 
-            />
-            <button
-              onClick={this.handleSubmit}
-            >send</button>
-          </form>
-        </div>
+      <div>
+        <div className="contact-box">
+          <div className="contact-item">
+            <h2>say hello...</h2>
+            <form>
+              {msgStatus.msg ? <p style={{ color: msgStatus.status }}>{ msgStatus.msg }</p> : null}
+              {errMsgs.name ? <p>{errMsgs.name}</p> : null}
+              <input 
+                name="name"
+                value={name} 
+                placeholder="your name" 
+                onChange={this.handleInput} 
+              />
+              {errMsgs.email ? <p>{errMsgs.email}</p> : null}
+              <input 
+                name="email"
+                value={email} 
+                placeholder="your email" 
+                onChange={this.handleInput} 
+              />
+              {errMsgs.message ? <p>{errMsgs.message}</p> : null}
+              <textarea 
+                name="message"
+                value={message}
+                cols="30" rows="10" 
+                placeholder="type your message here..." 
+                onChange={this.handleInput} 
+              />
+              <button
+                onClick={this.handleSubmit}
+              >send</button>
+            </form>
+          </div>
 
-        <div className="contact-item contact-text">
-          <div>
-            <p>Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.</p>
-            <h2>social</h2>
-            <p>You can find me on these social platforms:</p>
-            <ul>
-              <li>
-                <a target="_blank" href="http://www.instagram.com/hurricane.charlie">
-                  <i className="fa fa-instagram"></i>Instagram
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="http://twitter.com/hurricanechaz">
-                  <i className="fa fa-twitter"></i>Twitter
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="http://www.behance.net/chazhurricane">
-                  <i className="fa fa-behance"></i>Behance
-                </a>
-              </li>
-            </ul>
-            <h2>coding</h2>
-            <p>I designed and coded this website. For more information please visit my web development portfolio <a target="_blank" href="http://charlietaylorcoder.com">here</a></p>
+          <div className="contact-item contact-text">
+            <div>
+              <p>Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.</p>
+              <h2>social</h2>
+              <p>You can find me on these social platforms:</p>
+              <ul>
+                <li>
+                  <a target="_blank" href="http://www.instagram.com/hurricane.charlie">
+                    <i className="fa fa-instagram"></i>Instagram
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="http://twitter.com/hurricanechaz">
+                    <i className="fa fa-twitter"></i>Twitter
+                  </a>
+                </li>
+                <li>
+                  <a target="_blank" href="http://www.behance.net/chazhurricane">
+                    <i className="fa fa-behance"></i>Behance
+                  </a>
+                </li>
+              </ul>
+              <h2>coding</h2>
+              <p>I designed and coded this website. For more information please visit my web development portfolio <a target="_blank" href="http://charlietaylorcoder.com">here</a></p>
+            </div>
           </div>
         </div>
-
+        <CallToAction />
       </div>
     );
   }

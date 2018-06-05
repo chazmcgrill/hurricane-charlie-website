@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GalleryItem from './GalleryItem';
+import CallToAction from './CallToAction';
 
 class Gallery extends Component {
   componentDidMount() {
@@ -14,11 +15,14 @@ class Gallery extends Component {
     ) : null;
 
     return (
-      <section className="gallery">
-        <div className="gallery-grid">
-          {gallery}
-        </div>
-      </section>
+      <div>
+        <section className="gallery">
+          <div className="gallery-grid">
+            {gallery}
+          </div>
+        </section>
+        <CallToAction />
+      </div>
     )
   }
 }
