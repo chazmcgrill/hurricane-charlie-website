@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Gallery from './Gallery';
 import Contact from './Contact';
 import Shop from './Shop';
+import ErrorPage from './ErrorPage';
 
 const Content = ({ galleryData }) => {
   return (
@@ -11,13 +12,13 @@ const Content = ({ galleryData }) => {
         <Redirect from="/" to="/gallery" exact />
         <Route
           path="/gallery"
-          render={() => <Gallery galleryData={galleryData} />}
-        />
+          render={() => <Gallery galleryData={galleryData} />} />
         <Route path="/contact" component={Contact} />
         <Route path="/shop" component={Shop} />
+        <Route component={ErrorPage} />
       </Switch>
     </section>
-  );
+  )
 }
 
 export default Content;
