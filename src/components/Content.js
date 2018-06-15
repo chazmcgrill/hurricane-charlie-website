@@ -5,14 +5,14 @@ import Contact from './Contact';
 import Shop from './Shop';
 import ErrorPage from './ErrorPage';
 
-const Content = ({ galleryData }) => {
+const Content = ({ galleryData, modalId }) => {
   return (
     <section className="content-section">
       <Switch>
         <Redirect from="/" to="/gallery" exact />
         <Route
           path="/gallery"
-          render={() => <Gallery galleryData={galleryData} />} />
+          render={() => <Gallery galleryData={galleryData} modalId={modalId} />} />
         <Route path="/contact" component={Contact} />
         <Route path="/shop" component={Shop} />
         <Route component={ErrorPage} />

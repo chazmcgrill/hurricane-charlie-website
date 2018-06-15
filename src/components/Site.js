@@ -14,7 +14,8 @@ class Site extends Component {
         { id: 0, name: 'gallery', url: '/gallery' }, 
         { id: 1, name: 'contact', url: '/contact' }, 
         { id: 2, name: 'shop',    url: '/shop' }
-      ] 
+      ],
+      modalId: 1
     };
   }
 
@@ -23,7 +24,7 @@ class Site extends Component {
       <BrowserRouter>
         <div>
           <Header navData={this.state.navData} />
-          <Content galleryData={galleryData} />
+          <Content galleryData={galleryData} modalId={this.state.modalId}/>
           <Footer navData={this.state.navData} />
         </div>
       </BrowserRouter>

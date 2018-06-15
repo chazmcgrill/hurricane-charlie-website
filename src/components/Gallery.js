@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GalleryItem from './GalleryItem';
 import CallToAction from './CallToAction';
+import Modal from './Modal';
 
 class Gallery extends Component {
   componentDidMount() {
@@ -13,6 +14,7 @@ class Gallery extends Component {
         <GalleryItem galleryItemData={item} key={item.id} />
       ))
     ) : null;
+    const modal = this.props.modalId ? <Modal /> : null;
 
     return (
       <div>
@@ -21,6 +23,7 @@ class Gallery extends Component {
             {gallery}
           </div>
         </section>
+        {modal}
         <CallToAction />
       </div>
     )
