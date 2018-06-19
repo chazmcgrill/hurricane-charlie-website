@@ -9,13 +9,13 @@ class Gallery extends Component {
   }
 
   render() {
-    const { galleryData, modalId } = this.props;
+    const { galleryData, modalId, handleModal } = this.props;
     const gallery = galleryData ? (
       galleryData.map(item => (
         <GalleryItem galleryItemData={item} key={item.id} />
       ))
     ) : null;
-    const modal = modalId ? <Modal modalData={galleryData[modalId]} /> : null;
+    const modal = modalId ? <Modal modalData={galleryData[modalId]} handleModal={handleModal}/> : null;
 
     return (
       <div>

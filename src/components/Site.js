@@ -17,6 +17,11 @@ class Site extends Component {
       ],
       modalId: 1
     };
+    this.handleModal = this.handleModal.bind(this);
+  }
+
+  handleModal() {
+    console.log("modal click")
   }
 
   render() {  
@@ -24,7 +29,11 @@ class Site extends Component {
       <BrowserRouter>
         <div>
           <Header navData={this.state.navData} />
-          <Content galleryData={galleryData} modalId={this.state.modalId}/>
+          <Content 
+            galleryData={galleryData}
+            modalId={this.state.modalId}
+            handleModal={this.handleModal}  
+          />
           <Footer navData={this.state.navData} />
         </div>
       </BrowserRouter>
