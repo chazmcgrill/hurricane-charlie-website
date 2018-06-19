@@ -20,8 +20,19 @@ class Site extends Component {
     this.handleModal = this.handleModal.bind(this);
   }
 
-  handleModal() {
-    console.log("modal click")
+  handleModal(cmd) {
+    let { modalId } = this.state;
+    switch(cmd) {
+      case "next":
+        modalId++;
+        break;
+      case "previos":
+        modalId--;
+        break;
+      default:
+        break;
+    }
+    this.setState({modalId})
   }
 
   render() {  
