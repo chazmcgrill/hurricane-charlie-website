@@ -5,7 +5,7 @@ import Contact from './Contact';
 import Shop from './Shop';
 import ErrorPage from './ErrorPage';
 
-const Content = ({ galleryData, modalStatus, handleModal }) => {
+const Content = ({ galleryData, modalStatus, modalHandler }) => {
   return (
     <section className="content-section">
       <Switch>
@@ -15,7 +15,7 @@ const Content = ({ galleryData, modalStatus, handleModal }) => {
           render={() => <Gallery 
             galleryData={galleryData} 
             modalStatus={modalStatus} 
-            handleModal={handleModal} 
+            modalHandler={modalHandler} 
           />} 
         />
         <Route path="/contact" component={Contact} />

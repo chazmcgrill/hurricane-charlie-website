@@ -16,14 +16,14 @@ class Site extends Component {
         { id: 2, name: 'shop',    url: '/shop' }
       ],
       modalStatus: {
-        id: 26,
-        open: true 
+        id: 0,
+        open: false 
       }
     };
-    this.handleModal = this.handleModal.bind(this);
+    this.modalHandler = this.modalHandler.bind(this);
   }
 
-  handleModal(cmd) {
+  modalHandler(cmd) {
     let { modalStatus } = this.state;
     switch(cmd) {
       case "next":
@@ -36,10 +36,10 @@ class Site extends Component {
         modalStatus.open = false;
         break;
       default:
+        modalStatus = {id: cmd, open: true};
         break;
     }
-    console.log(modalStatus)
-    this.setState({ modalStatus })
+    this.setState({ modalStatus });
   }
 
   render() {  
@@ -50,7 +50,7 @@ class Site extends Component {
           <Content 
             galleryData={galleryData}
             modalStatus={this.state.modalStatus}
-            handleModal={this.handleModal}  
+            modalHandler={this.modalHandler}  
           />
           <Footer navData={this.state.navData} />
         </div>
