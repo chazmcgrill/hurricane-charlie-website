@@ -5,7 +5,7 @@ import Contact from './Contact';
 import Shop from './Shop';
 import ErrorPage from './ErrorPage';
 
-const Content = ({ galleryData, modalId, handleModal }) => {
+const Content = ({ galleryData, modalStatus, handleModal }) => {
   return (
     <section className="content-section">
       <Switch>
@@ -14,7 +14,7 @@ const Content = ({ galleryData, modalId, handleModal }) => {
           path="/gallery"
           render={() => <Gallery 
             galleryData={galleryData} 
-            modalId={modalId} 
+            modalStatus={modalStatus} 
             handleModal={handleModal} 
           />} 
         />

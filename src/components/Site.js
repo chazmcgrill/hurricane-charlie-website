@@ -15,24 +15,28 @@ class Site extends Component {
         { id: 1, name: 'contact', url: '/contact' }, 
         { id: 2, name: 'shop',    url: '/shop' }
       ],
-      modalId: 1
+      modalStatus: {
+        id: 0,
+        open: true 
+      }
     };
     this.handleModal = this.handleModal.bind(this);
   }
 
   handleModal(cmd) {
-    let { modalId } = this.state;
+    let { modalStatus } = this.state;
     switch(cmd) {
       case "next":
-        modalId++;
+        modalStatus.id++;
         break;
-      case "previos":
-        modalId--;
+      case "prev":
+        modalStatus.id--;
         break;
       default:
         break;
     }
-    this.setState({modalId})
+    console.log(modalStatus)
+    this.setState({ modalStatus })
   }
 
   render() {  
@@ -42,7 +46,7 @@ class Site extends Component {
           <Header navData={this.state.navData} />
           <Content 
             galleryData={galleryData}
-            modalId={this.state.modalId}
+            modalStatus={this.state.modalStatus}
             handleModal={this.handleModal}  
           />
           <Footer navData={this.state.navData} />
