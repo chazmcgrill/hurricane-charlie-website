@@ -16,7 +16,7 @@ class Site extends Component {
         { id: 2, name: 'shop',    url: '/shop' }
       ],
       modalStatus: {
-        id: 0,
+        id: 26,
         open: true 
       }
     };
@@ -31,6 +31,9 @@ class Site extends Component {
         break;
       case "prev":
         modalStatus.id--;
+        break;
+      case "close":
+        modalStatus.open = false;
         break;
       default:
         break;

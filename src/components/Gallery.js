@@ -19,6 +19,7 @@ class Gallery extends Component {
       ? <Modal 
           modalData={galleryData[modalStatus.id]} 
           handleModal={handleModal}
+          modalLimit={galleryData.length - 1}
         /> 
       : null;
 
