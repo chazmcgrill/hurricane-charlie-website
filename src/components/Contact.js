@@ -108,7 +108,7 @@ class Contact extends Component {
                 {socialItems.map(s => (
                   <li key={s.id}>
                     <a target="_blank" href={s.url}>
-                      <i className={`fa fa-${s.name}`}></i>{s.name}
+                      <i className={`fab fa-${s.name}`}></i>{s.name}
                     </a>
                   </li>
                 ))}
