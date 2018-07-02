@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { modalInfo } from '../globals/galleryData';
 
 const Modal = ({ modalData, modalHandler, modalLimit }) => {
   return(
@@ -12,7 +13,7 @@ const Modal = ({ modalData, modalHandler, modalLimit }) => {
       <div className="modal-data">
 
         <h2>{modalData.name}</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda maiores quaerat, porro praesentium nesciunt repudiandae eos! Error dolores quaerat non deleniti magni aliquam odit veniam eos. Architecto sapiente vero rerum?</p>
+        <p>{modalInfo[modalData.id].desc}</p>
 
         {modalData.shop ? <Link to="/shop">Buy in shop</Link> : null}
 

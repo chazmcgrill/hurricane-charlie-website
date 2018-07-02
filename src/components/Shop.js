@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ShopItem from './ShopItem';
-import shopItems from '../globals/shopItems';
+import { shopItems } from '../globals/shopItems';
 import { emailCheck } from '../helpers/validators';
 
 function validateEmail(email) {

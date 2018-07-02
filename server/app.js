@@ -72,7 +72,8 @@ app.post('/mailer', (req, res) => {
     console.log('Message sent: %s', info.messageId);
   });
 
-  res.redirect('/');
+  // res.redirect('/');
+  res.status(200).json("Message Sent")
 });
 
 const port = process.env.PORT || 5002;
