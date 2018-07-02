@@ -18,9 +18,15 @@ const Modal = ({ modalData, modalHandler, modalLimit }) => {
         {modalData.shop ? <Link to="/shop">Buy in shop</Link> : null}
         
         <div className="modal-btns">
-          {modalData.id >= 1 ? <div onClick={() => modalHandler('prev')}><i className="fas fa-arrow-alt-circle-left"></i></div> : <div><i className="fas fa-arrow-alt-circle-left"></i></div>}
+          {modalData.id >= 1 
+            ? <div onClick={() => modalHandler('prev')}><i className="fas fa-arrow-alt-circle-left"></i></div> 
+            : <div><i className="fas fa-arrow-alt-circle-left inactive"></i></div>}
+
           <div onClick={() => modalHandler('close')}><i className="fas fa-times"></i></div>
-          {modalData.id < modalLimit ? <div onClick={() => modalHandler('next')}><i className="fas fa-arrow-alt-circle-right"></i></div> : <div><i className="fas fa-arrow-alt-circle-right"></i></div>}
+          
+          {modalData.id < modalLimit 
+            ? <div onClick={() => modalHandler('next')}><i className="fas fa-arrow-alt-circle-right"></i></div> 
+            : <div><i className="fas fa-arrow-alt-circle-right inactive"></i></div>}
         </div>
 
       </div>
