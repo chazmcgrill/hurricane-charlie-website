@@ -11,11 +11,12 @@ const Modal = ({ modalData, modalHandler, modalLimit }) => {
       </div>
 
       <div className="modal-data">
+        <div>
+          <h2>{modalData.name}</h2>
+          <p>{modalInfo[modalData.id].desc}</p>
 
-        <h2>{modalData.name}</h2>
-        <p>{modalInfo[modalData.id].desc}</p>
-
-        {modalData.shop ? <Link to="/shop">Buy in shop</Link> : null}
+          {modalData.shop ? <Link to="/shop">Buy in shop</Link> : null}
+        </div>
         
         <div className="modal-btns">
           {modalData.id >= 1 
