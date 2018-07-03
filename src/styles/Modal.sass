@@ -1,11 +1,11 @@
 .modal
-  height: 500px
   padding: 10px
   display: flex
   flex-direction: column
   margin: 0 auto
 
   @media screen and (min-width: 768px)
+    height: 500px
     max-width: 900px
     flex-direction: row
     padding: 10px 50px
@@ -22,10 +22,23 @@
   justify-content: space-between
   padding: 0 20px
 
+  a
+    display: inline-block
+    border: 3px solid $domhue
+    font-weight: 500
+    color: $domhue
+    padding: 20px 30px
+    transition: all 0.4s ease-in-out 
+
+    &:hover
+      color: white
+      background: $domhue
+
 .modal-btns
   display: flex
   justify-content: space-between
   font-size: 3rem
+  margin: 20px
 
 .inactive
   color: lightgrey
