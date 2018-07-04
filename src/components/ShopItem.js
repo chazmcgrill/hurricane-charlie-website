@@ -1,7 +1,6 @@
 import React from 'react';
 
-const ShopItem = ({ product }) => {
-  const imgUrl = `assets/img/shop/${product.url}`;
+const ShopItem = ({ product, imgFile }) => {
   const price = `£${(product.price).toFixed(2)}`;
   const soldOut = product.soldOut ? <div className="shop-status">sold out</div> : null;
   const shopUrl = `http://hurricanecharlie.bigcartel.com/product/${product.shopUrl}`;
@@ -9,7 +8,7 @@ const ShopItem = ({ product }) => {
   return (
     <div className="shop-item">
       <a href={shopUrl} target="_blank">
-        <img src={imgUrl} alt={product.title} />
+        <img src={imgFile} alt={product.title} />
       </a>
       <p>{product.title}</p>
       <p><em>{product.desc}</em></p>

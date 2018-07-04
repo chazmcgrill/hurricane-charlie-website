@@ -3,6 +3,10 @@ import GalleryItem from './GalleryItem';
 import CallToAction from './CallToAction';
 import Modal from './Modal';
 
+import imageImport from '../helpers/imageImport';
+
+const images = imageImport(require.context('../images/thumbs', false, /\.jpg$/));
+
 class Gallery extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
@@ -15,7 +19,12 @@ class Gallery extends Component {
       ? (<section className="gallery">
             <div className="gallery-grid">
               {galleryData.map(item => (
-                <GalleryItem modalHandler={modalHandler} galleryItemData={item} key={item.id} />
+                <GalleryItem 
+                  modalHandler={modalHandler} 
+                  galleryItemData={item} 
+                  key={item.id} 
+                  imgData={images[item.src]}
+                />
               ))}
             </div>
           </section>) 

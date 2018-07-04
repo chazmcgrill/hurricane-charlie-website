@@ -1,14 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { modalInfo } from '../globals/galleryData';
+import imageImport from '../helpers/imageImport';
 
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-  return images;
-}
-
-const images = importAll(require.context('../images/modal-images', false, /\.(png|jpe?g|svg)$/));
+const images = imageImport(require.context('../images/modal-images', false, /\.(png|jpe?g|svg)$/));
 
 const Modal = ({ modalData, modalHandler, modalLimit }) => {
   const imgSrc = `modal-0${modalData.id < 10 ? '0' : ''}${modalData.id}.jpg`;
@@ -23,7 +18,6 @@ const Modal = ({ modalData, modalHandler, modalLimit }) => {
         <div>
           <h2>{modalData.name}</h2>
           <p>{modalInfo[modalData.id].desc}</p>
-
           {modalData.shop ? <Link to="/shop">Buy in shop</Link> : null}
         </div>
         

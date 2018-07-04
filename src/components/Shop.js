@@ -3,6 +3,10 @@ import ShopItem from './ShopItem';
 import { shopItems } from '../globals/shopItems';
 import { emailCheck } from '../helpers/validators';
 
+import imageImport from '../helpers/imageImport';
+
+const images = imageImport(require.context('../images/shop', false, /\.(png|jpe?g|svg)$/));
+
 function validateEmail(email) {
   if (email.length === 0) {
     return "email is required";
@@ -57,7 +61,7 @@ class Shop extends Component {
       <div>
         <div className="shop-container">
           {shopItems.map((itemData) => (
-            <ShopItem key={ itemData.id } product={ itemData }/>
+            <ShopItem key={ itemData.id } product={ itemData } imgFile={images[itemData.url]}/>
           ))}
         </div>
 
