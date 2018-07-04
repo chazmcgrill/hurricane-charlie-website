@@ -5,17 +5,22 @@
   margin: 0 auto
 
   @media screen and (min-width: 768px)
-    height: 500px
+    height: 650px
     max-width: 900px
     flex-direction: row
     padding: 10px 50px
 
 .modal-img
+  padding: 10px 20px
+  text-align: right
+
   img
-    width: 100%
+    max-width: 100%
+    height: auto
+
   @media screen and (min-width: 768px)
     min-width: 500px
-
+    
 .modal-data
   display: flex
   flex-direction: column
@@ -39,6 +44,9 @@
   justify-content: space-between
   font-size: 3rem
   margin: 20px
+
+  @media screen and (min-width: 768px)
+    margin: 20px 20px 60px
   i
     cursor: pointer
 
