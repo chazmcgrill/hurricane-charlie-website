@@ -8,7 +8,7 @@ function importAll(r) {
   return images;
 }
 
-const images = importAll(require.context('../assets/img/modal-images', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../images/modal-images', false, /\.(png|jpe?g|svg)$/));
 
 const Modal = ({ modalData, modalHandler, modalLimit }) => {
   const imgSrc = `modal-0${modalData.id < 10 ? '0' : ''}${modalData.id}.jpg`;
