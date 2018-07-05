@@ -7,30 +7,32 @@ const images = imageImport(require.context('../images/modal-images', false, /\.(
 
 const Modal = ({ modalData, modalHandler, modalLimit }) => {
   const imgSrc = `modal-0${modalData.id < 10 ? '0' : ''}${modalData.id}.jpg`;
+  const {name, id, shop} = modalData;
+
   return(
     <div className="modal">
     
       <div className="modal-img">
-        <img src={images[imgSrc]} alt={modalData.name}/>
+        <img src={images[imgSrc]} alt={name}/>
       </div>
 
       <div className="modal-data">
         <div>
-          <h2>{modalData.name}</h2>
-          <p>{modalInfo[modalData.id].desc}</p>
-          {modalData.shop ? <Link to="/shop">Buy in shop</Link> : null}
+          <h2>{name}</h2>
+          <p>{modalInfo[id].desc}</p>
+          {shop ? <Link to="/shop">Buy in shop</Link> : null}
         </div>
         
         <div className="modal-btns">
-          {modalData.id >= 1 
-            ? <div onClick={() => modalHandler('prev')}><i className="fas fa-arrow-alt-circle-left"></i></div> 
-            : <div><i className="fas fa-arrow-alt-circle-left inactive"></i></div>}
+          <div onClick={id >= 1 ? () => modalHandler('prev') : null}>
+            <i className={`fas fa-arrow-alt-circle-left ${id >= 1 ? null : "inactive"}`}/>
+          </div>
 
-          <div onClick={() => modalHandler('close')}><i className="fas fa-times"></i></div>
+          <div onClick={() => modalHandler('close')}><i className="fas fa-times"/></div>
           
-          {modalData.id < modalLimit 
-            ? <div onClick={() => modalHandler('next')}><i className="fas fa-arrow-alt-circle-right"></i></div> 
-            : <div><i className="fas fa-arrow-alt-circle-right inactive"></i></div>}
+          <div onClick={id < modalLimit ? () => modalHandler('next') : null}>
+            <i className={`fas fa-arrow-alt-circle-right ${id < modalLimit ? null : "inactive"}`}/>
+          </div>
         </div>
 
       </div>
