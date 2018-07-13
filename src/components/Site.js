@@ -17,7 +17,7 @@ class Site extends Component {
       ],
       modalStatus: {
         id: 0,
-        open: true 
+        open: false 
       }
     };
     this.modalHandler = this.modalHandler.bind(this);
