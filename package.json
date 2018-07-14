@@ -28,13 +28,13 @@
   "homepage": "http://www.hurricanecharlie.co.uk",
   "devDependencies": {
     "babel-jest": "^22.4.4",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^7.1.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
-    "dotenv-webpack": "^1.5.5",
+    "dotenv-webpack": "^1.5.7",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "file-loader": "^1.1.11",
@@ -42,19 +42,18 @@
     "imagemin": "^5.3.1",
     "img-loader": "^3.0.0",
     "jest-cli": "^22.4.4",
-    "node-sass": "^4.9.0",
-    "react-test-renderer": "^16.4.0",
-    "sass-loader": "^7.0.1",
+    "node-sass": "^4.9.2",
+    "react-test-renderer": "^16.4.1",
+    "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
-    "webpack": "^4.10.2",
-    "webpack-cli": "^2.1.4",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^2.1.5",
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "normalize.css": "^8.0.0",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-router-dom": "^4.2.2"
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1"
   }
 }
