@@ -11,7 +11,7 @@ const Footer = ({ navData }) => {
           <a key={s.id} target="_blank" href={s.url}><i className={`fab fa-${s.name}`}></i></a>
         ))}
       </div>
-      <p>&copy; 2018 Charlie Taylor all rights reserved.</p>
+      <p><span>&copy;</span> 2018 Charlie Taylor all rights reserved.</p>
     </footer>
   )
 }

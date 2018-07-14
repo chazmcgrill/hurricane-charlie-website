@@ -5,10 +5,9 @@ const GalleryItem = ({ galleryItemData, modalHandler, imgData }) => {
   return (
     <div
       onClick={() => modalHandler(galleryItemData.id)}
-      className={ itemClass } 
-      // style={{ backgroundImage: `url('assets/img/thumbs/${galleryItemData.src}')`}}
+      className={itemClass}
       style={{ backgroundImage: `url('${imgData}')`}}
-      alt={ galleryItemData.name } >
+      alt={galleryItemData.name} >
       <div className="img-overlay"><p>{galleryItemData.name}</p></div>
     </div>
   );
