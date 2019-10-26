@@ -1,18 +1,3 @@
-export function emailCheck(email: string) {
-    const rgx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return email.match(rgx);
-}
-
-function nameCheck(name: string) {
-    const rgx = /^[a-zA-Z ]/;
-    return name.match(rgx);
-}
-
-function msgCheck(msg: string) {
-    const rgx = /[A-Za-z0-9\w.'?!,@$#\-_\n\r]/;
-    return msg.match(rgx);
-}
-
 export interface FormValidatorData {
     name: string;
     email: string;
@@ -22,6 +7,32 @@ export interface FormValidatorData {
 interface FormValidatorReturn {
     isValid: boolean;
     errorMessages: FormValidatorData;
+}
+
+function emailCheck(email: string) {
+    const rgx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return email.match(rgx);
+}
+
+function nameCheck(name: string) {
+    const rgx = /^[a-zA-Z ]/;
+    return name.match(rgx);
+}
+
+function messageCheck(msg: string) {
+    const rgx = /[A-Za-z0-9\w.'?!,@$#\-_\n\r]/;
+    return msg.match(rgx);
+}
+
+export function validateEmail(email: string): string {
+    switch (true) {
+        case (email.length === 0):
+            return 'email is required';
+        case (!emailCheck(email)):
+            return 'incorrect email format';
+        default:
+            return '';
+    }
 }
 
 export function formValidator(data: FormValidatorData): FormValidatorReturn {
@@ -45,7 +56,7 @@ export function formValidator(data: FormValidatorData): FormValidatorReturn {
     // check message
     if (message.length < 10) {
         errorMessages.message = 'message is too short min length 10 characters';
-    } else if (!msgCheck(message)) {
+    } else if (!messageCheck(message)) {
         errorMessages.message = 'invalid characters entered'
     }
 

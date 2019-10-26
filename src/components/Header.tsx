@@ -1,53 +1,43 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import logo from '../images/hclogo.png';
 import Navbar from './Navbar';
 import navData from '../globals/navData';
 
-class Header extends Component {
-    state = {
-        burgerOpen: false,
-        width: 0,
-    }
+const Header = () => {
+    const [burgerOpen, setBurgerOpen] = useState(false);
+    const [width, setWidth] = useState(0);
 
-    burgerClick = () => {
-        this.setState({ burgerOpen: !this.state.burgerOpen });
-    }
+    const updateWindowSize = () => setWidth(window.innerWidth);
 
-    componentDidMount() {
-        this.updateWindowSize();
-        window.addEventListener('resize', this.updateWindowSize);
-    }
+    useEffect(() => {
+        updateWindowSize();
+        window.addEventListener('resize', updateWindowSize);
+        return () => {
+            window.removeEventListener('resize', updateWindowSize);
+        };
+    }, [])
 
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowSize);
-    }
+    const burgerClass = `hamburger hamburger-spin ${burgerOpen ? 'is-active' : ''}`;
+    const showHamburger = width < 640;
+    const showNavBar = width > 640 || burgerOpen;
 
-    updateWindowSize = () => {
-        this.setState({ width: window.innerWidth })
-    }
+    return (
+        <header>
+            <img src={logo} alt="Hurricane Charlie Logo" />
 
-    render() {
-        const { burgerOpen, width } = this.state;
-        const burgerClass = `hamburger hamburger-spin ${burgerOpen ? 'is-active' : ''}`;
-    
-        return (
-            <header>
-                <img src={logo} alt="Hurricane Charlie Logo" />
-
-                {width < 640 && (
-                    <div onClick={this.burgerClick} className="hamburger-container">
-                        <div className={burgerClass}>
-                            <span className="hamburger-box">
-                                <span className="hamburger-inner"></span>
-                            </span>
-                        </div>
+            {showHamburger && (
+                <div onClick={() => setBurgerOpen(!burgerOpen)} className="hamburger-container">
+                    <div className={burgerClass}>
+                        <span className="hamburger-box">
+                            <span className="hamburger-inner"></span>
+                        </span>
                     </div>
-                )}
+                </div>
+            )}
 
-                {(width > 640 || burgerOpen) && <Navbar navData={navData} />}
-            </header>
-        )
-    }
+            {showNavBar && <Navbar navData={navData} />}
+        </header>
+    )
 }
 
-export default Header
+export default Header;

@@ -11,7 +11,7 @@ const ShopItem = ({
     imgFile,
 }: ShopItemProps) => {
     const price = `£${(product.price).toFixed(2)}`;
-    const shopUrl = `http://hurricanecharlie.bigcartel.com/product/${product.shopUrl}`;
+    const shopUrl = `https://hurricanecharlie.bigcartel.com/product/${product.shopUrl}`;
 
     return (
         <div className="shop-item">
