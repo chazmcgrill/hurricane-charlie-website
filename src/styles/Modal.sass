@@ -1,0 +1,56 @@
+.modal
+  padding: 10px
+  display: flex
+  flex-direction: column
+  margin: 0 auto
+
+  @media screen and (min-width: 768px)
+    height: 650px
+    max-width: 900px
+    flex-direction: row
+    padding: 10px 50px
+
+.modal-img
+  padding: 10px
+  text-align: center
+
+  img
+    max-width: 100%
+    height: auto
+
+  @media screen and (min-width: 768px)
+    text-align: right
+    min-width: 50%
+    
+.modal-data
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 0 20px
+
+  a
+    display: inline-block
+    border: 3px solid $domhue
+    font-weight: 500
+    color: $domhue
+    padding: 20px 30px
+    transition: all 0.4s ease-in-out 
+
+    &:hover
+      color: white
+      background: $domhue
+
+.modal-btns
+  display: flex
+  justify-content: space-between
+  font-size: 3rem
+  margin: 20px
+
+  @media screen and (min-width: 768px)
+    font-size: 2rem
+    margin: 20px 20px 60px
+  i
+    cursor: pointer
+
+.inactive
+  color: lightgrey

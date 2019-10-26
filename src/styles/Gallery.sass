@@ -1,0 +1,60 @@
+.gallery
+  padding: 0.5em
+
+  .gallery-grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(10, 1fr)
+    grid-gap: 0.5em
+
+    @media screen and (min-width: 480px)
+      grid-template-columns: repeat(4, 1fr)
+      grid-template-rows: repeat(5, 1fr)
+
+    @media screen and (min-width: 760px)
+      grid-template-columns: repeat(6, 1fr)
+      grid-template-rows: repeat(5, 1fr)
+
+    @media screen and (min-width: 900px)
+      grid-template-columns: repeat(8, 1fr)
+      grid-template-rows: repeat(5, 1fr)
+  
+  .img-overlay
+    font-family: 'Roboto Mono', monospace
+    font-size: 1.1rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    opacity: 0
+    background: rgba(black,0.8)
+    color: white
+    position: absolute
+    left: 0 
+    right: 0
+    top: 0
+    bottom: 0
+    transition: opacity 0.1s ease-out, font-size 0.1s ease-out
+  
+  .grid-item
+    position: relative
+    min-height: 200px
+    background-color: $accent
+    background-size: cover
+    background-position: center
+    cursor: pointer
+
+    &.large
+      grid-column: span 2
+      grid-row: span 2
+
+    &.wide
+      grid-column: span 2
+
+    &.tall
+      grid-row: span 2
+
+    &:hover
+      .img-overlay
+        opacity: 1
+        font-size: 0.8rem

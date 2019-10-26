@@ -1,0 +1,863 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shop renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Shop />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="shop-container"
+        >
+          <ShopItem
+            product={
+              Object {
+                "desc": "monochrome screenprint",
+                "id": 1,
+                "price": 9.95,
+                "shopUrl": "mushroomjack",
+                "soldOut": false,
+                "title": "Mushroom Lumberjack",
+                "url": "shop01.jpg",
+              }
+            }
+          />
+          <ShopItem
+            product={
+              Object {
+                "desc": "five colour screenprint",
+                "id": 2,
+                "price": 22.5,
+                "shopUrl": "patterned-beetle",
+                "soldOut": false,
+                "title": "Patterned Beetle",
+                "url": "shop02.jpg",
+              }
+            }
+          />
+          <ShopItem
+            product={
+              Object {
+                "desc": "glossy giclee full colour",
+                "id": 3,
+                "price": 3.95,
+                "shopUrl": "desert-smoker",
+                "soldOut": false,
+                "title": "Desert Smoker",
+                "url": "shop03.jpg",
+              }
+            }
+          />
+          <ShopItem
+            product={
+              Object {
+                "desc": "art stock giclee",
+                "id": 4,
+                "price": 12.95,
+                "shopUrl": "robot-workshop",
+                "soldOut": false,
+                "title": "Robot Workshop",
+                "url": "shop04.jpg",
+              }
+            }
+          />
+          <ShopItem
+            product={
+              Object {
+                "desc": "five colour screenprint",
+                "id": 5,
+                "price": 22.5,
+                "shopUrl": "patterned-butterfly",
+                "soldOut": false,
+                "title": "Patterned Butterfly",
+                "url": "shop05.jpg",
+              }
+            }
+          />
+          <ShopItem
+            product={
+              Object {
+                "desc": "glossy giclee full colour",
+                "id": 6,
+                "price": 3.95,
+                "shopUrl": "desert-portrait",
+                "soldOut": true,
+                "title": "Desert Portrait",
+                "url": "shop06.jpg",
+              }
+            }
+          />
+        </div>,
+        <div
+          className="mailer-cta"
+        >
+          <h2>
+            Be the first to know about new items
+          </h2>
+          <div
+            className="mailer-form"
+          >
+            <input
+              onChange={[Function]}
+              placeholder="your email"
+              type="email"
+              value=""
+            />
+            <button
+              onClick={[Function]}
+            >
+              join
+            </button>
+          </div>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <ShopItem
+              product={
+                Object {
+                  "desc": "monochrome screenprint",
+                  "id": 1,
+                  "price": 9.95,
+                  "shopUrl": "mushroomjack",
+                  "soldOut": false,
+                  "title": "Mushroom Lumberjack",
+                  "url": "shop01.jpg",
+                }
+              }
+            />,
+            <ShopItem
+              product={
+                Object {
+                  "desc": "five colour screenprint",
+                  "id": 2,
+                  "price": 22.5,
+                  "shopUrl": "patterned-beetle",
+                  "soldOut": false,
+                  "title": "Patterned Beetle",
+                  "url": "shop02.jpg",
+                }
+              }
+            />,
+            <ShopItem
+              product={
+                Object {
+                  "desc": "glossy giclee full colour",
+                  "id": 3,
+                  "price": 3.95,
+                  "shopUrl": "desert-smoker",
+                  "soldOut": false,
+                  "title": "Desert Smoker",
+                  "url": "shop03.jpg",
+                }
+              }
+            />,
+            <ShopItem
+              product={
+                Object {
+                  "desc": "art stock giclee",
+                  "id": 4,
+                  "price": 12.95,
+                  "shopUrl": "robot-workshop",
+                  "soldOut": false,
+                  "title": "Robot Workshop",
+                  "url": "shop04.jpg",
+                }
+              }
+            />,
+            <ShopItem
+              product={
+                Object {
+                  "desc": "five colour screenprint",
+                  "id": 5,
+                  "price": 22.5,
+                  "shopUrl": "patterned-butterfly",
+                  "soldOut": false,
+                  "title": "Patterned Butterfly",
+                  "url": "shop05.jpg",
+                }
+              }
+            />,
+            <ShopItem
+              product={
+                Object {
+                  "desc": "glossy giclee full colour",
+                  "id": 6,
+                  "price": 3.95,
+                  "shopUrl": "desert-portrait",
+                  "soldOut": true,
+                  "title": "Desert Portrait",
+                  "url": "shop06.jpg",
+                }
+              }
+            />,
+          ],
+          "className": "shop-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "product": Object {
+                "desc": "monochrome screenprint",
+                "id": 1,
+                "price": 9.95,
+                "shopUrl": "mushroomjack",
+                "soldOut": false,
+                "title": "Mushroom Lumberjack",
+                "url": "shop01.jpg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "function",
+            "props": Object {
+              "product": Object {
+                "desc": "five colour screenprint",
+                "id": 2,
+                "price": 22.5,
+                "shopUrl": "patterned-beetle",
+                "soldOut": false,
+                "title": "Patterned Beetle",
+                "url": "shop02.jpg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "3",
+            "nodeType": "function",
+            "props": Object {
+              "product": Object {
+                "desc": "glossy giclee full colour",
+                "id": 3,
+                "price": 3.95,
+                "shopUrl": "desert-smoker",
+                "soldOut": false,
+                "title": "Desert Smoker",
+                "url": "shop03.jpg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "4",
+            "nodeType": "function",
+            "props": Object {
+              "product": Object {
+                "desc": "art stock giclee",
+                "id": 4,
+                "price": 12.95,
+                "shopUrl": "robot-workshop",
+                "soldOut": false,
+                "title": "Robot Workshop",
+                "url": "shop04.jpg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "5",
+            "nodeType": "function",
+            "props": Object {
+              "product": Object {
+                "desc": "five colour screenprint",
+                "id": 5,
+                "price": 22.5,
+                "shopUrl": "patterned-butterfly",
+                "soldOut": false,
+                "title": "Patterned Butterfly",
+                "url": "shop05.jpg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "6",
+            "nodeType": "function",
+            "props": Object {
+              "product": Object {
+                "desc": "glossy giclee full colour",
+                "id": 6,
+                "price": 3.95,
+                "shopUrl": "desert-portrait",
+                "soldOut": true,
+                "title": "Desert Portrait",
+                "url": "shop06.jpg",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h2>
+              Be the first to know about new items
+            </h2>,
+            <div
+              className="mailer-form"
+            >
+              <input
+                onChange={[Function]}
+                placeholder="your email"
+                type="email"
+                value=""
+              />
+              <button
+                onClick={[Function]}
+              >
+                join
+              </button>
+            </div>,
+          ],
+          "className": "mailer-cta",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Be the first to know about new items",
+            },
+            "ref": null,
+            "rendered": "Be the first to know about new items",
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                null,
+                <input
+                  onChange={[Function]}
+                  placeholder="your email"
+                  type="email"
+                  value=""
+                />,
+                <button
+                  onClick={[Function]}
+                >
+                  join
+                </button>,
+              ],
+              "className": "mailer-form",
+            },
+            "ref": null,
+            "rendered": Array [
+              null,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "onChange": [Function],
+                  "placeholder": "your email",
+                  "type": "email",
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "join",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "join",
+                "type": "button",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="shop-container"
+          >
+            <ShopItem
+              product={
+                Object {
+                  "desc": "monochrome screenprint",
+                  "id": 1,
+                  "price": 9.95,
+                  "shopUrl": "mushroomjack",
+                  "soldOut": false,
+                  "title": "Mushroom Lumberjack",
+                  "url": "shop01.jpg",
+                }
+              }
+            />
+            <ShopItem
+              product={
+                Object {
+                  "desc": "five colour screenprint",
+                  "id": 2,
+                  "price": 22.5,
+                  "shopUrl": "patterned-beetle",
+                  "soldOut": false,
+                  "title": "Patterned Beetle",
+                  "url": "shop02.jpg",
+                }
+              }
+            />
+            <ShopItem
+              product={
+                Object {
+                  "desc": "glossy giclee full colour",
+                  "id": 3,
+                  "price": 3.95,
+                  "shopUrl": "desert-smoker",
+                  "soldOut": false,
+                  "title": "Desert Smoker",
+                  "url": "shop03.jpg",
+                }
+              }
+            />
+            <ShopItem
+              product={
+                Object {
+                  "desc": "art stock giclee",
+                  "id": 4,
+                  "price": 12.95,
+                  "shopUrl": "robot-workshop",
+                  "soldOut": false,
+                  "title": "Robot Workshop",
+                  "url": "shop04.jpg",
+                }
+              }
+            />
+            <ShopItem
+              product={
+                Object {
+                  "desc": "five colour screenprint",
+                  "id": 5,
+                  "price": 22.5,
+                  "shopUrl": "patterned-butterfly",
+                  "soldOut": false,
+                  "title": "Patterned Butterfly",
+                  "url": "shop05.jpg",
+                }
+              }
+            />
+            <ShopItem
+              product={
+                Object {
+                  "desc": "glossy giclee full colour",
+                  "id": 6,
+                  "price": 3.95,
+                  "shopUrl": "desert-portrait",
+                  "soldOut": true,
+                  "title": "Desert Portrait",
+                  "url": "shop06.jpg",
+                }
+              }
+            />
+          </div>,
+          <div
+            className="mailer-cta"
+          >
+            <h2>
+              Be the first to know about new items
+            </h2>
+            <div
+              className="mailer-form"
+            >
+              <input
+                onChange={[Function]}
+                placeholder="your email"
+                type="email"
+                value=""
+              />
+              <button
+                onClick={[Function]}
+              >
+                join
+              </button>
+            </div>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <ShopItem
+                product={
+                  Object {
+                    "desc": "monochrome screenprint",
+                    "id": 1,
+                    "price": 9.95,
+                    "shopUrl": "mushroomjack",
+                    "soldOut": false,
+                    "title": "Mushroom Lumberjack",
+                    "url": "shop01.jpg",
+                  }
+                }
+              />,
+              <ShopItem
+                product={
+                  Object {
+                    "desc": "five colour screenprint",
+                    "id": 2,
+                    "price": 22.5,
+                    "shopUrl": "patterned-beetle",
+                    "soldOut": false,
+                    "title": "Patterned Beetle",
+                    "url": "shop02.jpg",
+                  }
+                }
+              />,
+              <ShopItem
+                product={
+                  Object {
+                    "desc": "glossy giclee full colour",
+                    "id": 3,
+                    "price": 3.95,
+                    "shopUrl": "desert-smoker",
+                    "soldOut": false,
+                    "title": "Desert Smoker",
+                    "url": "shop03.jpg",
+                  }
+                }
+              />,
+              <ShopItem
+                product={
+                  Object {
+                    "desc": "art stock giclee",
+                    "id": 4,
+                    "price": 12.95,
+                    "shopUrl": "robot-workshop",
+                    "soldOut": false,
+                    "title": "Robot Workshop",
+                    "url": "shop04.jpg",
+                  }
+                }
+              />,
+              <ShopItem
+                product={
+                  Object {
+                    "desc": "five colour screenprint",
+                    "id": 5,
+                    "price": 22.5,
+                    "shopUrl": "patterned-butterfly",
+                    "soldOut": false,
+                    "title": "Patterned Butterfly",
+                    "url": "shop05.jpg",
+                  }
+                }
+              />,
+              <ShopItem
+                product={
+                  Object {
+                    "desc": "glossy giclee full colour",
+                    "id": 6,
+                    "price": 3.95,
+                    "shopUrl": "desert-portrait",
+                    "soldOut": true,
+                    "title": "Desert Portrait",
+                    "url": "shop06.jpg",
+                  }
+                }
+              />,
+            ],
+            "className": "shop-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "function",
+              "props": Object {
+                "product": Object {
+                  "desc": "monochrome screenprint",
+                  "id": 1,
+                  "price": 9.95,
+                  "shopUrl": "mushroomjack",
+                  "soldOut": false,
+                  "title": "Mushroom Lumberjack",
+                  "url": "shop01.jpg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "function",
+              "props": Object {
+                "product": Object {
+                  "desc": "five colour screenprint",
+                  "id": 2,
+                  "price": 22.5,
+                  "shopUrl": "patterned-beetle",
+                  "soldOut": false,
+                  "title": "Patterned Beetle",
+                  "url": "shop02.jpg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "3",
+              "nodeType": "function",
+              "props": Object {
+                "product": Object {
+                  "desc": "glossy giclee full colour",
+                  "id": 3,
+                  "price": 3.95,
+                  "shopUrl": "desert-smoker",
+                  "soldOut": false,
+                  "title": "Desert Smoker",
+                  "url": "shop03.jpg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "4",
+              "nodeType": "function",
+              "props": Object {
+                "product": Object {
+                  "desc": "art stock giclee",
+                  "id": 4,
+                  "price": 12.95,
+                  "shopUrl": "robot-workshop",
+                  "soldOut": false,
+                  "title": "Robot Workshop",
+                  "url": "shop04.jpg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "5",
+              "nodeType": "function",
+              "props": Object {
+                "product": Object {
+                  "desc": "five colour screenprint",
+                  "id": 5,
+                  "price": 22.5,
+                  "shopUrl": "patterned-butterfly",
+                  "soldOut": false,
+                  "title": "Patterned Butterfly",
+                  "url": "shop05.jpg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "6",
+              "nodeType": "function",
+              "props": Object {
+                "product": Object {
+                  "desc": "glossy giclee full colour",
+                  "id": 6,
+                  "price": 3.95,
+                  "shopUrl": "desert-portrait",
+                  "soldOut": true,
+                  "title": "Desert Portrait",
+                  "url": "shop06.jpg",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h2>
+                Be the first to know about new items
+              </h2>,
+              <div
+                className="mailer-form"
+              >
+                <input
+                  onChange={[Function]}
+                  placeholder="your email"
+                  type="email"
+                  value=""
+                />
+                <button
+                  onClick={[Function]}
+                >
+                  join
+                </button>
+              </div>,
+            ],
+            "className": "mailer-cta",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Be the first to know about new items",
+              },
+              "ref": null,
+              "rendered": "Be the first to know about new items",
+              "type": "h2",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  null,
+                  <input
+                    onChange={[Function]}
+                    placeholder="your email"
+                    type="email"
+                    value=""
+                  />,
+                  <button
+                    onClick={[Function]}
+                  >
+                    join
+                  </button>,
+                ],
+                "className": "mailer-form",
+              },
+              "ref": null,
+              "rendered": Array [
+                null,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "onChange": [Function],
+                    "placeholder": "your email",
+                    "type": "email",
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "join",
+                    "onClick": [Function],
+                  },
+                  "ref": null,
+                  "rendered": "join",
+                  "type": "button",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

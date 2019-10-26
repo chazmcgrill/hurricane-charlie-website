@@ -1,0 +1,393 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Footer />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Navbar
+          navClick={undefined}
+          navData={undefined}
+        />,
+        <div
+          className="footer-icons"
+        >
+          <a
+            href="http://twitter.com/hurricanechaz"
+            target="_blank"
+          >
+            <i
+              className="fa fa-twitter"
+            />
+          </a>
+          <a
+            href="http://www.instagram.com/hurricane.charlie"
+            target="_blank"
+          >
+            <i
+              className="fa fa-instagram"
+            />
+          </a>
+          <a
+            href="http://www.behance.net/chazhurricane"
+            target="_blank"
+          >
+            <i
+              className="fa fa-behance"
+            />
+          </a>
+        </div>,
+        <p>
+          © 2018 Charlie Taylor all rights reserved.
+        </p>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "navClick": undefined,
+          "navData": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <a
+              href="http://twitter.com/hurricanechaz"
+              target="_blank"
+            >
+              <i
+                className="fa fa-twitter"
+              />
+            </a>,
+            <a
+              href="http://www.instagram.com/hurricane.charlie"
+              target="_blank"
+            >
+              <i
+                className="fa fa-instagram"
+              />
+            </a>,
+            <a
+              href="http://www.behance.net/chazhurricane"
+              target="_blank"
+            >
+              <i
+                className="fa fa-behance"
+              />
+            </a>,
+          ],
+          "className": "footer-icons",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": <i
+                className="fa fa-twitter"
+              />,
+              "href": "http://twitter.com/hurricanechaz",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fa fa-twitter",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": <i
+                className="fa fa-instagram"
+              />,
+              "href": "http://www.instagram.com/hurricane.charlie",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fa fa-instagram",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": <i
+                className="fa fa-behance"
+              />,
+              "href": "http://www.behance.net/chazhurricane",
+              "target": "_blank",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fa fa-behance",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "type": "a",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "© 2018 Charlie Taylor all rights reserved.",
+        },
+        "ref": null,
+        "rendered": "© 2018 Charlie Taylor all rights reserved.",
+        "type": "p",
+      },
+    ],
+    "type": "footer",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Navbar
+            navClick={undefined}
+            navData={undefined}
+          />,
+          <div
+            className="footer-icons"
+          >
+            <a
+              href="http://twitter.com/hurricanechaz"
+              target="_blank"
+            >
+              <i
+                className="fa fa-twitter"
+              />
+            </a>
+            <a
+              href="http://www.instagram.com/hurricane.charlie"
+              target="_blank"
+            >
+              <i
+                className="fa fa-instagram"
+              />
+            </a>
+            <a
+              href="http://www.behance.net/chazhurricane"
+              target="_blank"
+            >
+              <i
+                className="fa fa-behance"
+              />
+            </a>
+          </div>,
+          <p>
+            © 2018 Charlie Taylor all rights reserved.
+          </p>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "navClick": undefined,
+            "navData": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <a
+                href="http://twitter.com/hurricanechaz"
+                target="_blank"
+              >
+                <i
+                  className="fa fa-twitter"
+                />
+              </a>,
+              <a
+                href="http://www.instagram.com/hurricane.charlie"
+                target="_blank"
+              >
+                <i
+                  className="fa fa-instagram"
+                />
+              </a>,
+              <a
+                href="http://www.behance.net/chazhurricane"
+                target="_blank"
+              >
+                <i
+                  className="fa fa-behance"
+                />
+              </a>,
+            ],
+            "className": "footer-icons",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fa fa-twitter"
+                />,
+                "href": "http://twitter.com/hurricanechaz",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fa fa-twitter",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fa fa-instagram"
+                />,
+                "href": "http://www.instagram.com/hurricane.charlie",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fa fa-instagram",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": <i
+                  className="fa fa-behance"
+                />,
+                "href": "http://www.behance.net/chazhurricane",
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "fa fa-behance",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "i",
+              },
+              "type": "a",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "© 2018 Charlie Taylor all rights reserved.",
+          },
+          "ref": null,
+          "rendered": "© 2018 Charlie Taylor all rights reserved.",
+          "type": "p",
+        },
+      ],
+      "type": "footer",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

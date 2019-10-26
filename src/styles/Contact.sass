@@ -1,0 +1,61 @@
+.contact-box
+  display: flex
+  flex-direction: column
+  padding: 10px 50px
+  max-width: 900px
+  margin: 0 auto
+  @media screen and (min-width: 640px)
+    flex-direction: row
+    justify-content: space-around
+
+form
+  display: flex
+  flex-direction: column
+  margin-bottom: 20px
+
+textarea
+  resize: vertical
+    
+form
+  input, textarea, button
+    outline: none
+    background: white
+    border: 1px solid $black
+    border-radius: 3px
+    font-size: 0.8em
+    margin: 5px 0
+    padding: 10px
+    &::placeholder
+      font-family: 'Roboto Mono', monospace
+      font-size: 0.7rem
+      // font-family: 'Lora', serif
+      // font-style: italic
+      color: $black 
+  p
+    color: red
+
+form button
+  max-width: 100px
+  padding-left: 0
+  border: 2px solid $black
+  cursor: pointer
+  transition: color 0.3s ease-in, background 0.3s ease-in
+  &:hover
+    background: $black
+    color: white
+
+.contact-item
+  ul 
+    padding-left: 10px 
+    list-style: none
+    li
+      margin-bottom: 5px
+  a:hover
+    color: $accent
+  i
+    margin-right: 10px
+  @media screen and (min-width: 640px)
+    max-width: 50%
+
+.contact-text
+  margin-top: 20px
