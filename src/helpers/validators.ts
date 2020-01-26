@@ -60,7 +60,7 @@ export function formValidator(data: FormValidatorData): FormValidatorReturn {
         errorMessages.message = 'invalid characters entered'
     }
 
-    const isValid = Object.values(errorMessages).every(errorMessage => errorMessage);
+    const isValid = Object.values(errorMessages).every(errorMessage => errorMessage === '');
 
     return { errorMessages, isValid };
 }

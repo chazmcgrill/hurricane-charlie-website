@@ -34,7 +34,7 @@ class Contact extends Component<{}, ContactState> {
         window.scrollTo(0, 0)
     }
 
-    async handleSubmit(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
         const { errorMessages, isValid } = formValidator(this.state.data);
 
@@ -43,13 +43,14 @@ class Contact extends Component<{}, ContactState> {
             let { msgStatus } = this.state;
       
             try {
-                const { ok } = await fetch('https://hc-mail.herokuapp.com/contact', {
+                const { ok } = await fetch('https://ct-core-api.herokuapp.com/hc-contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(data),
                 });
+
                 if (ok) {
                     msgStatus = { msg: "message sent, speak to you soon...", status: "green" };
                 }

@@ -21,12 +21,15 @@ const Shop = () => {
 
         if (!isEmailValid) {
             try {
-                await fetch(process.env.MAILER_URL!, {
+                const messageRequest = await fetch('https://ct-core-api.herokuapp.com/hc-mailer' , {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(email),
-                })
-                newMessage = 'You\'ve been added to the mailing list';
+                    body: JSON.stringify({ email }),
+                });
+
+                if (messageRequest.ok) {
+                    newMessage = 'You\'ve been added to the mailing list';
+                }
             } catch (error) {
                 newMessage = 'Something went wrong, please try again.';
             }
