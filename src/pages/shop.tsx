@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+
 import ShopItem from '../components/shop-item';
 import { shopItems } from '../globals/shopItems';
 import { validateEmail } from '../helpers/validators';
@@ -7,6 +9,26 @@ import Layout from '../components/layout';
 const Shop = () => {
     const [email, setEmail] = useState('');
     const [message, setMsg] = useState('');
+
+    const imageData = useStaticQuery(graphql`
+        query {
+            allFile(filter: { relativeDirectory: { eq: "shop" } }) {
+                nodes {
+                    childImageSharp {
+                        fluid {
+                            originalName
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        }
+    `);
+
+    const flattendImageData = imageData.allFile.nodes.reduce((acc: any, cur: any) => {
+        const { originalName, ...rest } = cur.childImageSharp.fluid;
+        return { [originalName]: rest, ...acc };
+    }, {});
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -46,6 +68,7 @@ const Shop = () => {
                     <ShopItem
                         key={shopItem.id}
                         product={shopItem}
+                        imgData={flattendImageData[shopItem.url]}
                     />
                 ))}
             </div>

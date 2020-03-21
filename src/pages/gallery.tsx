@@ -1,20 +1,35 @@
 import React, { useState, useEffect } from 'react';
-// import GalleryItem from './GalleryItem';
-// import Modal from './Modal';
-import { galleryData } from '../globals/galleryData';
+import { useStaticQuery, graphql } from 'gatsby';
 
-// import imageImport from '../helpers/imageImport';
+import { galleryData } from '../globals/galleryData';
 import CallToAction from '../components/call-to-action';
 import GalleryItem from '../components/gallery-item';
 import Modal from '../components/modal';
 import Layout from '../components/layout';
 
-// const images = imageImport(require.context('../images/thumbs', false, /\.jpg$/)) as { [key: string]: string };
-
 const Gallery = () => {
     const [selectedGalleryItemId, setSelectedGalleryItemId] = useState(0);
     const [isModalShowing, setIsModalShowing] = useState(false);
     const modalLimit = galleryData.length - 1;
+    const imageData = useStaticQuery(graphql`
+        query {
+            allFile(filter: { relativeDirectory: { eq: "thumbs" } }) {
+                nodes {
+                    childImageSharp {
+                        fluid {
+                            originalName
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        }
+    `);
+
+    const flattendImageData = imageData.allFile.nodes.reduce((acc: any, cur: any) => {
+        const { originalName, ...rest } = cur.childImageSharp.fluid;
+        return { [originalName]: rest, ...acc };
+    }, {});
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -60,7 +75,7 @@ const Gallery = () => {
                             selectGalleryItem={selectGalleryItem}
                             galleryItemData={item}
                             key={item.id}
-                            // imgData={images[item.src]}
+                            imgData={flattendImageData[item.src]}
                         />
                     ))}
                 </div>
