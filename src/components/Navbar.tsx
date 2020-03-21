@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from "gatsby";
 import { NavData } from '../globals/navData';
 
 const activeNav = { borderBottom: "3px solid #FF2E63" };
@@ -14,9 +14,9 @@ const Navbar = ({
     <nav>
         {navData.map(item => (
             <li key={item.id}>
-                <NavLink to={item.url} exact activeStyle={activeNav}>
+                <Link to={item.url} activeStyle={activeNav}>
                     {item.name}
-                </NavLink>
+                </Link>
             </li>
         ))}
     </nav>

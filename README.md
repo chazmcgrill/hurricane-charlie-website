@@ -4,8 +4,8 @@ Personal illustration and art portfolio. Featuring a gallery contact form (with 
 
 [Visit Site](https://hurricanecharlie.co.uk)
 
-Tech: 
+Tech:
+- Gatsby
 - React
 - Sass
 - Typescript
-- React Router Dom

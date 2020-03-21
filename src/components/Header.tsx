@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../images/hclogo.png';
-import Navbar from './Navbar';
+import Navbar from './navbar';
+import Image from './image';
 import navData from '../globals/navData';
 
 const Header = () => {
@@ -23,7 +23,7 @@ const Header = () => {
 
     return (
         <header>
-            <img src={logo} alt="Hurricane Charlie Logo" />
+            <Image />
 
             {showHamburger && (
                 <div onClick={() => setBurgerOpen(!burgerOpen)} className="hamburger-container">

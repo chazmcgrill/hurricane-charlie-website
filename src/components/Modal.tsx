@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { modalInfo, galleryData } from '../globals/galleryData';
-import imageImport from '../helpers/imageImport';
+import { Link } from 'gatsby';
+import Image from './image';
+// import imageImport from '../helpers/imageImport';
 
-const images = imageImport(require.context('../images/modal-images', false, /\.(png|jpe?g|svg)$/)) as { [key: string]: string };
+// const images = imageImport(require.context('../images/modal-images', false, /\.(png|jpe?g|svg)$/)) as { [key: string]: string };
 
 interface ModalProps {
     selectedGalleryItemId: number;
@@ -17,13 +19,14 @@ const Modal = ({
     modalLimit,
 }: ModalProps) => {
     const modalData = galleryData[selectedGalleryItemId];
-    const imgSrc = `modal-0${modalData.id < 10 ? '0' : ''}${modalData.id}.jpg`;
+    // const imgSrc = `modal-0${modalData.id < 10 ? '0' : ''}${modalData.id}.jpg`;
     const {name, id, shop} = modalData;
 
     return (
         <div className="modal">
             <div className="modal-img">
-                <img src={images[imgSrc]} alt={name}/>
+                {/* <img src={images[imgSrc]} alt={name}/> */}
+                <Image />
             </div>
 
             <div className="modal-data">
