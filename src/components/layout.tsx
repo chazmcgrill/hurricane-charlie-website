@@ -3,6 +3,11 @@ import Header from "./header";
 import Footer from "./footer";
 import "../styles/main.sass";
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+
+library.add(fab);
+
 interface LayoutProps {
     children: ReactNode | ReactNode[];
 }

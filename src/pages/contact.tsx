@@ -114,7 +114,9 @@ class Contact extends Component<{}, ContactState> {
                             <p>{`Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.`}</p>
                             <h2>social</h2>
                             <p>You can find me on these social platforms:</p>
-                            <SocialIcons />
+                            <div className="contact-icons">
+                                <SocialIcons />
+                            </div>
                             <h2>coding</h2>
                             <p>I designed and coded this website. For more information please visit my web development portfolio <a target="_blank" rel="noopener noreferrer" href="http://charlietaylorcoder.com">here</a></p>
                         </div>

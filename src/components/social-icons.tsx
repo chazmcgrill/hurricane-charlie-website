@@ -1,13 +1,14 @@
 import React, { Fragment } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface SocialItem {
     id: number;
     url: string;
-    name: string;
+    name: 'instagram' | 'twitter' | 'behance';
 }
 
-const Footer = () => {
+const SocialIcons = () => {
     const socialItems = useStaticQuery(graphql`
         query {
             socialYaml {
@@ -24,11 +25,11 @@ const Footer = () => {
         <Fragment>
             {socialItems.socialYaml.social.map((item: SocialItem) => (
                 <a key={item.id} target="_blank" rel="noopener noreferrer" href={item.url}>
-                    <i className={`fab fa-${item.name}`}></i>
+                    <FontAwesomeIcon icon={['fab', item.name]} style={{ color: '#000000' }} size="1x" />
                 </a>
             ))}
         </Fragment>
     );
 }
 
-export default Footer
+export default SocialIcons;
