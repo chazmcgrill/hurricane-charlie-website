@@ -1,18 +1,15 @@
 import React from 'react';
 import Navbar from './navbar';
-import socialItems from '../globals/socialItems';
-import navData from '../globals/navData';
+import SocialIcons from './social-icons';
 
 const Footer = () => (
     <footer>
-        <Navbar navData={navData} />
+        <Navbar />
+
         <div className="footer-icons">
-            {socialItems.map(s => (
-                <a key={s.id} target="_blank" rel="noopener noreferrer" href={s.url}>
-                    <i className={`fab fa-${s.name}`}></i>
-                </a>
-            ))}
+            <SocialIcons />
         </div>
+
         <p><span>&copy;</span> 2018 Charlie Taylor all rights reserved.</p>
     </footer>
 );

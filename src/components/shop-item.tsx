@@ -1,7 +1,15 @@
 import React from 'react';
 import Img from "gatsby-image";
 
-import { IShopItem } from '../globals/shopItems';
+export interface IShopItem {
+    id: number;
+    url: string;
+    title: string;
+    price: number;
+    desc: string;
+    soldOut: boolean;
+    shopUrl: string;
+}
 
 interface ShopItemProps {
     product: IShopItem;

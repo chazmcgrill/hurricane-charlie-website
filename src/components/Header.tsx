@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './navbar';
 import Image from './image';
-import navData from '../globals/navData';
 
 const Header = () => {
     const [burgerOpen, setBurgerOpen] = useState(false);
@@ -35,7 +34,7 @@ const Header = () => {
                 </div>
             )}
 
-            {showNavBar && <Navbar navData={navData} />}
+            {showNavBar && <Navbar />}
         </header>
     )
 }

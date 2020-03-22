@@ -1,19 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import { galleryData } from '../globals/galleryData';
 import CallToAction from '../components/call-to-action';
 import GalleryItem from '../components/gallery-item';
 import Modal from '../components/modal';
 import Layout from '../components/layout';
 
+export interface IGalleryItem {
+    id: number;
+    name: string;
+    src: string;
+    size: string;
+    shop: boolean;
+    desc: string;
+    modalImage: string;
+}
+
 const Gallery = () => {
     const [selectedGalleryItemId, setSelectedGalleryItemId] = useState(0);
     const [isModalShowing, setIsModalShowing] = useState(false);
-    const modalLimit = galleryData.length - 1;
-    const imageData = useStaticQuery(graphql`
+    
+    const galleryData = useStaticQuery(graphql`
         query {
-            allFile(filter: { relativeDirectory: { eq: "thumbs" } }) {
+            data: galleryYaml {
+                gallery {
+                    id
+                    name
+                    shop
+                    size
+                    src
+                    desc
+                    modalImage
+                }
+            }
+            images: allFile(filter: { relativeDirectory: { eq: "thumbs" } }) {
+                nodes {
+                    childImageSharp {
+                        fluid {
+                            originalName
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+            modalImages: allFile(filter: { relativeDirectory: { eq: "modal-images" } }) {
                 nodes {
                     childImageSharp {
                         fluid {
@@ -26,7 +56,14 @@ const Gallery = () => {
         }
     `);
 
-    const flattendImageData = imageData.allFile.nodes.reduce((acc: any, cur: any) => {
+    const modalLimit = galleryData.data.gallery.length - 1;
+
+    const flattendImageData = galleryData.images.nodes.reduce((acc: any, cur: any) => {
+        const { originalName, ...rest } = cur.childImageSharp.fluid;
+        return { [originalName]: rest, ...acc };
+    }, {});
+
+    const flattendModalImageData = galleryData.modalImages.nodes.reduce((acc: any, cur: any) => {
         const { originalName, ...rest } = cur.childImageSharp.fluid;
         return { [originalName]: rest, ...acc };
     }, {});
@@ -55,10 +92,12 @@ const Gallery = () => {
     }
 
     if (isModalShowing) {
+        const { modalImage, ...selectedGalleryItem } = galleryData.data.gallery[selectedGalleryItemId];
         return (
             <Layout>
                 <Modal
-                    selectedGalleryItemId={selectedGalleryItemId}
+                    selectedGalleryItem={selectedGalleryItem}
+                    imgData={flattendModalImageData[modalImage]}
                     modalHandler={modalHandler}
                     modalLimit={modalLimit}
                 />
@@ -70,7 +109,7 @@ const Gallery = () => {
         <Layout>
             <section className="gallery">
                 <div className="gallery-grid">
-                    {galleryData.map(item => (
+                    {galleryData.data.gallery.map((item: IGalleryItem) => (
                         <GalleryItem
                             selectGalleryItem={selectGalleryItem}
                             galleryItemData={item}

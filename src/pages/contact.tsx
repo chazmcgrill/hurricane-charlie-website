@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import CallToAction from '../components/call-to-action';
-import socialItems from '../globals/socialItems';
 import { formValidator, FormValidatorData } from '../helpers/validators';
 import Layout from '../components/layout';
+import SocialIcons from '../components/social-icons';
 
 interface ContactState {
     data: FormValidatorData;
@@ -73,6 +73,7 @@ class Contact extends Component<{}, ContactState> {
     render() {
         const { name, email, message } = this.state.data;
         const { errorMessages, msgStatus } = this.state;
+
         return (
             <Layout>
                 <div className="contact-box">
@@ -113,15 +114,7 @@ class Contact extends Component<{}, ContactState> {
                             <p>{`Please feel free to contact me with any questions. I'm open to commissions and exhibitions so do get in touch.`}</p>
                             <h2>social</h2>
                             <p>You can find me on these social platforms:</p>
-                            <ul>
-                                {socialItems.map(s => (
-                                    <li key={s.id}>
-                                        <a target="_blank" rel="noopener noreferrer" href={s.url}>
-                                            <i className={`fab fa-${s.name}`}></i>{s.name}
-                                        </a>
-                                    </li>
-                                ))}
-                            </ul>
+                            <SocialIcons />
                             <h2>coding</h2>
                             <p>I designed and coded this website. For more information please visit my web development portfolio <a target="_blank" rel="noopener noreferrer" href="http://charlietaylorcoder.com">here</a></p>
                         </div>

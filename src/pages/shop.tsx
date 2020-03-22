@@ -2,17 +2,26 @@ import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import ShopItem from '../components/shop-item';
-import { shopItems } from '../globals/shopItems';
 import { validateEmail } from '../helpers/validators';
 import Layout from '../components/layout';
+
+interface IShopItem {
+    id: number;
+    url: string;
+    title: string;
+    price: number;
+    desc: string;
+    soldOut: boolean;
+    shopUrl: string;
+}
 
 const Shop = () => {
     const [email, setEmail] = useState('');
     const [message, setMsg] = useState('');
 
-    const imageData = useStaticQuery(graphql`
+    const shopData = useStaticQuery(graphql`
         query {
-            allFile(filter: { relativeDirectory: { eq: "shop" } }) {
+            images: allFile(filter: { relativeDirectory: { eq: "shop" } }) {
                 nodes {
                     childImageSharp {
                         fluid {
@@ -22,10 +31,21 @@ const Shop = () => {
                     }
                 }
             }
+            data: shopYaml {
+                shop {
+                    desc
+                    id
+                    price
+                    shopUrl
+                    soldOut
+                    title
+                    url
+                }
+            }
         }
     `);
 
-    const flattendImageData = imageData.allFile.nodes.reduce((acc: any, cur: any) => {
+    const flattendImageData = shopData.images.nodes.reduce((acc: any, cur: any) => {
         const { originalName, ...rest } = cur.childImageSharp.fluid;
         return { [originalName]: rest, ...acc };
     }, {});
@@ -64,7 +84,7 @@ const Shop = () => {
     return (
         <Layout>
             <div className="shop-container">
-                {shopItems.map((shopItem) => (
+                {shopData.data.shop.map((shopItem: IShopItem) => (
                     <ShopItem
                         key={shopItem.id}
                         product={shopItem}

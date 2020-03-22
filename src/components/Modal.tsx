@@ -1,38 +1,34 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
-import { modalInfo, galleryData } from '../globals/galleryData';
 import { Link } from 'gatsby';
-import Image from './image';
-// import imageImport from '../helpers/imageImport';
+import Img from "gatsby-image";
 
-// const images = imageImport(require.context('../images/modal-images', false, /\.(png|jpe?g|svg)$/)) as { [key: string]: string };
+import { IGalleryItem } from '../pages/gallery';
 
 interface ModalProps {
-    selectedGalleryItemId: number;
+    selectedGalleryItem: IGalleryItem;
     modalHandler: (cmd: string) => void;
     modalLimit: number;
+    imgData: any;
 }
 
 const Modal = ({
-    selectedGalleryItemId,
+    selectedGalleryItem,
+    imgData,
     modalHandler,
     modalLimit,
 }: ModalProps) => {
-    const modalData = galleryData[selectedGalleryItemId];
-    // const imgSrc = `modal-0${modalData.id < 10 ? '0' : ''}${modalData.id}.jpg`;
-    const {name, id, shop} = modalData;
+    const { name, id, shop, desc } = selectedGalleryItem;
 
     return (
         <div className="modal">
             <div className="modal-img">
-                {/* <img src={images[imgSrc]} alt={name}/> */}
-                <Image />
+                <Img fluid={imgData} />
             </div>
 
             <div className="modal-data">
                 <div>
                     <h2>{name}</h2>
-                    <p>{modalInfo[id].desc}</p>
+                    <p>{desc}</p>
                     {shop && <Link to="/shop">Buy in shop</Link>}
                 </div>
         

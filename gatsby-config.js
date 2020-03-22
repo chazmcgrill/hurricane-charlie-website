@@ -6,6 +6,7 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-eslint`,
+        `gatsby-transformer-yaml`,
         `gatsby-plugin-typescript`,
         `gatsby-plugin-sass`,
         `gatsby-plugin-react-helmet`,
@@ -14,6 +15,13 @@ module.exports = {
             options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
+            },
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `content`,
+                path: `${__dirname}/src/content`,
             },
         },
         `gatsby-transformer-sharp`,
