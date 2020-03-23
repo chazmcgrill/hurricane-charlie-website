@@ -1,11 +1,12 @@
 import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
-import { IGalleryItem } from '../pages/gallery';
+import { GalleryItemData } from '../pages/gallery';
+import { FluidObject } from 'gatsby-image';
 
 interface GalleryItemProps {
-    galleryItemData: IGalleryItem;
+    galleryItemData: GalleryItemData;
     selectGalleryItem: (id: number) => void;
-    imgData: any;
+    imgData: FluidObject;
 }
 
 const GalleryItem = ({
@@ -13,7 +14,7 @@ const GalleryItem = ({
     selectGalleryItem,
     imgData,
 }: GalleryItemProps): JSX.Element => {
-    const itemClass = `grid-item ${galleryItemData ? galleryItemData.size : null}`;
+    const itemClass = `grid-item ${galleryItemData ? galleryItemData.size : ''}`;
   
     return (
         <BackgroundImage

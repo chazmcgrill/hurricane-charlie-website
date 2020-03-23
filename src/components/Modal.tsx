@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from "gatsby-image";
+import Img, { FluidObject } from "gatsby-image";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { IGalleryItem } from '../pages/gallery';
+import { GalleryItemData } from '../pages/gallery';
 
 interface ModalProps {
-    selectedGalleryItem: IGalleryItem;
+    selectedGalleryItem: GalleryItemData;
     modalHandler: (cmd: string) => void;
     modalLimit: number;
-    imgData: any;
+    imgData: FluidObject;
 }
 
 const Modal = ({

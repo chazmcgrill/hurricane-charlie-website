@@ -7,9 +7,9 @@ const Header = () => {
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [width, setWidth] = useState(640);
 
-    const image = useStaticQuery(graphql`
+    const { image } = useStaticQuery(graphql`
         query {
-            file(relativePath: { eq: "hclogo.png" }) {
+            image: file(relativePath: { eq: "hclogo.png" }) {
                 childImageSharp {
                     fixed(width: 45) {
                         ...GatsbyImageSharpFixed
@@ -35,7 +35,7 @@ const Header = () => {
 
     return (
         <header>
-            <Img fixed={image.file.childImageSharp.fixed} />
+            <Img fixed={image.childImageSharp.fixed} />
 
             {showHamburger && (
                 <div onClick={() => setBurgerOpen(!burgerOpen)} className="hamburger-container">

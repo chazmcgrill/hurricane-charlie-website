@@ -10,7 +10,7 @@ interface NavData {
 const activeNav = { borderBottom: "3px solid #FF2E63" };
 
 const Navbar = () => {
-    const navData = useStaticQuery(graphql`
+    const { data } = useStaticQuery(graphql`
         query {
             data: navYaml {
                 nav {
@@ -24,7 +24,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            {navData.data.nav.map((item: NavData) => (
+            {data.nav.map((item: NavData) => (
                 <li key={item.id}>
                     <Link to={item.url} activeStyle={activeNav}>
                         {item.name}

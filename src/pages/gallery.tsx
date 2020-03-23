@@ -5,8 +5,9 @@ import CallToAction from '../components/call-to-action';
 import GalleryItem from '../components/gallery-item';
 import Modal from '../components/modal';
 import Layout from '../components/layout';
+import { imageObjectFromArray } from '../helpers/imageObjectFromArray';
 
-export interface IGalleryItem {
+export interface GalleryItemData {
     id: number;
     name: string;
     src: string;
@@ -19,8 +20,12 @@ export interface IGalleryItem {
 const Gallery = () => {
     const [selectedGalleryItemId, setSelectedGalleryItemId] = useState(0);
     const [isModalShowing, setIsModalShowing] = useState(false);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
     
-    const galleryData = useStaticQuery(graphql`
+    const {data, images, modalImages} = useStaticQuery(graphql`
         query {
             data: galleryYaml {
                 gallery {
@@ -56,21 +61,9 @@ const Gallery = () => {
         }
     `);
 
-    const modalLimit = galleryData.data.gallery.length - 1;
-
-    const flattendImageData = galleryData.images.nodes.reduce((acc: any, cur: any) => {
-        const { originalName, ...rest } = cur.childImageSharp.fluid;
-        return { [originalName]: rest, ...acc };
-    }, {});
-
-    const flattendModalImageData = galleryData.modalImages.nodes.reduce((acc: any, cur: any) => {
-        const { originalName, ...rest } = cur.childImageSharp.fluid;
-        return { [originalName]: rest, ...acc };
-    }, {});
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
+    const modalLimit = data.gallery.length - 1;
+    const flattendImageData = imageObjectFromArray(images.nodes);
+    const flattendModalImageData = imageObjectFromArray(modalImages.nodes);
 
     const selectGalleryItem = (id: number): void => {
         setSelectedGalleryItemId(id);
@@ -92,7 +85,7 @@ const Gallery = () => {
     }
 
     if (isModalShowing) {
-        const { modalImage, ...selectedGalleryItem } = galleryData.data.gallery[selectedGalleryItemId];
+        const { modalImage, ...selectedGalleryItem } = data.gallery[selectedGalleryItemId];
         return (
             <Layout>
                 <Modal
@@ -109,7 +102,7 @@ const Gallery = () => {
         <Layout>
             <section className="gallery">
                 <div className="gallery-grid">
-                    {galleryData.data.gallery.map((item: IGalleryItem) => (
+                    {data.gallery.map((item: GalleryItemData) => (
                         <GalleryItem
                             selectGalleryItem={selectGalleryItem}
                             galleryItemData={item}

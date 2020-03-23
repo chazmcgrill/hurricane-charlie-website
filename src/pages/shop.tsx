@@ -1,25 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import ShopItem from '../components/shop-item';
+import ShopItem, { ShopItemData } from '../components/shop-item';
 import { validateEmail } from '../helpers/validators';
 import Layout from '../components/layout';
-
-interface IShopItem {
-    id: number;
-    url: string;
-    title: string;
-    price: number;
-    desc: string;
-    soldOut: boolean;
-    shopUrl: string;
-}
+import { imageObjectFromArray } from '../helpers/imageObjectFromArray';
 
 const Shop = () => {
     const [email, setEmail] = useState('');
     const [message, setMsg] = useState('');
 
-    const shopData = useStaticQuery(graphql`
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, []);
+
+    const { images, data } = useStaticQuery(graphql`
         query {
             images: allFile(filter: { relativeDirectory: { eq: "shop" } }) {
                 nodes {
@@ -45,14 +40,7 @@ const Shop = () => {
         }
     `);
 
-    const flattendImageData = shopData.images.nodes.reduce((acc: any, cur: any) => {
-        const { originalName, ...rest } = cur.childImageSharp.fluid;
-        return { [originalName]: rest, ...acc };
-    }, {});
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, []);
+    const flattendImageData = imageObjectFromArray(images.nodes);
 
     const mailListSubmit = async (): Promise<void> => {
         const isEmailValid = validateEmail(email);
@@ -84,7 +72,7 @@ const Shop = () => {
     return (
         <Layout>
             <div className="shop-container">
-                {shopData.data.shop.map((shopItem: IShopItem) => (
+                {data.shop.map((shopItem: ShopItemData) => (
                     <ShopItem
                         key={shopItem.id}
                         product={shopItem}

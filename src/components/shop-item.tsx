@@ -1,7 +1,7 @@
 import React from 'react';
-import Img from "gatsby-image";
+import Img, { FluidObject } from "gatsby-image";
 
-export interface IShopItem {
+export interface ShopItemData {
     id: number;
     url: string;
     title: string;
@@ -12,8 +12,8 @@ export interface IShopItem {
 }
 
 interface ShopItemProps {
-    product: IShopItem;
-    imgData: any;
+    product: ShopItemData;
+    imgData: FluidObject;
 }
 
 const ShopItem = ({

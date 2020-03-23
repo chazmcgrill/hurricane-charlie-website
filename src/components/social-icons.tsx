@@ -9,9 +9,9 @@ export interface SocialItem {
 }
 
 const SocialIcons = () => {
-    const socialItems = useStaticQuery(graphql`
+    const { data } = useStaticQuery(graphql`
         query {
-            socialYaml {
+            data: socialYaml {
                 social {
                     id
                     name
@@ -23,7 +23,7 @@ const SocialIcons = () => {
 
     return (
         <Fragment>
-            {socialItems.socialYaml.social.map((item: SocialItem) => (
+            {data.social.map((item: SocialItem) => (
                 <a key={item.id} target="_blank" rel="noopener noreferrer" href={item.url}>
                     <FontAwesomeIcon icon={['fab', item.name]} style={{ color: '#000000' }} size="1x" />
                 </a>
