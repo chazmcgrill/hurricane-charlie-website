@@ -6,6 +6,7 @@ import GalleryItem from '../components/gallery-item';
 import Modal from '../components/modal';
 import Layout from '../components/layout';
 import { imageObjectFromArray } from '../helpers/imageObjectFromArray';
+import SEO from '../components/seo';
 
 export interface GalleryItemData {
     id: number;
@@ -84,6 +85,7 @@ const Gallery = () => {
         const { modalImage, ...selectedGalleryItem } = data.gallery[selectedGalleryItemId];
         return (
             <Layout>
+                <SEO title={selectedGalleryItem.name} />
                 <Modal
                     selectedGalleryItem={selectedGalleryItem}
                     imgData={flattendModalImageData[modalImage]}
@@ -96,6 +98,7 @@ const Gallery = () => {
 
     return (
         <Layout>
+            <SEO title="Gallery" />
             <section className="gallery">
                 <div className="gallery-grid">
                     {data.gallery.map((item: GalleryItemData) => (

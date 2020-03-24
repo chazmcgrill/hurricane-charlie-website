@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `Gatsby Default Starter`,
-        description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-        author: `@gatsbyjs`,
+        title: `Hurricane Charlie - The Art and Illustration of Charlie Taylor`,
+        description: `Hurricane Charlie is the illustration and graphic art of Charlie Taylor.`,
+        author: `Charlie Taylor`,
     },
     plugins: [
         `gatsby-plugin-eslint`,

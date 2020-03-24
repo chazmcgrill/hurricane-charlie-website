@@ -12,7 +12,8 @@ interface GatsbyImageNode {
     };
 }
 
-export const imageObjectFromArray = (imageNodes: GatsbyImageNode[]) => imageNodes.reduce((acc: FlattenedReturn, cur: GatsbyImageNode) => {
-    const { originalName, ...rest } = cur.childImageSharp.fluid;
-    return { [originalName]: rest, ...acc };
-}, {});
+export const imageObjectFromArray = (imageNodes: GatsbyImageNode[]): FlattenedReturn => 
+    imageNodes.reduce((acc: FlattenedReturn, cur: GatsbyImageNode) => {
+        const { originalName, ...rest } = cur.childImageSharp.fluid;
+        return { [originalName]: rest, ...acc };
+    }, {});

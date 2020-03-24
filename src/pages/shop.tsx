@@ -5,6 +5,7 @@ import ShopItem, { ShopItemData } from '../components/shop-item';
 import { validateEmail } from '../helpers/validators';
 import Layout from '../components/layout';
 import { imageObjectFromArray } from '../helpers/imageObjectFromArray';
+import SEO from '../components/seo';
 
 const Shop = () => {
     const [email, setEmail] = useState('');
@@ -67,6 +68,7 @@ const Shop = () => {
 
     return (
         <Layout>
+            <SEO title="Shop" />
             <div className="shop-container">
                 {data.shop.map((shopItem: ShopItemData) => (
                     <ShopItem

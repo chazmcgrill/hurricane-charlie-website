@@ -3,6 +3,7 @@ import CallToAction from '../components/call-to-action';
 import { formValidator, FormValidatorData } from '../helpers/validators';
 import Layout from '../components/layout';
 import SocialIcons from '../components/social-icons';
+import SEO from '../components/seo';
 
 interface ContactState {
     data: FormValidatorData;
@@ -72,6 +73,7 @@ class Contact extends Component<{}, ContactState> {
 
         return (
             <Layout>
+                <SEO title="404: Not found" />
                 <div className="contact-box">
                     <div className="contact-item">
                         <h2>say hello...</h2>
