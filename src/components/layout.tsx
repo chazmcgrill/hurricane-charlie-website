@@ -1,4 +1,4 @@
-import React, { Fragment, ReactNode } from "react";
+import React, { Fragment, ReactNode, useEffect } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import "../styles/main.sass";
@@ -12,12 +12,20 @@ interface LayoutProps {
     children: ReactNode | ReactNode[];
 }
 
-const Layout = ({ children }: LayoutProps): JSX.Element => (
-    <Fragment>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-    </ Fragment>
-);
+const Layout = ({ children }: LayoutProps): JSX.Element => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (
+        <Fragment>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+        </ Fragment>
+    );
+}
+
+
 
 export default Layout;

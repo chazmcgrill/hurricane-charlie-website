@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import ShopItem, { ShopItemData } from '../components/shop-item';
@@ -9,10 +9,6 @@ import { imageObjectFromArray } from '../helpers/imageObjectFromArray';
 const Shop = () => {
     const [email, setEmail] = useState('');
     const [message, setMsg] = useState('');
-
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, []);
 
     const { images, data } = useStaticQuery(graphql`
         query {

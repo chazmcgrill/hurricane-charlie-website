@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import CallToAction from '../components/call-to-action';
@@ -20,10 +20,6 @@ export interface GalleryItemData {
 const Gallery = () => {
     const [selectedGalleryItemId, setSelectedGalleryItemId] = useState(0);
     const [isModalShowing, setIsModalShowing] = useState(false);
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
     
     const {data, images, modalImages} = useStaticQuery(graphql`
         query {
@@ -117,4 +113,4 @@ const Gallery = () => {
     )
 }
 
-export default Gallery
+export default Gallery;

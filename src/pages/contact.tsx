@@ -31,10 +31,6 @@ class Contact extends Component<{}, ContactState> {
         });
     }
 
-    componentDidMount() {
-        window.scrollTo(0, 0)
-    }
-
     handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         e.preventDefault();
         const { errorMessages, isValid } = formValidator(this.state.data);

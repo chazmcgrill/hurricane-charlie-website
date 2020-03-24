@@ -3,7 +3,7 @@ import Navbar from './navbar';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-const Header = () => {
+const Header = (): JSX.Element => {
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [width, setWidth] = useState(640);
 
