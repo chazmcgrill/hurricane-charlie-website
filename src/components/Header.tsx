@@ -17,21 +17,20 @@ const Header = () => {
                 }
             }
         }
-    `)
-
-    const updateWindowSize = () => setWidth(window.innerWidth);
+    `);
 
     useEffect(() => {
+        const updateWindowSize = () => setWidth(window.innerWidth);
         updateWindowSize();
         window.addEventListener('resize', updateWindowSize);
         return () => {
             window.removeEventListener('resize', updateWindowSize);
         };
-    }, [])
+    }, []);
 
     const burgerClass = `hamburger hamburger-spin ${burgerOpen ? 'is-active' : ''}`;
     const showHamburger = width < 640;
-    const showNavBar = width > 640 || burgerOpen;
+    const showNavBar = width >= 640 || burgerOpen;
 
     return (
         <header>
