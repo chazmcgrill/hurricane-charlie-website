@@ -34,7 +34,7 @@ const Header = (): JSX.Element => {
 
     return (
         <header>
-            <Img fixed={image.childImageSharp.fixed} />
+            <Img fixed={image.childImageSharp.fixed} alt="Hurricane Charlie Icon" />
 
             {showHamburger && (
                 <div onClick={() => setBurgerOpen(!burgerOpen)} className="hamburger-container">

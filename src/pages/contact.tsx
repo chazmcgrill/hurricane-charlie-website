@@ -56,7 +56,7 @@ const Contact = () => {
 
     return (
         <Layout>
-            <SEO title="404: Not found" />
+            <SEO title="Contact" />
             <div className="contact-box">
                 <div className="contact-item">
                     <h2>say hello...</h2>
