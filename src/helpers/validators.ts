@@ -37,7 +37,7 @@ export function validateEmail(email: string): string {
 
 export function formValidator(data: FormValidatorData): FormValidatorReturn {
     const { name, email, message } = data;
-    let errorMessages = { name: '', email: '', message: '' } as FormValidatorData;
+    const errorMessages = { name: '', email: '', message: '' } as FormValidatorData;
 
     // check name
     if (name.length === 0) {

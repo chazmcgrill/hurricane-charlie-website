@@ -1,47 +1,49 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { modalInfo, galleryData } from '../globals/galleryData';
-import imageImport from '../helpers/imageImport';
-
-const images = imageImport(require.context('../images/modal-images', false, /\.(png|jpe?g|svg)$/)) as { [key: string]: string };
+import { Link } from 'gatsby';
+import Img, { FluidObject } from "gatsby-image";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes, faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { GalleryItemData } from '../pages/gallery';
 
 interface ModalProps {
-    selectedGalleryItemId: number;
+    selectedGalleryItem: GalleryItemData;
     modalHandler: (cmd: string) => void;
     modalLimit: number;
+    imgData: FluidObject;
 }
 
 const Modal = ({
-    selectedGalleryItemId,
+    selectedGalleryItem,
+    imgData,
     modalHandler,
     modalLimit,
 }: ModalProps) => {
-    const modalData = galleryData[selectedGalleryItemId];
-    const imgSrc = `modal-0${modalData.id < 10 ? '0' : ''}${modalData.id}.jpg`;
-    const {name, id, shop} = modalData;
+    const { name, id, shop, desc } = selectedGalleryItem;
 
     return (
         <div className="modal">
             <div className="modal-img">
-                <img src={images[imgSrc]} alt={name}/>
+                <Img fluid={imgData} />
             </div>
 
             <div className="modal-data">
                 <div>
                     <h2>{name}</h2>
-                    <p>{modalInfo[id].desc}</p>
+                    <p>{desc}</p>
                     {shop && <Link to="/shop">Buy in shop</Link>}
                 </div>
         
                 <div className="modal-btns">
                     <div onClick={() => modalHandler('prev')}>
-                        <i className={`fas fa-arrow-alt-circle-left ${id >= 1 ? null : "inactive"}`}/>
+                        <FontAwesomeIcon icon={faArrowAltCircleLeft} style={{ color: id >= 1 ? '#000' : 'lightgrey' }} />
                     </div>
 
-                    <div onClick={() => modalHandler('close')}><i className="fas fa-times"/></div>
+                    <div onClick={() => modalHandler('close')}>
+                        <FontAwesomeIcon icon={faTimes} style={{ color: '#000000' }} />
+                    </div>
           
                     <div onClick={() => modalHandler('next')}>
-                        <i className={`fas fa-arrow-alt-circle-right ${id < modalLimit ? null : "inactive"}`}/>
+                        <FontAwesomeIcon icon={faArrowAltCircleRight} style={{ color: id < modalLimit ? '#000' : 'lightgrey' }} />
                     </div>
                 </div>
             </div>

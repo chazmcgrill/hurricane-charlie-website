@@ -1,29 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../images/hclogo.png';
-import Navbar from './Navbar';
-import navData from '../globals/navData';
+import Navbar from './navbar';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-const Header = () => {
+const Header = (): JSX.Element => {
     const [burgerOpen, setBurgerOpen] = useState(false);
-    const [width, setWidth] = useState(0);
+    const [width, setWidth] = useState(640);
 
-    const updateWindowSize = () => setWidth(window.innerWidth);
+    const { image } = useStaticQuery(graphql`
+        query {
+            image: file(relativePath: { eq: "hclogo.png" }) {
+                childImageSharp {
+                    fixed(width: 45) {
+                        ...GatsbyImageSharpFixed
+                    }
+                }
+            }
+        }
+    `);
 
     useEffect(() => {
+        const updateWindowSize = () => setWidth(window.innerWidth);
         updateWindowSize();
         window.addEventListener('resize', updateWindowSize);
         return () => {
             window.removeEventListener('resize', updateWindowSize);
         };
-    }, [])
+    }, []);
 
     const burgerClass = `hamburger hamburger-spin ${burgerOpen ? 'is-active' : ''}`;
     const showHamburger = width < 640;
-    const showNavBar = width > 640 || burgerOpen;
+    const showNavBar = width >= 640 || burgerOpen;
 
     return (
         <header>
-            <img src={logo} alt="Hurricane Charlie Logo" />
+            <Img fixed={image.childImageSharp.fixed} />
 
             {showHamburger && (
                 <div onClick={() => setBurgerOpen(!burgerOpen)} className="hamburger-container">
@@ -35,7 +46,7 @@ const Header = () => {
                 </div>
             )}
 
-            {showNavBar && <Navbar navData={navData} />}
+            {showNavBar && <Navbar />}
         </header>
     )
 }
