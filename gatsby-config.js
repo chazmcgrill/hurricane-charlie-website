@@ -29,9 +29,9 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `gatsby-starter-default`,
-                short_name: `starter`,
-                start_url: `/gallery`,
+                name: `hurricane-charlie-portfolio`,
+                short_name: `hc`,
+                start_url: `/`,
                 background_color: `#663399`,
                 theme_color: `#663399`,
                 display: `minimal-ui`,
