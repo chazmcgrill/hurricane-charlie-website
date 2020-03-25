@@ -21,6 +21,7 @@ const GalleryItem = ({
             onClick={() => selectGalleryItem(galleryItemData.id)}
             className={itemClass}
             fluid={imgData}
+            alt={`Thumbnail - ${galleryItemData.name}`}
         >
             <div className="img-overlay"><p>{galleryItemData.name}</p></div>
         </BackgroundImage>

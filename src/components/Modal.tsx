@@ -23,7 +23,7 @@ const Modal = ({
     return (
         <div className="modal">
             <div className="modal-img">
-                <Img fluid={imgData} />
+                <Img fluid={imgData} alt={name} />
             </div>
 
             <div className="modal-data">

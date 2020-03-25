@@ -26,7 +26,7 @@ const ShopItem = ({
     return (
         <div className="shop-item">
             <a href={shopUrl} target="_blank" rel="noopener noreferrer">
-                <Img fluid={imgData} />
+                <Img fluid={imgData} alt={`Shop - ${product.title}`} />
             </a>
             <p>{product.title}</p>
             <p><em>{product.desc}</em></p>
