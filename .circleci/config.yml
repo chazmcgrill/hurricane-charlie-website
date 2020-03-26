@@ -1,0 +1,70 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.9.1
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-deps-{{ checksum "package.json" }}
+            - v1-deps-
+
+      - run:
+          name: Install packages
+          command: npm install
+
+      - run:
+          name: Build project
+          command: npm run build
+
+      - persist_to_workspace:
+          root: ~/repo
+          paths:
+            - dist
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-deps-{{ checksum "package.json" }}
+
+      - run:
+          name: Run tests
+          command: npm run test
+
+  deploy:
+    environment:
+      LC_ALL: en_US.UTF-8
+      LANG: en_US.UTF-8
+
+    docker:
+      - image: circleci/node:12.9.1
+
+    steps:
+      - attach_workspace:
+          at: ~/repo
+
+      - add_ssh_keys:
+          fingerprints:
+            - "6a:46:f7:a6:8f:1c:21:05:dd:19:7c:6c:2e:b3:01:87"
+
+      - run:
+          name: deploy to hosting
+          command: |
+            ssh-keyscan -t rsa ${DEPLOY_SERVER_IP} >> ~/.ssh/known_hosts
+            scp -r ~/repo/dist/. ${DEPLOY_USER}@${DEPLOY_SERVER_IP}:${DEPLOY_DIR}
+workflows:
+  version: 2.1
+  build-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
+        #   filters:
+        #     branches:
+        #       only: master
