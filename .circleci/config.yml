@@ -25,7 +25,7 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths:
-            - dist
+            - public
 
       - save_cache:
           paths:
@@ -56,7 +56,7 @@ jobs:
           name: deploy to hosting
           command: |
             ssh-keyscan -t rsa ${DEPLOY_SERVER_IP} >> ~/.ssh/known_hosts
-            scp -r ~/repo/dist/. ${DEPLOY_USER}@${DEPLOY_SERVER_IP}:${DEPLOY_DIR}
+            scp -r ~/repo/public/. ${DEPLOY_USER}@${DEPLOY_SERVER_IP}:${DEPLOY_DIR}
 workflows:
   version: 2.1
   build-deploy:
