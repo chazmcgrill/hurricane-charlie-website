@@ -2,7 +2,7 @@
   "name": "hurricane-charlie-website",
   "private": true,
   "description": "Hurricane Charlie Website",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "author": "Charlie Taylor",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -52,6 +52,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "preversion": "npm test",
+    "version": "git add .",
+    "postversion": "git push && git push --tags",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
