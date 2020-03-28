@@ -55,7 +55,7 @@
     "preversion": "npm test",
     "version": "git add .",
     "postversion": "git push && git push --tags",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
     "type": "git",
