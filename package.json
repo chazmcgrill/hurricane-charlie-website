@@ -52,6 +52,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "preversion": "npm test",
+    "version": "git add .",
+    "postversion": "git push && git push --tags",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
