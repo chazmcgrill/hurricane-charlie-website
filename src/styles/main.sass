@@ -6,86 +6,87 @@ $black: #252A34
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono')
 
 *
-  -webkit-font-smoothing: antialiased
-  -webkit-text-size-adjust: 100%
+    -webkit-font-smoothing: antialiased
+    -webkit-text-size-adjust: 100%
 
 body
-  font-family: 'Roboto', sans-serif
-  font-style: normal
-  font-weight: 400
-  font-size: 20px
-  margin: 0
+    font-family: 'Roboto', sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 20px
+    margin: 0
 
-  @media screen and (min-width: 640px)
-    font-size: 15px
+    @media screen and (min-width: 640px)
+        font-size: 15px
 
 h1,h2,h3,h4,h5,h6,strong
-  font-size: 1.3em
-  font-weight: 500
+    font-size: 1.3em
+    font-weight: 500
 
 a
-  text-decoration: none
-  color: $black
+    text-decoration: none
+    color: $black
 
 button
-  outline: none
+    outline: none
 
 nav 
-  li
-    list-style: none
-    text-transform: uppercase
-    font-weight: 500
-    cursor: pointer
-    &:hover
-      color: $accent
+    li
+        list-style: none
+        text-transform: uppercase
+        font-weight: 500
+        cursor: pointer
+        
+        &:hover
+            color: $accent
 
 .err-msg
-  font-size: 0.7em
+    font-size: 0.7em
 
 @import './header'
 
 .shop-cta
-  position: relative
-  background-image: url('../images/hero.jpg')
-  background-size: cover
-  height: 200px
-
-  @media screen and (min-width: 640px)
-    height: 300px
-  
-  .shop-cta-overlay
-    position: absolute
-    background: rgba($domhue, 0.9) 
-    top: 0
-    left: 0
-    bottom: 0
-    right: 0
-
-  .shop-cta-box
-    text-align: center
-    display: block
     position: relative
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 300px
-    padding: 30px
+    background-image: url('../images/hero.jpg')
+    background-size: cover
+    height: 200px
 
-    h2
-      font-weight: normal
-      margin: 0 0 30px
+    @media screen and (min-width: 640px)
+        height: 300px
+  
+    .shop-cta-overlay
+        position: absolute
+        background: rgba($domhue, 0.9) 
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
 
-    a
-      background: none
-      padding: 10px 20px
-      border: 3px solid $black
-      font-size: inherit
-      outline: none
-      cursor: pointer
+    .shop-cta-box
+        text-align: center
+        display: block
+        position: relative
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 300px
+        padding: 30px
 
-      &:hover
-        background: $black
-        color: $domhue
+        h2
+            font-weight: normal
+            margin: 0 0 30px
+
+        a
+            background: none
+            padding: 10px 20px
+            border: 3px solid $black
+            font-size: inherit
+            outline: none
+            cursor: pointer
+
+        &:hover
+            background: $black
+            color: $domhue
     
 @import './gallery'
 @import './modal'
@@ -93,3 +94,4 @@ nav
 @import './shop'
 @import './error-page'
 @import './footer'
+@import './loading-spinner'

@@ -1,7 +1,7 @@
 # Hurricane Charlie Website
 
 [![CircleCI](https://circleci.com/gh/chazmcgrill/hurricane-charlie-website/tree/master.svg?style=svg)](https://circleci.com/gh/chazmcgrill/hurricane-charlie-website/tree/master)
-[![GitHub Release](https://img.shields.io/github/v/release/chazmcgrill/hurricane-charlie-website)]()
+[![GitHub Release](https://img.shields.io/github/v/release/chazmcgrill/hurricane-charlie-website)](https://github.com/chazmcgrill/hurricane-charlie-website/releases)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
 Personal illustration and art portfolio.

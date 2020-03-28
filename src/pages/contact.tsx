@@ -4,24 +4,43 @@ import { formValidator } from '../helpers/validators';
 import Layout from '../components/layout';
 import SocialIcons from '../components/social-icons';
 import SEO from '../components/seo';
+import LoadingSpinner from '../components/loading-spinner';
+import ContactForm from '../components/contact-form';
 
 const DEFAULT_MESSAGE_STATE = { name: '', email: '', message: '' };
 
-const Contact = () => {
-    const [data, setData] = useState(DEFAULT_MESSAGE_STATE);
-    const [errorMessages, setErrorMessages] = useState(DEFAULT_MESSAGE_STATE);
-    const [msgStatus, setMsgStatus] = useState({ msg: '', status: '' });
+export interface MessageState {
+    name: string;
+    email: string;
+    message: string;
+}
 
-    const handleInput = (e: React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
-        setData({ ...data, [e.currentTarget.name]: e.currentTarget.value });
+export interface MessageStatus {
+    msg: string;
+    status: string;
+    isLoading?: boolean;
+}
+
+export type FormEventType = React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>;
+export type MouseEventType = React.MouseEvent<HTMLButtonElement, MouseEvent>;
+
+const Contact = () => {
+    const [messageData, setMessageData] = useState<MessageState>(DEFAULT_MESSAGE_STATE);
+    const [errorMessages, setErrorMessages] = useState<MessageState>(DEFAULT_MESSAGE_STATE);
+    const [messageStatus, setMessageStatus] = useState<MessageStatus>({ msg: '', status: '', isLoading: false });
+
+    const handleInput = (e: FormEventType): void => {
+        setMessageData({ ...messageData, [e.currentTarget.name]: e.currentTarget.value });
     }
 
-    const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const handleSubmit = async (e: MouseEventType): Promise<void> => {
         e.preventDefault();
-        const { errorMessages, isValid } = formValidator(data);
+        const { errorMessages, isValid } = formValidator(messageData);
 
         if (isValid) {
-            let newMessageStatus = { ...msgStatus };
+            setMessageStatus({ ...messageStatus, isLoading: true });
+
+            let newMessageStatus = { ...messageStatus };
 
             try {
                 const { ok } = await fetch('https://ct-core-api.herokuapp.com/hc-contact', {
@@ -29,7 +48,7 @@ const Contact = () => {
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify(data),
+                    body: JSON.stringify(messageData),
                 });
 
                 if (ok) {
@@ -45,51 +64,30 @@ const Contact = () => {
                 };
             }
 
-            setData(DEFAULT_MESSAGE_STATE);
-            setMsgStatus(newMessageStatus);
+            setMessageData(DEFAULT_MESSAGE_STATE);
+            setMessageStatus({ ...newMessageStatus, isLoading: false });
         }
         
         setErrorMessages(errorMessages);
     }
 
-    const { name, email, message } = data;
-
     return (
         <Layout>
             <SEO title="Contact" />
+
             <div className="contact-box">
                 <div className="contact-item">
-                    <h2>say hello...</h2>
-                    <form>
-                        {msgStatus.msg ? <p style={{ color: msgStatus.status }}>{msgStatus.msg}</p> : null}
-
-                        {errorMessages.name ? <p className="err-msg">{errorMessages.name}</p> : null}
-                        <input
-                            name="name"
-                            value={name}
-                            placeholder="your name"
-                            onChange={handleInput}
+                    { messageStatus.isLoading ? (
+                        <LoadingSpinner text="Sending message, please wait." />
+                    ) : (
+                        <ContactForm
+                            messageData={messageData}
+                            messageStatus={messageStatus}
+                            errorMessages={errorMessages}
+                            handleInput={handleInput}
+                            handleSubmit={handleSubmit}
                         />
-
-                        {errorMessages.email ? <p className="err-msg">{errorMessages.email}</p> : null}
-                        <input
-                            name="email"
-                            value={email}
-                            placeholder="your email"
-                            onChange={handleInput}
-                        />
-
-                        {errorMessages.message ? <p className="err-msg">{errorMessages.message}</p> : null}
-                        <textarea
-                            name="message"
-                            value={message}
-                            cols={30} rows={10}
-                            placeholder="type your message here..."
-                            onChange={handleInput}
-                        />
-
-                        <button onClick={handleSubmit}>send</button>
-                    </form>
+                    )}
                 </div>
 
                 <div className="contact-item contact-text">
