@@ -1,39 +1,40 @@
 footer
-  display: grid
-  grid-auto-rows: 2em
-  background-color: $second
-  padding: 20px 0
+    display: grid
+    grid-auto-rows: 2em
+    background-color: $second
+    padding: 20px 0
 
-  nav, p, .footer-icons
-    align-self: center
-    justify-self: center
+    nav, p, .footer-icons
+        align-self: center
+        justify-self: center
 
-  nav
-    li
-      margin-right: 10px
-      display: inline-block
-      &:last-child
-        margin-right: 0
+    nav
+        li
+            margin-right: 10px
+            display: inline-block
 
-  p
-    margin: 0
-    font-family: 'Roboto Mono', monospace;
-    font-size: 0.5rem
+            &:last-child
+                margin-right: 0
+
+    p
+        margin: 0
+        font-family: 'Roboto Mono', monospace;
+        font-size: 0.5rem
 
     span
-      font-size: 0.7rem
+        font-size: 0.7rem
 
-  .footer-icons
-    width: 120px
-    display: grid
-    grid-template-columns: repeat(3, 1fr)
-    text-align: center
+    .footer-icons
+        width: 120px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        text-align: center
 
-  i:hover
-    color: $accent
+    i:hover
+        color: $accent
 
 @media screen and (min-width: 700px)
-  footer
-    grid-template-rows: 1fr
-    grid-template-columns: repeat(3, 1fr)
-    padding: 40px 20px
+    footer
+        grid-template-rows: 1fr
+        grid-template-columns: repeat(3, 1fr)
+        padding: 40px 20px
