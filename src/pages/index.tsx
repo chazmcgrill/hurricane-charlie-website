@@ -3,7 +3,8 @@ import { navigate } from 'gatsby';
 
 export default () => {
     useEffect(() => {
-        navigate('/gallery/');
+        fetch('https://ct-core-api.herokuapp.com/');
+        navigate('/gallery');
     }, []);
     return null;
 };

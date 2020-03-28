@@ -4,7 +4,6 @@ import ShopItem, { ShopItemData } from '../components/shop-item';
 import Layout from '../components/layout';
 import { imageObjectFromArray } from '../helpers/imageObjectFromArray';
 import SEO from '../components/seo';
-import MailingListForm from '../components/mailing-list-form';
 
 const Shop = (): JSX.Element => {
     const { images, data } = useStaticQuery(graphql`
@@ -48,8 +47,6 @@ const Shop = (): JSX.Element => {
                     />
                 ))}
             </div>
-
-            <MailingListForm />
         </Layout>
     );
 }
