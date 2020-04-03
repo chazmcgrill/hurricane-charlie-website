@@ -1,51 +1,18 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import Img, { FluidObject } from "gatsby-image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { GalleryItemData } from '../pages/gallery';
+import { ChildrenType } from './layout';
 
 interface ModalProps {
-    selectedGalleryItem: GalleryItemData;
-    modalHandler: (cmd: string) => void;
-    modalLimit: number;
-    imgData: FluidObject;
+    children?: ChildrenType;
+    isModalOpen?: boolean;
 }
 
-const Modal = ({
-    selectedGalleryItem,
-    imgData,
-    modalHandler,
-    modalLimit,
-}: ModalProps) => {
-    const { name, id, shop, desc } = selectedGalleryItem;
+const Modal = ({ children, isModalOpen }: ModalProps): JSX.Element | null => {
+    if (!isModalOpen) return null;
 
     return (
-        <div className="modal">
-            <div className="modal-img">
-                <Img fluid={imgData} alt={name} />
-            </div>
-
-            <div className="modal-data">
-                <div>
-                    <h2>{name}</h2>
-                    <p>{desc}</p>
-                    {shop && <Link to="/shop">Buy in shop</Link>}
-                </div>
-        
-                <div className="modal-btns">
-                    <div onClick={() => modalHandler('prev')}>
-                        <FontAwesomeIcon icon={faArrowAltCircleLeft} style={{ color: id >= 1 ? '#000' : 'lightgrey' }} />
-                    </div>
-
-                    <div onClick={() => modalHandler('close')}>
-                        <FontAwesomeIcon icon={faTimes} style={{ color: '#000000' }} />
-                    </div>
-          
-                    <div onClick={() => modalHandler('next')}>
-                        <FontAwesomeIcon icon={faArrowAltCircleRight} style={{ color: id < modalLimit ? '#000' : 'lightgrey' }} />
-                    </div>
-                </div>
+        <div className="modal-background">
+            <div className="modal-content">
+                {children && children}
             </div>
         </div>
     );
