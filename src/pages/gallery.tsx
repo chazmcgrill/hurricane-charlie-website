@@ -67,7 +67,7 @@ const Gallery = () => {
         setIsModalShowing(true);
     }
 
-    const modalHandler = (command: string): void => {
+    const modalHandler = (command?: string): void => {
         switch (command) {
             case "next":
                 if (selectedGalleryItemId < modalLimit) setSelectedGalleryItemId(selectedGalleryItemId + 1);
@@ -93,7 +93,11 @@ const Gallery = () => {
     const { modalImage, ...selectedGalleryItem } = data.gallery[selectedGalleryItemId];
 
     return (
-        <Layout isModalOpen={isModalShowing} modalComponent={modalComponent()}>
+        <Layout
+            isModalOpen={isModalShowing}
+            modalComponent={modalComponent()}
+            onOutsideClick={modalHandler}
+        >
             <SEO title="Gallery" />
             <section className="gallery">
                 <div className="gallery-grid">

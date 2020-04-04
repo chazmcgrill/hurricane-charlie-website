@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { useEffect, Fragment } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import "../styles/main.sass";
@@ -15,22 +15,28 @@ interface LayoutProps {
     children: ChildrenType;
     modalComponent?: ChildrenType;
     isModalOpen?: boolean;
+    onOutsideClick?: () => void;
 }
 
-const Layout = ({ children, modalComponent, isModalOpen }: LayoutProps): JSX.Element => {
+const Layout = ({
+    children,
+    modalComponent,
+    isModalOpen,
+    onOutsideClick,
+}: LayoutProps): JSX.Element => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
-        <div style={{ position: 'relative' }}>
+        <Fragment>
             <Header />
             <main>{children}</main>
             <Footer />
-            <Modal isModalOpen={isModalOpen}>
+            <Modal isModalOpen={isModalOpen} onOutsideClick={onOutsideClick}>
                 {modalComponent}
             </Modal>
-        </ div>
+        </ Fragment>
     );
 }
 
