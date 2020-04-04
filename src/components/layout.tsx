@@ -23,14 +23,14 @@ const Layout = ({ children, modalComponent, isModalOpen }: LayoutProps): JSX.Ele
     }, []);
 
     return (
-        <Fragment>
+        <div style={{ position: 'relative' }}>
             <Header />
             <main>{children}</main>
             <Footer />
             <Modal isModalOpen={isModalOpen}>
                 {modalComponent}
             </Modal>
-        </ Fragment>
+        </ div>
     );
 }
 
