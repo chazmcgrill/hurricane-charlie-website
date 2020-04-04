@@ -34,7 +34,7 @@ const GalleryModalContent = ({
                         <FontAwesomeIcon icon={faArrowAltCircleLeft} style={{ color: id >= 1 ? '#000' : 'lightgrey' }} />
                     </div>
                 </div>
-                <div className="modal-img">
+                <div className="modal-image-wrapper">
                     <Img fixed={imgData} alt={name} imgStyle={{ objectFit: 'contain' }} className="modal-image" />
                 </div>
                 <div className="modal-aside">
