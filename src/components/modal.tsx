@@ -11,7 +11,7 @@ const Modal = ({ children, isModalOpen }: ModalProps): JSX.Element | null => {
 
     return (
         <div className="modal-background">
-            <div className="modal-content">
+            <div className="modal">
                 {children && children}
             </div>
         </div>

@@ -3,9 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import CallToAction from '../components/call-to-action';
 import GalleryItem from '../components/gallery-item';
-import Modal from '../components/galley-modal-content';
+import Modal from '../components/gallery-modal-content';
 import Layout from '../components/layout';
-import { imageObjectFromArray } from '../helpers/imageObjectFromArray';
+import { fixedImageObjectFromArray, fluidImageObjectFromArray } from '../helpers/imageObjectFromArray';
 import SEO from '../components/seo';
 
 export interface GalleryItemData {
@@ -48,9 +48,9 @@ const Gallery = () => {
             modalImages: allFile(filter: { relativeDirectory: { eq: "modal-images" } }) {
                 nodes {
                     childImageSharp {
-                        fluid {
+                        fixed(height: 450) {
                             originalName
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFixed
                         }
                     }
                 }
@@ -59,8 +59,8 @@ const Gallery = () => {
     `);
 
     const modalLimit = data.gallery.length - 1;
-    const flattendImageData = imageObjectFromArray(images.nodes);
-    const flattendModalImageData = imageObjectFromArray(modalImages.nodes);
+    const flattendImageData = fluidImageObjectFromArray(images.nodes);
+    const flattendModalImageData = fixedImageObjectFromArray(modalImages.nodes);
 
     const selectGalleryItem = (id: number): void => {
         setSelectedGalleryItemId(id);
