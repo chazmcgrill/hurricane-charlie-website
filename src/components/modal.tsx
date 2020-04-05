@@ -12,7 +12,7 @@ const Modal = ({
     children,
     isModalOpen,
     onOutsideClick,
-}: ModalProps) => {
+}: ModalProps): any => { // TODO: improve return type
     const [show, setShow] = useState(false);
 
     const modalTransitions = useTransition(show, null, {
@@ -27,6 +27,8 @@ const Modal = ({
         leave: { opacity: 0 },
     });
 
+    const handleModalClick = (e: React.MouseEvent<HTMLElement>) => e.stopPropagation();
+
     useEffect(() => {
         document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
         setShow(Boolean(isModalOpen));
@@ -35,7 +37,7 @@ const Modal = ({
     return backgroundTransitions.map(({ item, key, props }) => item && (
         <animated.div className="modal-background" style={props} key={key} onClick={onOutsideClick}>
             {modalTransitions.map(({ item, key, props}) => item && (
-                <animated.div className="modal" style={props} key={key}>
+                <animated.div className="modal" style={props} key={key} onClick={handleModalClick}>
                     {children && children}
                 </animated.div>
             ))}
