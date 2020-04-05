@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { animated, useTransition } from 'react-spring';
 import { ChildrenType } from './layout';
 
 interface ModalProps {
@@ -11,20 +12,28 @@ const Modal = ({
     children,
     isModalOpen,
     onOutsideClick,
-}: ModalProps): JSX.Element | null => {
+}: ModalProps) => {
+    const [show, setShow] = useState(false);
+
+    const transitions = useTransition(show, null, {
+        from: { opacity: 0 },
+        enter: { opacity: 1 },
+        leave: { opacity: 0 },
+    });
+
     useEffect(() => {
         document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
+        setShow(Boolean(isModalOpen));
     }, [isModalOpen]);
 
-    if (!isModalOpen) return null;
-
-    return (
-        <div className="modal-background" onClick={onOutsideClick}>
+    return transitions.map(({ item, key, props }) => item && (
+        <animated.div className="modal-background" style={props} key={key} onClick={onOutsideClick}>
             <div className="modal">
                 {children && children}
             </div>
-        </div>
-    );
+        </animated.div>
+    ));
+    
 }
 
 export default Modal;
