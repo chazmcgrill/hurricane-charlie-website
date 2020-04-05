@@ -15,7 +15,13 @@ const Modal = ({
 }: ModalProps) => {
     const [show, setShow] = useState(false);
 
-    const transitions = useTransition(show, null, {
+    const modalTransitions = useTransition(show, null, {
+        from: { transform: 'translateY(100px)' },
+        enter: { transform: 'translateY(0px)' },
+        leave: { transform: 'translateY(100px)' },
+    });
+
+    const backgroundTransitions = useTransition(show, null, {
         from: { opacity: 0 },
         enter: { opacity: 1 },
         leave: { opacity: 0 },
@@ -26,11 +32,13 @@ const Modal = ({
         setShow(Boolean(isModalOpen));
     }, [isModalOpen]);
 
-    return transitions.map(({ item, key, props }) => item && (
+    return backgroundTransitions.map(({ item, key, props }) => item && (
         <animated.div className="modal-background" style={props} key={key} onClick={onOutsideClick}>
-            <div className="modal">
-                {children && children}
-            </div>
+            {modalTransitions.map(({ item, key, props}) => item && (
+                <animated.div className="modal" style={props} key={key}>
+                    {children && children}
+                </animated.div>
+            ))}
         </animated.div>
     ));
     
