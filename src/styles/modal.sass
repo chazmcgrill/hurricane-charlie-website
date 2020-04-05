@@ -16,20 +16,20 @@
     border-radius: 5px
     cursor: auto
 
-.modal-header
-    padding: 10px
-    border-top-left-radius: 5px
-    border-top-right-radius: 5px
-    background-color: #f6f6f6
-
 .modal-icon
     font-size: 1.5rem
     cursor: pointer
 
-.modal-close-button
-    margin-left: auto
+.modal-header
+    padding: 10px 15px 10px 20px
     display: flex
-    justify-content: flex-end
+    justify-content: space-between
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    background-color: #f6f6f6
+
+    p
+        margin: 5px 0px
 
 .modal-body
     display: flex
@@ -38,7 +38,7 @@
 .modal-aside
     display: flex
     align-items: center
-    padding: 0 5px
+    padding: 0 10px
     font-size: 1.5rem
 
 .modal-image-wrapper
@@ -51,11 +51,15 @@
         height: 450
 
 .modal-text
-    padding: 5px 30px
-    min-height: 70px
+    padding: 20px
     background-color: #f6f6f6
     border-bottom-left-radius: 5px
     border-bottom-right-radius: 5px
+
+    em
+        font-family: 'Roboto Mono', monospace
+        font-style: normal
+        font-size: 0.6em
 
     a
         font-weight: 500

@@ -23,6 +23,7 @@ const GalleryModalContent = ({
     return (
         <div className="modal-content">
             <div className="modal-header">
+                <p>{name}</p>
                 <div onClick={() => modalHandler('close')} className="modal-icon modal-close-button">
                     <FontAwesomeIcon icon={faTimes} style={{ color: '#333' }} />
                 </div>
@@ -45,7 +46,7 @@ const GalleryModalContent = ({
             </div>
 
             <div className="modal-text">
-                <p>{desc}{shop && <Link to="/shop"> available to buy</Link>}</p>
+                <em>{desc}{shop && <Link to="/shop"> available to buy</Link>}</em>
             </div>
         </div>
     );
