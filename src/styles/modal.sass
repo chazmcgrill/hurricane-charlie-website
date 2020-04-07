@@ -1,54 +1,63 @@
+.modal-background
+    background-color: rgba(#333, 0.5)
+    height: 100%
+    width: 100%
+    position: fixed
+    overflow: auto
+    top: 0
+    left: 0
+    cursor: pointer
+
 .modal
-    padding: 10px
+    background-color: #fff
+    max-width: 800px
+    width: 90%
+    margin: 20px auto
+    border-radius: 5px
+    cursor: auto
+
+.modal-icon
+    font-size: 1.5rem
+    cursor: pointer
+
+.modal-header
+    padding: 10px 15px 10px 20px
     display: flex
-    flex-direction: column
-    margin: 0 auto
-
-    @media screen and (min-width: 768px)
-        height: 650px
-        max-width: 900px
-        flex-direction: row
-        padding: 10px 50px
-
-.modal-img
-    padding: 10px
-    text-align: center
-
-    img
-        max-width: 100%
-        height: auto
-
-    @media screen and (min-width: 768px)
-        text-align: right
-        min-width: 50%
-    
-.modal-data
-    display: flex
-    flex-direction: column
     justify-content: space-between
-    padding: 0 20px
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    background-color: #f6f6f6
+
+    p
+        margin: 5px 0px
+
+.modal-body
+    display: flex
+    justify-content: center
+
+    @media screen and (min-width: 480px)
+        justify-content: space-between
+
+.modal-aside
+    padding: 0 10px
+    font-size: 1.5rem
+    display: none
+
+    @media screen and (min-width: 480px)
+        display: flex
+        align-items: center
+
+.modal-text
+    padding: 20px
+    background-color: #f6f6f6
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+
+    em
+        font-family: 'Roboto Mono', monospace
+        font-style: normal
+        font-size: 0.6em
 
     a
-        display: inline-block
-        border: 3px solid $domhue
         font-weight: 500
         color: $domhue
-        padding: 20px 30px
-        transition: all 0.4s ease-in-out
-
-        &:hover
-            color: white
-            background: $domhue
-
-.modal-btns
-    display: flex
-    justify-content: space-between
-    font-size: 3rem
-    margin: 20px
-
-    @media screen and (min-width: 768px)
-        font-size: 2rem
-        margin: 20px 20px 60px
-
-    div
-        cursor: pointer

@@ -1,54 +1,49 @@
-import React from 'react';
-import { Link } from 'gatsby';
-import Img, { FluidObject } from "gatsby-image";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes, faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { GalleryItemData } from '../pages/gallery';
+import React, { useEffect, useState } from 'react';
+import { animated, useTransition } from 'react-spring';
+import { ChildrenType } from './layout';
 
 interface ModalProps {
-    selectedGalleryItem: GalleryItemData;
-    modalHandler: (cmd: string) => void;
-    modalLimit: number;
-    imgData: FluidObject;
+    children?: ChildrenType;
+    isModalOpen?: boolean;
+    onOutsideClick?: () => void;
 }
 
 const Modal = ({
-    selectedGalleryItem,
-    imgData,
-    modalHandler,
-    modalLimit,
-}: ModalProps) => {
-    const { name, id, shop, desc } = selectedGalleryItem;
+    children,
+    isModalOpen,
+    onOutsideClick,
+}: ModalProps): any => { // TODO: improve return type
+    const [show, setShow] = useState(false);
 
-    return (
-        <div className="modal">
-            <div className="modal-img">
-                <Img fluid={imgData} alt={name} />
-            </div>
+    const modalTransitions = useTransition(show, null, {
+        from: { transform: 'translateY(100px)' },
+        enter: { transform: 'translateY(0px)' },
+        leave: { transform: 'translateY(100px)' },
+    });
 
-            <div className="modal-data">
-                <div>
-                    <h2>{name}</h2>
-                    <p>{desc}</p>
-                    {shop && <Link to="/shop">Buy in shop</Link>}
-                </div>
-        
-                <div className="modal-btns">
-                    <div onClick={() => modalHandler('prev')}>
-                        <FontAwesomeIcon icon={faArrowAltCircleLeft} style={{ color: id >= 1 ? '#000' : 'lightgrey' }} />
-                    </div>
+    const backgroundTransitions = useTransition(show, null, {
+        from: { opacity: 0 },
+        enter: { opacity: 1 },
+        leave: { opacity: 0 },
+    });
 
-                    <div onClick={() => modalHandler('close')}>
-                        <FontAwesomeIcon icon={faTimes} style={{ color: '#000000' }} />
-                    </div>
-          
-                    <div onClick={() => modalHandler('next')}>
-                        <FontAwesomeIcon icon={faArrowAltCircleRight} style={{ color: id < modalLimit ? '#000' : 'lightgrey' }} />
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+    const handleModalClick = (e: React.MouseEvent<HTMLElement>) => e.stopPropagation();
+
+    useEffect(() => {
+        document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
+        setShow(Boolean(isModalOpen));
+    }, [isModalOpen]);
+
+    return backgroundTransitions.map(({ item, key, props }) => item && (
+        <animated.div className="modal-background" style={props} key={key} onClick={onOutsideClick}>
+            {modalTransitions.map(({ item, key, props}) => item && (
+                <animated.div className="modal" style={props} key={key} onClick={handleModalClick}>
+                    {children && children}
+                </animated.div>
+            ))}
+        </animated.div>
+    ));
+    
 }
 
 export default Modal;

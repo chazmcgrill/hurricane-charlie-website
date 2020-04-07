@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import ShopItem, { ShopItemData } from '../components/shop-item';
 import Layout from '../components/layout';
-import { imageObjectFromArray } from '../helpers/imageObjectFromArray';
+import { fluidImageObjectFromArray } from '../helpers/imageObjectFromArray';
 import SEO from '../components/seo';
 
 const Shop = (): JSX.Element => {
@@ -32,7 +32,7 @@ const Shop = (): JSX.Element => {
         }
     `);
 
-    const flattendImageData = imageObjectFromArray(images.nodes);
+    const flattendImageData = fluidImageObjectFromArray(images.nodes);
 
     return (
         <Layout>

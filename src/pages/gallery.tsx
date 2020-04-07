@@ -3,9 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import CallToAction from '../components/call-to-action';
 import GalleryItem from '../components/gallery-item';
-import Modal from '../components/modal';
+import Modal from '../components/gallery-modal-content';
 import Layout from '../components/layout';
-import { imageObjectFromArray } from '../helpers/imageObjectFromArray';
+import { fixedImageObjectFromArray, fluidImageObjectFromArray } from '../helpers/imageObjectFromArray';
 import SEO from '../components/seo';
 
 export interface GalleryItemData {
@@ -48,9 +48,9 @@ const Gallery = () => {
             modalImages: allFile(filter: { relativeDirectory: { eq: "modal-images" } }) {
                 nodes {
                     childImageSharp {
-                        fluid {
+                        fixed {
                             originalName
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFixed
                         }
                     }
                 }
@@ -59,15 +59,15 @@ const Gallery = () => {
     `);
 
     const modalLimit = data.gallery.length - 1;
-    const flattendImageData = imageObjectFromArray(images.nodes);
-    const flattendModalImageData = imageObjectFromArray(modalImages.nodes);
+    const flattendImageData = fluidImageObjectFromArray(images.nodes);
+    const flattendModalImageData = fixedImageObjectFromArray(modalImages.nodes);
 
     const selectGalleryItem = (id: number): void => {
         setSelectedGalleryItemId(id);
         setIsModalShowing(true);
     }
 
-    const modalHandler = (command: string): void => {
+    const modalHandler = (command?: string): void => {
         switch (command) {
             case "next":
                 if (selectedGalleryItemId < modalLimit) setSelectedGalleryItemId(selectedGalleryItemId + 1);
@@ -81,23 +81,23 @@ const Gallery = () => {
         }
     }
 
-    if (isModalShowing) {
-        const { modalImage, ...selectedGalleryItem } = data.gallery[selectedGalleryItemId];
-        return (
-            <Layout>
-                <SEO title={selectedGalleryItem.name} />
-                <Modal
-                    selectedGalleryItem={selectedGalleryItem}
-                    imgData={flattendModalImageData[modalImage]}
-                    modalHandler={modalHandler}
-                    modalLimit={modalLimit}
-                />
-            </Layout>
-        )
-    }
+    const modalComponent = () => (
+        <Modal
+            selectedGalleryItem={selectedGalleryItem}
+            imgData={flattendModalImageData[modalImage]}
+            modalHandler={modalHandler}
+            modalLimit={modalLimit}
+        />
+    );
+
+    const { modalImage, ...selectedGalleryItem } = data.gallery[selectedGalleryItemId];
 
     return (
-        <Layout>
+        <Layout
+            isModalOpen={isModalShowing}
+            modalComponent={modalComponent()}
+            onOutsideClick={modalHandler}
+        >
             <SEO title="Gallery" />
             <section className="gallery">
                 <div className="gallery-grid">

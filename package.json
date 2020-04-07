@@ -2,7 +2,7 @@
   "name": "hurricane-charlie-website",
   "private": true,
   "description": "Hurricane Charlie Website",
-  "version": "2.4.1",
+  "version": "2.5.0",
   "author": "Charlie Taylor",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -25,7 +25,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-spring": "^8.0.27"
   },
   "devDependencies": {
     "@types/node": "^13.9.1",
