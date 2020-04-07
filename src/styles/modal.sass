@@ -33,22 +33,19 @@
 
 .modal-body
     display: flex
-    justify-content: space-between
+    justify-content: center
+
+    @media screen and (min-width: 480px)
+        justify-content: space-between
 
 .modal-aside
-    display: flex
-    align-items: center
     padding: 0 10px
     font-size: 1.5rem
+    display: none
 
-.modal-image-wrapper
-    display: flex
-    justify-content: center
-    height: 450
-
-    .modal-image
-        max-width: 100%
-        height: 450
+    @media screen and (min-width: 480px)
+        display: flex
+        align-items: center
 
 .modal-text
     padding: 20px

@@ -35,9 +35,12 @@ const GalleryModalContent = ({
                         <FontAwesomeIcon icon={faArrowAltCircleLeft} style={{ color: id >= 1 ? '#000' : 'lightgrey' }} />
                     </div>
                 </div>
-                <div className="modal-image-wrapper">
-                    <Img fixed={imgData} alt={name} imgStyle={{ objectFit: 'contain' }} className="modal-image" />
-                </div>
+                <Img
+                    fixed={imgData}
+                    alt={name}
+                    style={{ margin: '1rem', maxHeight: 'calc(70vh - 4rem)' }}
+                    imgStyle={{ objectFit: 'contain' }}
+                />
                 <div className="modal-aside">
                     <div onClick={() => modalHandler('next')} className="modal-icon">
                         <FontAwesomeIcon icon={faArrowAltCircleRight} style={{ color: id < modalLimit ? '#000' : 'lightgrey' }} />
