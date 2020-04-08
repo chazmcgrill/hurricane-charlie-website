@@ -11,7 +11,7 @@ const GalleryItem = ({
     galleryItemData,
     selectGalleryItem,
 }: GalleryItemProps): JSX.Element => {
-    const itemClass = `grid-item ${galleryItemData ? galleryItemData.size : ''}`;
+    const itemClass = `grid-item${galleryItemData.isLarge ? ' large' : ''}`;
   
     return (
         <BackgroundImage

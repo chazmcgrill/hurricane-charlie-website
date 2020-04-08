@@ -1,30 +1,48 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-
+import { FluidObject } from 'gatsby-image';
 import CallToAction from '../components/call-to-action';
 import GalleryItem from '../components/gallery-item';
 import Modal from '../components/gallery-modal-content';
 import Layout from '../components/layout';
 import { fixedImageObjectFromArray, fluidImageObjectFromArray, GatsbyFluidImageNode } from '../helpers/imageObjectFromArray';
 import SEO from '../components/seo';
-import { FluidObject } from 'gatsby-image';
 
 export interface GalleryItemData {
     id: number;
     name: string;
     src: string;
-    size: string;
+    isLarge: boolean;
     shop: boolean;
     desc: string;
     image: FluidObject;
     modalImage: string;
 }
 
+const LARGE_ITEMS_PATTERN = [3, 9, 3, 5];
+const LARGE_ITEMS_PATTERN_LENGTH = LARGE_ITEMS_PATTERN.length;
+
+const indexesForLargeGridItems = (gridLength: number): number[] => {
+    const limitForLargeItems = gridLength - (gridLength % 10); // prevent orphaned small items
+    const largeItemsIndexes = [];
+    let currentGridIndex = 0;
+
+    while (currentGridIndex < limitForLargeItems) {
+        largeItemsIndexes.push(currentGridIndex);
+        const patternIndex = (largeItemsIndexes.length - 1) % LARGE_ITEMS_PATTERN_LENGTH;
+        currentGridIndex += LARGE_ITEMS_PATTERN[patternIndex];
+    }
+
+    return largeItemsIndexes;
+} 
+
 const combineDataAndImages = (images: GatsbyFluidImageNode[], data: GalleryItemData[]) => {
+    const largeItemsIndexes = indexesForLargeGridItems(images.length);
     const flattendImageData = fluidImageObjectFromArray(images);
-    return data.map((item) => ({
+    return data.map((item, index) => ({
         ...item,
         image: flattendImageData[item.src],
+        isLarge: largeItemsIndexes.includes(index),
     }));
 }
 
@@ -39,7 +57,6 @@ const Gallery = () => {
                     id
                     name
                     shop
-                    size
                     src
                     desc
                     modalImage
