@@ -37,3 +37,45 @@
         top: 40%
         left: 50%
         transform: translate(-50%, -50%)
+
+.shop-cta
+    position: relative
+    height: 200px
+
+    @media screen and (min-width: 640px)
+        height: 300px
+  
+.shop-cta-overlay
+    position: absolute
+    background: rgba($domhue, 0.9) 
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+
+.shop-cta-box
+    text-align: center
+    display: block
+    position: relative
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 300px
+    padding: 30px
+
+    h2
+        font-weight: normal
+        margin: 0 0 30px
+
+    a
+        background: none
+        padding: 10px 20px
+        border: 3px solid $black
+        font-size: inherit
+        outline: none
+        cursor: pointer
+
+        &:hover
+            background: $black
+            color: $domhue
+    
