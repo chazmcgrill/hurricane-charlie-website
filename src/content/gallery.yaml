@@ -24,6 +24,14 @@
     modalImage: modal-002.jpg
 
   - id: 3
+    name: patterned butterfly
+    src: thumbs-015.jpg
+    size: large
+    shop: true
+    desc: Butterfly illustration created using pen and ink, coloured on illustrator. Screenprints available to buy 5 colours on heavy duty paper.
+    modalImage: modal-007.jpg
+
+  - id: 4
     name: angled pike
     src: thumbs-004.jpg
     size: small
@@ -31,7 +39,7 @@
     desc: An angular pike drawn for Wharf Chambers gig Man Forever. Pen and ink coloured using Photoshop.
     modalImage: modal-003.jpg
 
-  - id: 4
+  - id: 5
     name: mission of burma
     src: thumbs-005.jpg
     size: small
@@ -39,7 +47,7 @@
     desc: Gig poster for legendary post punk band Mission Burma gig. created for Room237 and Brudenell Social Club. Created using pen and ink and coloured on Photoshop and Illustrator.
     modalImage: modal-004.jpg
 
-  - id: 5
+  - id: 6
     name: mushroomjack 
     src: thumbs-021.jpg
     size: tall
@@ -47,21 +55,13 @@
     desc: Mushroom lumberjack detailed illustration. I used pigment pens, a quill, a brush and platinum carbon ink, on heavy duty art paper. This is a available to buy in screenprint form.
     modalImage: modal-005.jpg
 
-  - id: 6
+  - id: 7
     name: folläkzoid 
     src: thumbs-007.jpg
     size: tall
     shop: false
     desc: Gig poster for Chilean space rock band Föllakzoid produced for Third Eye and Karma promotions. Created using pen and ink, coloured pencil and Photoshop.
     modalImage: modal-006.jpg
-
-  - id: 7
-    name: patterned butterfly
-    src: thumbs-015.jpg
-    size: large
-    shop: true
-    desc: Butterfly illustration created using pen and ink, coloured on illustrator. Screenprints available to buy 5 colours on heavy duty paper.
-    modalImage: modal-007.jpg
 
   - id: 8
     name: angler fish
@@ -96,6 +96,14 @@
     modalImage: modal-011.jpg
 
   - id: 12
+    name: collapse
+    src: thumbs-018.jpg
+    size: large
+    shop: false
+    desc: Hand drawn illustration of head collapsing together in a circle with varying degrees of torment. Created using pen and ink
+    modalImage: modal-017.jpg
+
+  - id: 13
     name: nf fly
     src: thumbs-013.jpg
     size: tall
@@ -103,7 +111,7 @@
     desc: Debut gig poster for Leeds based gig promoters Northern Flowerhouse. Hand drawn illustration texture and colour done with Photoshop.
     modalImage: modal-012.jpg
 
-  - id: 13
+  - id: 14
     name: desert smoker
     src: thumbs-014.jpg
     size: tall
@@ -111,15 +119,15 @@
     desc: Part of my desert tryptich illustration. Pen and ink drawings coloured using mixed media and finished on Photoshop.
     modalImage: modal-013.jpg
 
-  - id: 14
-    name: robot workshop
-    src: thumbs-008.jpg
-    size: large
-    shop: true
-    desc: Hand drawn illustration of a robot being built. This was exhibited at North Bar for an exhibition titled 'Under Construction'. Created using pigment pens and water colour. Giclee prints on art paper available to buy.
-    modalImage: modal-014.jpg
-
   - id: 15
+    name: leaf insect
+    src: thumbs-001.jpg
+    size: large
+    shop: false
+    desc: Another gig poster for Leeds based gig promoters Northern Flowerhouse. This time featuring a leaf insect. Created using Illustrator and Photoshop.
+    modalImage: modal-021.jpg
+
+  - id: 16
     name: dylan carlson
     src: thumbs-016.jpg
     size: wide
@@ -127,7 +135,15 @@
     desc: Gig poster for drone legend Dylan Carlson, created for Room237. Created using pen and ink and coloured on Photoshop and Illustrator.
     modalImage: modal-015.jpg
 
-  - id: 16
+  - id: 17
+    name: robot workshop
+    src: thumbs-008.jpg
+    size: tall
+    shop: true
+    desc: Hand drawn illustration of a robot being built. This was exhibited at North Bar for an exhibition titled 'Under Construction'. Created using pigment pens and water colour. Giclee prints on art paper available to buy.
+    modalImage: modal-014.jpg
+
+  - id: 18
     name: octopsss
     src: thumbs-017.jpg
     size: wide
@@ -135,15 +151,7 @@
     desc: Computer illustrated picture of an Octopussssss. Created using Adobe Illustrator and Photoshop.
     modalImage: modal-016.jpg
 
-  - id: 17
-    name: collapse
-    src: thumbs-018.jpg
-    size: small
-    shop: false
-    desc: Hand drawn illustration of head collapsing together in a circle with varying degrees of torment. Created using pen and ink
-    modalImage: modal-017.jpg
-
-  - id: 18
+  - id: 19
     name: rat race
     src: thumbs-019.jpg
     size: small
@@ -151,7 +159,7 @@
     desc: Computer illustrated picture of a rat working in the rat race. Created using Adobe Illustrator and Photoshop.
     modalImage: modal-018.jpg
 
-  - id: 19
+  - id: 20
     name: papa m house
     src: thumbs-020.jpg
     size: tall
@@ -159,21 +167,13 @@
     desc: Gig poster for Slint legend Papa M, created for Room237. Created using Photoshop and Illustrator. I have massive screen printed posters of this for sale
     modalImage: modal-019.jpg
 
-  - id: 20
+  - id: 21
     name: bass overload
     src: thumbs-006.jpg
     size: tall
     shop: false
     desc: Computer illustrated picture of what happens with too much bass. Created using Adobe Illustrator and Photoshop.
     modalImage: modal-020.jpg
-
-  - id: 21
-    name: leaf insect
-    src: thumbs-001.jpg
-    size: large
-    shop: false
-    desc: Another gig poster for Leeds based gig promoters Northern Flowerhouse. This time featuring a leaf insect. Created using Illustrator and Photoshop.
-    modalImage: modal-021.jpg
 
   - id: 22
     name: crab man
@@ -186,7 +186,7 @@
   - id: 23
     name: tree man
     src: thumbs-024.jpg
-    size: large
+    size: wide
     shop: false
     desc: Hand drawn illustration of a colourful tree man. Created using pigment pens and water colour.
     modalImage: modal-023.jpg
