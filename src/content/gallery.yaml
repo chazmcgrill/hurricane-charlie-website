@@ -24,6 +24,14 @@
     modalImage: modal-002.jpg
 
   - id: 3
+    name: patterned butterfly
+    src: thumbs-015.jpg
+    size: large
+    shop: true
+    desc: Butterfly illustration created using pen and ink, coloured on illustrator. Screenprints available to buy 5 colours on heavy duty paper.
+    modalImage: modal-007.jpg
+
+  - id: 4
     name: angled pike
     src: thumbs-004.jpg
     size: small
@@ -96,6 +104,14 @@
     modalImage: modal-011.jpg
 
   - id: 12
+    name: collapse
+    src: thumbs-018.jpg
+    size: large
+    shop: false
+    desc: Hand drawn illustration of head collapsing together in a circle with varying degrees of torment. Created using pen and ink
+    modalImage: modal-017.jpg
+
+  - id: 13
     name: nf fly
     src: thumbs-013.jpg
     size: tall
@@ -120,6 +136,14 @@
     modalImage: modal-014.jpg
 
   - id: 15
+    name: leaf insect
+    src: thumbs-001.jpg
+    size: large
+    shop: false
+    desc: Another gig poster for Leeds based gig promoters Northern Flowerhouse. This time featuring a leaf insect. Created using Illustrator and Photoshop.
+    modalImage: modal-021.jpg
+
+  - id: 15
     name: dylan carlson
     src: thumbs-016.jpg
     size: wide
@@ -127,7 +151,15 @@
     desc: Gig poster for drone legend Dylan Carlson, created for Room237. Created using pen and ink and coloured on Photoshop and Illustrator.
     modalImage: modal-015.jpg
 
-  - id: 16
+  - id: 17
+    name: robot workshop
+    src: thumbs-008.jpg
+    size: tall
+    shop: true
+    desc: Hand drawn illustration of a robot being built. This was exhibited at North Bar for an exhibition titled 'Under Construction'. Created using pigment pens and water colour. Giclee prints on art paper available to buy.
+    modalImage: modal-014.jpg
+
+  - id: 18
     name: octopsss
     src: thumbs-017.jpg
     size: wide
@@ -186,7 +218,7 @@
   - id: 23
     name: tree man
     src: thumbs-024.jpg
-    size: large
+    size: wide
     shop: false
     desc: Hand drawn illustration of a colourful tree man. Created using pigment pens and water colour.
     modalImage: modal-023.jpg
