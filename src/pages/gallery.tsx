@@ -5,8 +5,9 @@ import CallToAction from '../components/call-to-action';
 import GalleryItem from '../components/gallery-item';
 import Modal from '../components/gallery-modal-content';
 import Layout from '../components/layout';
-import { fixedImageObjectFromArray, fluidImageObjectFromArray } from '../helpers/imageObjectFromArray';
+import { fixedImageObjectFromArray, fluidImageObjectFromArray, GatsbyFluidImageNode } from '../helpers/imageObjectFromArray';
 import SEO from '../components/seo';
+import { FluidObject } from 'gatsby-image';
 
 export interface GalleryItemData {
     id: number;
@@ -15,7 +16,16 @@ export interface GalleryItemData {
     size: string;
     shop: boolean;
     desc: string;
+    image: FluidObject;
     modalImage: string;
+}
+
+const combineDataAndImages = (images: GatsbyFluidImageNode[], data: GalleryItemData[]) => {
+    const flattendImageData = fluidImageObjectFromArray(images);
+    return data.map((item) => ({
+        ...item,
+        image: flattendImageData[item.src],
+    }));
 }
 
 const Gallery = () => {
@@ -59,7 +69,7 @@ const Gallery = () => {
     `);
 
     const modalLimit = data.gallery.length - 1;
-    const flattendImageData = fluidImageObjectFromArray(images.nodes);
+    const galleryData = combineDataAndImages(images.nodes, data.gallery);
     const flattendModalImageData = fixedImageObjectFromArray(modalImages.nodes);
 
     const selectGalleryItem = (id: number): void => {
@@ -81,6 +91,8 @@ const Gallery = () => {
         }
     }
 
+    const { modalImage, ...selectedGalleryItem } = data.gallery[selectedGalleryItemId];
+
     const modalComponent = () => (
         <Modal
             selectedGalleryItem={selectedGalleryItem}
@@ -89,8 +101,6 @@ const Gallery = () => {
             modalLimit={modalLimit}
         />
     );
-
-    const { modalImage, ...selectedGalleryItem } = data.gallery[selectedGalleryItemId];
 
     return (
         <Layout
@@ -101,12 +111,11 @@ const Gallery = () => {
             <SEO title="Gallery" />
             <section className="gallery">
                 <div className="gallery-grid">
-                    {data.gallery.map((item: GalleryItemData) => (
+                    {galleryData.map((item: GalleryItemData) => (
                         <GalleryItem
                             selectGalleryItem={selectGalleryItem}
                             galleryItemData={item}
                             key={item.id}
-                            imgData={flattendImageData[item.src]}
                         />
                     ))}
                 </div>
