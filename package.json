@@ -2,7 +2,7 @@
   "name": "hurricane-charlie-website",
   "private": true,
   "description": "Hurricane Charlie Website",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "author": "Charlie Taylor",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
