@@ -11,13 +11,13 @@ interface GatsbyFixedReturn extends FixedObject {
     originalName: string;
 }
 
-export interface GatsbyFluidImageNode {
+interface GatsbyFluidImageNode {
     childImageSharp: {
         fluid: GatsbyFluidReturn;
     };
 }
 
-export interface GatsbyFixedImageNode {
+interface GatsbyFixedImageNode {
     childImageSharp: {
         fixed: GatsbyFixedReturn;
     };
