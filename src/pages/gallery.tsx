@@ -13,18 +13,36 @@ export interface GalleryItemData {
     id: number;
     name: string;
     src: string;
-    size: string;
+    isLarge: boolean;
     shop: boolean;
     desc: string;
     image: FluidObject;
     modalImage: string;
 }
 
+const LARGE_ITEMS_PATTERN = [3, 9, 3, 5];
+const LARGE_ITEMS_PATTERN_LENGTH = LARGE_ITEMS_PATTERN.length;
+
+const indexesForLargeGridItems = (gridLength: number): number[] => {
+    const largeItemsIndexes = [];
+    let currentGridIndex = 0;
+
+    while (currentGridIndex < gridLength) {
+        largeItemsIndexes.push(currentGridIndex)
+        const patternIndex = (largeItemsIndexes.length - 1) % LARGE_ITEMS_PATTERN_LENGTH;
+        currentGridIndex += LARGE_ITEMS_PATTERN[patternIndex];
+    }
+
+    return largeItemsIndexes;
+} 
+
 const combineDataAndImages = (images: GatsbyFluidImageNode[], data: GalleryItemData[]) => {
+    const largeItemsIndexes = indexesForLargeGridItems(images.length);
     const flattendImageData = fluidImageObjectFromArray(images);
-    return data.map((item) => ({
+    return data.map((item, index) => ({
         ...item,
         image: flattendImageData[item.src],
+        isLarge: largeItemsIndexes.includes(index),
     }));
 }
 
