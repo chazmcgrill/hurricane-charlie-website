@@ -1,23 +1,26 @@
 import React from 'react';
 import BackgroundImage from 'gatsby-background-image';
 import { GalleryItemData } from '../pages/gallery';
+import { FluidObject } from 'gatsby-image';
 
 interface GalleryItemProps {
     galleryItemData: GalleryItemData;
     selectGalleryItem: (id: number) => void;
+    imgData: FluidObject;
 }
 
 const GalleryItem = ({
     galleryItemData,
     selectGalleryItem,
+    imgData,
 }: GalleryItemProps): JSX.Element => {
-    const itemClass = `grid-item${galleryItemData.isLarge ? ' large' : ''}`;
+    const itemClass = `grid-item ${galleryItemData ? galleryItemData.size : ''}`;
   
     return (
         <BackgroundImage
             onClick={() => selectGalleryItem(galleryItemData.id)}
             className={itemClass}
-            fluid={galleryItemData.image}
+            fluid={imgData}
             alt={`Thumbnail - ${galleryItemData.name}`}
         >
             <div className="img-overlay"><p>{galleryItemData.name}</p></div>
