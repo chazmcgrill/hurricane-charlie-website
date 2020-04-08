@@ -48,7 +48,7 @@ const Gallery = () => {
             modalImages: allFile(filter: { relativeDirectory: { eq: "modal-images" } }) {
                 nodes {
                     childImageSharp {
-                        fixed(width: 360) {
+                        fixed {
                             originalName
                             ...GatsbyImageSharpFixed
                         }
