@@ -1,49 +1,21 @@
 import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { FluidObject } from 'gatsby-image';
+
 import CallToAction from '../components/call-to-action';
 import GalleryItem from '../components/gallery-item';
 import Modal from '../components/gallery-modal-content';
 import Layout from '../components/layout';
-import { fixedImageObjectFromArray, fluidImageObjectFromArray, GatsbyFluidImageNode } from '../helpers/imageObjectFromArray';
+import { fixedImageObjectFromArray, fluidImageObjectFromArray } from '../helpers/imageObjectFromArray';
 import SEO from '../components/seo';
 
 export interface GalleryItemData {
     id: number;
     name: string;
     src: string;
-    isLarge: boolean;
+    size: string;
     shop: boolean;
     desc: string;
-    image: FluidObject;
     modalImage: string;
-}
-
-const LARGE_ITEMS_PATTERN = [3, 9, 3, 5];
-const LARGE_ITEMS_PATTERN_LENGTH = LARGE_ITEMS_PATTERN.length;
-
-const indexesForLargeGridItems = (gridLength: number): number[] => {
-    const limitForLargeItems = gridLength - (gridLength % 10); // prevent orphaned small items
-    const largeItemsIndexes = [];
-    let currentGridIndex = 0;
-
-    while (currentGridIndex < limitForLargeItems) {
-        largeItemsIndexes.push(currentGridIndex);
-        const patternIndex = (largeItemsIndexes.length - 1) % LARGE_ITEMS_PATTERN_LENGTH;
-        currentGridIndex += LARGE_ITEMS_PATTERN[patternIndex];
-    }
-
-    return largeItemsIndexes;
-} 
-
-const combineDataAndImages = (images: GatsbyFluidImageNode[], data: GalleryItemData[]) => {
-    const largeItemsIndexes = indexesForLargeGridItems(images.length);
-    const flattendImageData = fluidImageObjectFromArray(images);
-    return data.map((item, index) => ({
-        ...item,
-        image: flattendImageData[item.src],
-        isLarge: largeItemsIndexes.includes(index),
-    }));
 }
 
 const Gallery = () => {
@@ -57,6 +29,7 @@ const Gallery = () => {
                     id
                     name
                     shop
+                    size
                     src
                     desc
                     modalImage
@@ -86,7 +59,7 @@ const Gallery = () => {
     `);
 
     const modalLimit = data.gallery.length - 1;
-    const galleryData = combineDataAndImages(images.nodes, data.gallery);
+    const flattendImageData = fluidImageObjectFromArray(images.nodes);
     const flattendModalImageData = fixedImageObjectFromArray(modalImages.nodes);
 
     const selectGalleryItem = (id: number): void => {
@@ -108,8 +81,6 @@ const Gallery = () => {
         }
     }
 
-    const { modalImage, ...selectedGalleryItem } = data.gallery[selectedGalleryItemId];
-
     const modalComponent = () => (
         <Modal
             selectedGalleryItem={selectedGalleryItem}
@@ -118,6 +89,8 @@ const Gallery = () => {
             modalLimit={modalLimit}
         />
     );
+
+    const { modalImage, ...selectedGalleryItem } = data.gallery[selectedGalleryItemId];
 
     return (
         <Layout
@@ -128,11 +101,12 @@ const Gallery = () => {
             <SEO title="Gallery" />
             <section className="gallery">
                 <div className="gallery-grid">
-                    {galleryData.map((item: GalleryItemData) => (
+                    {data.gallery.map((item: GalleryItemData) => (
                         <GalleryItem
                             selectGalleryItem={selectGalleryItem}
                             galleryItemData={item}
                             key={item.id}
+                            imgData={flattendImageData[item.src]}
                         />
                     ))}
                 </div>
