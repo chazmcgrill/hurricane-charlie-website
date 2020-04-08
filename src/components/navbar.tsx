@@ -26,7 +26,7 @@ const Navbar = () => {
         <nav>
             {data.nav.map((item: NavData) => (
                 <li key={item.id}>
-                    <Link to={item.url} activeStyle={activeNav}>
+                    <Link to={item.url} activeStyle={activeNav} partiallyActive>
                         {item.name}
                     </Link>
                 </li>
