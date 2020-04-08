@@ -19,7 +19,7 @@ const CallToAction = (): JSX.Element => {
         <BackgroundImage
             fluid={heroImage.childImageSharp.fluid}
             style={{ backgroundPosition: 'top center' }}
-            classId="shop-cta"
+            className="shop-cta"
         >
             <div className="shop-cta-overlay"></div>
             <div className="shop-cta-box">
