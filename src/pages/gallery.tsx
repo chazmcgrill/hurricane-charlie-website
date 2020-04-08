@@ -57,7 +57,6 @@ const Gallery = () => {
                     id
                     name
                     shop
-                    size
                     src
                     desc
                     modalImage
