@@ -187,3 +187,24 @@
     shop: false
     desc: Hand drawn illustration of a guy with a tree stump growing from his head. Created using pen, ink and colouring pencils.
     modalImage: modal-026.jpg
+
+  - id: 27
+    name: robot poster
+    src: thumbs-028.jpg
+    shop: false
+    desc: Robot gig poster created for fourteen pulsars, poster was printed using two colour risograph.
+    modalImage: modal-028.jpg
+
+  - id: 28
+    name: four seasons poster
+    src: thumbs-029.jpg
+    shop: false
+    desc: Four seasons gig poster created for fourteen pulsars gig birth; life; death; relection.
+    modalImage: modal-029.jpg
+
+  - id: 29
+    name: plywood lazy demo
+    src: thumbs-030.jpg
+    shop: false
+    desc: Demo cover artwork for Leeds band Plywood Lazy pen, ink and computer.
+    modalImage: modal-030.jpg
