@@ -21,7 +21,7 @@ const Header = (): JSX.Element => {
 
     return (
         <header>
-            <Image alt="Hurricane Charlie Icon" src={'/images/hcicon.png'} width={50} height={50} />
+            <Image alt="Hurricane Charlie Icon" src={'/images/hclogo.png'} width={50} height={50} />
 
             {showHamburger && (
                 <div onClick={() => setBurgerOpen(!burgerOpen)} className="hamburger-container">
