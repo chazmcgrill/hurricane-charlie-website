@@ -5,6 +5,7 @@ import Layout from '@components/layout';
 import SocialIcons from '@components/social-icons';
 import LoadingSpinner from '@components/loading-spinner';
 import ContactForm from '@components/contact-form';
+import { PageMeta } from '@components/head';
 
 const DEFAULT_MESSAGE_STATE = { name: '', email: '', message: '' };
 
@@ -22,6 +23,11 @@ export interface MessageStatus {
 
 export type FormEventType = React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>;
 export type MouseEventType = React.MouseEvent<HTMLButtonElement, MouseEvent>;
+
+const PAGE_META: PageMeta = {
+    titleSuffix: 'Contact',
+    description: 'Hurricane Charlie contact page - please get in touch.',
+};
 
 const Contact = () => {
     const [messageData, setMessageData] = useState<MessageState>(DEFAULT_MESSAGE_STATE);
@@ -71,7 +77,7 @@ const Contact = () => {
     };
 
     return (
-        <Layout>
+        <Layout pageMeta={PAGE_META}>
             <div className="contact-box">
                 <div className="contact-item">
                     {messageStatus.isLoading ? (
