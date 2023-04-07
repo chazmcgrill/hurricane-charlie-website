@@ -12,16 +12,17 @@ const ShopItem = ({ product }: ShopItemProps) => {
 
     return (
         <div className="shop-item">
-            <div className="shop-image-wrapper">
-                <a href={shopUrl} target="_blank" rel="noopener noreferrer">
+            <a href={shopUrl} target="_blank" rel="noopener noreferrer">
+                <div className="shop-image-wrapper">
                     <Image
                         className="shop-image"
                         src={`/images/shop/${product.url}`}
                         alt={`Shop - ${product.title}`}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                </a>
-            </div>
+                </div>
+            </a>
             <p>{product.title}</p>
             <p>
                 <em>{product.desc}</em>

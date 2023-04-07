@@ -14,9 +14,11 @@ const GalleryItem = ({ galleryItemData, selectGalleryItem, isLarge }: GalleryIte
     return (
         <div className={itemClass} onClick={() => selectGalleryItem(galleryItemData.id)}>
             <Image
+                style={{ objectFit: 'cover' }}
                 src={require(`../../public/images/thumbs/${galleryItemData.src}`)}
                 alt={`Thumbnail - ${galleryItemData.name}`}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div className="img-overlay">
                 <p>{galleryItemData.name}</p>
