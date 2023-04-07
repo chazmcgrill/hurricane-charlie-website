@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { MessageState, MessageStatus, MouseEventType, FormEventType } from '../legacy-pages/contact';
+import { MessageState, MessageStatus, MouseEventType, FormEventType } from '../pages/contact';
 
 interface ContactFormProps {
     messageData: MessageState;

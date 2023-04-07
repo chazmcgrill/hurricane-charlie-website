@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import CallToAction from '../components/call-to-action';
-import { formValidator } from '../helpers/validators';
-import Layout from '../components/layout';
-import SocialIcons from '../components/social-icons';
-import SEO from '../components/seo';
-import LoadingSpinner from '../components/loading-spinner';
-import ContactForm from '../components/contact-form';
+import CallToAction from '@components/call-to-action';
+import { formValidator } from '@helpers/validators';
+import Layout from '@components/layout';
+import SocialIcons from '@components/social-icons';
+import LoadingSpinner from '@components/loading-spinner';
+import ContactForm from '@components/contact-form';
 
 const DEFAULT_MESSAGE_STATE = { name: '', email: '', message: '' };
 
@@ -31,7 +30,7 @@ const Contact = () => {
 
     const handleInput = (e: FormEventType): void => {
         setMessageData({ ...messageData, [e.currentTarget.name]: e.currentTarget.value });
-    }
+    };
 
     const handleSubmit = async (e: MouseEventType): Promise<void> => {
         e.preventDefault();
@@ -67,17 +66,15 @@ const Contact = () => {
             setMessageData(DEFAULT_MESSAGE_STATE);
             setMessageStatus({ ...newMessageStatus, isLoading: false });
         }
-        
+
         setErrorMessages(errorMessages);
-    }
+    };
 
     return (
         <Layout>
-            <SEO title="Contact" />
-
             <div className="contact-box">
                 <div className="contact-item">
-                    { messageStatus.isLoading ? (
+                    {messageStatus.isLoading ? (
                         <LoadingSpinner text="Sending message, please wait." />
                     ) : (
                         <ContactForm
@@ -99,14 +96,20 @@ const Contact = () => {
                             <SocialIcons />
                         </div>
                         <h2>coding</h2>
-                        <p>I designed and coded this website. For more information please visit my web development portfolio <a target="_blank" rel="noopener noreferrer" href="http://charlietaylorcoder.com">here</a></p>
+                        <p>
+                            I designed and coded this website. For more information please visit my web development
+                            portfolio{' '}
+                            <a target="_blank" rel="noopener noreferrer" href="http://charlietaylorcoder.com">
+                                here
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
-        
+
             <CallToAction />
         </Layout>
     );
-}
+};
 
 export default Contact;
