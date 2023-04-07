@@ -1,28 +1,28 @@
 import React from 'react';
-import BackgroundImage from 'gatsby-background-image';
-import { GalleryItemData } from '../pages/gallery';
+import Image from 'next/image';
+import { GalleryItemData } from '@/content/gallery';
 
 interface GalleryItemProps {
     galleryItemData: GalleryItemData;
     selectGalleryItem: (id: number) => void;
+    isLarge: boolean;
 }
 
-const GalleryItem = ({
-    galleryItemData,
-    selectGalleryItem,
-}: GalleryItemProps): JSX.Element => {
-    const itemClass = `grid-item${galleryItemData.isLarge ? ' large' : ''}`;
-  
+const GalleryItem = ({ galleryItemData, selectGalleryItem, isLarge }: GalleryItemProps): JSX.Element => {
+    const itemClass = `grid-item${isLarge ? ' large' : ''}`;
+
     return (
-        <BackgroundImage
-            onClick={() => selectGalleryItem(galleryItemData.id)}
-            className={itemClass}
-            fluid={galleryItemData.image}
-            alt={`Thumbnail - ${galleryItemData.name}`}
-        >
-            <div className="img-overlay"><p>{galleryItemData.name}</p></div>
-        </BackgroundImage>
+        <div className={itemClass} onClick={() => selectGalleryItem(galleryItemData.id)}>
+            <Image
+                src={require(`../../public/images/thumbs/${galleryItemData.src}`)}
+                alt={`Thumbnail - ${galleryItemData.name}`}
+                fill
+            />
+            <div className="img-overlay">
+                <p>{galleryItemData.name}</p>
+            </div>
+        </div>
     );
-}
+};
 
 export default GalleryItem;

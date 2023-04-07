@@ -8,11 +8,7 @@ interface ModalProps {
     onOutsideClick?: () => void;
 }
 
-const Modal = ({
-    children,
-    isModalOpen,
-    onOutsideClick,
-}: ModalProps): any => { // TODO: improve return type
+const Modal = ({ children, isModalOpen, onOutsideClick }: ModalProps): any => {
     const [show, setShow] = useState(false);
 
     const modalTransitions = useTransition(show, null, {
@@ -34,16 +30,21 @@ const Modal = ({
         setShow(Boolean(isModalOpen));
     }, [isModalOpen]);
 
-    return backgroundTransitions.map(({ item, key, props }) => item && (
-        <animated.div className="modal-background" style={props} key={key} onClick={onOutsideClick}>
-            {modalTransitions.map(({ item, key, props}) => item && (
-                <animated.div className="modal" style={props} key={key} onClick={handleModalClick}>
-                    {children && children}
+    return backgroundTransitions.map(
+        ({ item, key, props }) =>
+            item && (
+                <animated.div className="modal-background" style={props} key={key} onClick={onOutsideClick}>
+                    {modalTransitions.map(
+                        ({ item, key, props }) =>
+                            item && (
+                                <animated.div className="modal" style={props} key={key} onClick={handleModalClick}>
+                                    {children && children}
+                                </animated.div>
+                            ),
+                    )}
                 </animated.div>
-            ))}
-        </animated.div>
-    ));
-    
-}
+            ),
+    );
+};
 
 export default Modal;

@@ -6,11 +6,11 @@ const Footer = () => (
     <footer>
         <Navbar />
 
-        <div className="footer-icons">
-            <SocialIcons />
-        </div>
+        <div className="footer-icons">{/* <SocialIcons /> */}</div>
 
-        <p><span>&copy;</span> 2018 Charlie Taylor all rights reserved.</p>
+        <p>
+            <span>&copy;</span> 2018 Charlie Taylor all rights reserved.
+        </p>
     </footer>
 );
 

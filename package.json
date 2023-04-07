@@ -14,6 +14,7 @@
         "next": "13.1.6",
         "react": "18.2.0",
         "react-dom": "18.2.0",
+        "react-spring": "^8.0.27",
         "typescript": "4.9.5"
     },
     "keywords": [
@@ -28,7 +29,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "test": "echo \"add some tests\""
     },
     "repository": {
         "type": "git",
@@ -36,5 +38,8 @@
     },
     "bugs": {
         "url": "https://github.com/chazmcgrill/hurricane-charlie-website/issues"
+    },
+    "devDependencies": {
+        "sass": "^1.58.0"
     }
 }
