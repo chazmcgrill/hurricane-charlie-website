@@ -37,7 +37,7 @@ const Gallery = () => {
     const modalHandler = (command?: string): void => {
         switch (command) {
             case 'next':
-                if (selectedGalleryItemId < gallery.length) setSelectedGalleryItemId(selectedGalleryItemId + 1);
+                if (selectedGalleryItemId < modalLimit) setSelectedGalleryItemId(selectedGalleryItemId + 1);
                 break;
             case 'prev':
                 if (selectedGalleryItemId > 0) setSelectedGalleryItemId(selectedGalleryItemId - 1);

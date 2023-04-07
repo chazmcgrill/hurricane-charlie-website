@@ -8,27 +8,8 @@ interface ModalProps {
     onOutsideClick?: () => void;
 }
 
-const Modal = ({ children, isModalOpen, onOutsideClick }: ModalProps): any => {
-    // const [show, setShow] = useState(false);
-
-    // const [modalTransitions] = useTransition(show, () => ({
-    //     from: { transform: 'translateY(100px)' },
-    //     enter: { transform: 'translateY(0px)' },
-    //     leave: { transform: 'translateY(100px)' },
-    // }));
-
-    // const [backgroundTransitions] = useTransition(show, () => ({
-    //     from: { opacity: 0 },
-    //     enter: { opacity: 1 },
-    //     leave: { opacity: 0 },
-    // }));
-
-    // const handleModalClick = (e: React.MouseEvent<HTMLElement>) => e.stopPropagation();
-
-    // useEffect(() => {
-    //     document.body.style.overflow = isModalOpen ? 'hidden' : 'auto';
-    //     setShow(Boolean(isModalOpen));
-    // }, [isModalOpen]);
+const Modal = ({ children, isModalOpen, onOutsideClick }: ModalProps) => {
+    const handleModalClick = (e: React.MouseEvent<HTMLElement>) => e.stopPropagation();
 
     return (
         <AnimatePresence>
@@ -42,7 +23,7 @@ const Modal = ({ children, isModalOpen, onOutsideClick }: ModalProps): any => {
                 >
                     <motion.div
                         className="modal"
-                        // onClick={handleModalClick}
+                        onClick={handleModalClick}
                         initial={{ transform: 'translateY(100px)' }}
                         animate={{ transform: 'translateY(0px)' }}
                         exit={{ transform: 'translateY(100px)' }}
