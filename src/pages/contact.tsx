@@ -17,10 +17,17 @@ const PAGE_META: PageMeta = {
 const Contact = () => {
     const [messageData, setMessageData] = useState<MessageState>(DEFAULT_MESSAGE_STATE);
     const [errorMessages, setErrorMessages] = useState<MessageState>(DEFAULT_MESSAGE_STATE);
-    const [messageStatus, setMessageStatus] = useState<MessageStatus>({ msg: '', status: '', isLoading: false });
+    const [messageStatus, setMessageStatus] = useState<MessageStatus>({
+        msg: '',
+        status: '',
+        isLoading: false,
+    });
 
     const handleInput = (e: FormEventType): void => {
-        setMessageData({ ...messageData, [e.currentTarget.name]: e.currentTarget.value });
+        setMessageData({
+            ...messageData,
+            [e.currentTarget.name]: e.currentTarget.value,
+        });
     };
 
     const handleSubmit = async (e: MouseEventType): Promise<void> => {
@@ -93,8 +100,7 @@ const Contact = () => {
                         </div>
                         <h2>coding</h2>
                         <p>
-                            I designed and coded this website. For more information please visit my web development
-                            portfolio{' '}
+                            I designed and coded this website. For more information please visit my web development portfolio{' '}
                             <a target="_blank" rel="noopener noreferrer" href="http://charlietaylorcoder.com">
                                 here
                             </a>

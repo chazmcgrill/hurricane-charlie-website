@@ -24,14 +24,7 @@ const ContactForm = ({ messageData, messageStatus, errorMessages, handleInput, h
                 <input name="email" value={email} placeholder="your email" onChange={handleInput} />
 
                 {errorMessages.message ? <p className="err-msg">{errorMessages.message}</p> : null}
-                <textarea
-                    name="message"
-                    value={message}
-                    cols={30}
-                    rows={10}
-                    placeholder="type your message here..."
-                    onChange={handleInput}
-                />
+                <textarea name="message" value={message} cols={30} rows={10} placeholder="type your message here..." onChange={handleInput} />
 
                 <button onClick={handleSubmit}>send</button>
             </form>

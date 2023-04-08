@@ -6,12 +6,7 @@ const CallToAction = (): JSX.Element => {
     return (
         <>
             <div className="shop-cta">
-                <Image
-                    style={{ backgroundPosition: 'top center' }}
-                    alt="Shop hero image lumberjack"
-                    src="/images/hero.jpg"
-                    fill
-                />
+                <Image style={{ backgroundPosition: 'top center' }} alt="Shop hero image lumberjack" src="/images/hero.jpg" fill />
 
                 <div className="shop-cta-overlay"></div>
                 <div className="shop-cta-box">

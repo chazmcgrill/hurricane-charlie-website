@@ -31,11 +31,16 @@
     ],
     "license": "MIT",
     "scripts": {
-        "dev": "next dev",
         "build": "next build",
-        "start": "next start",
+        "check-types": "npx tsc --noEmit",
+        "dev": "next dev",
+        "format": "npm run prettier -- --write",
         "lint": "next lint",
-        "test": "echo \"add some tests\""
+        "prepare": "husky install",
+        "prettier": "prettier --ignore-path .gitignore --ignore-path .prettierignore \"**/*.+(js|json|ts|tsx)\"",
+        "start": "next start",
+        "test": "echo \"add some tests\"",
+        "validate": "npm run check-types && npm run lint"
     },
     "repository": {
         "type": "git",
@@ -46,6 +51,12 @@
     },
     "devDependencies": {
         "@types/nodemailer": "^6.4.7",
+        "husky": "^8.0.3",
+        "prettier": "^2.8.7",
         "sass": "^1.58.0"
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": "eslint --cache --fix",
+        "*.{js,ts,tsx,json}": "prettier --write"
     }
 }

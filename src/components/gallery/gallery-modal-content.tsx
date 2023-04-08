@@ -26,26 +26,15 @@ const GalleryModalContent = ({ selectedGalleryItem, modalHandler, modalLimit }: 
             <div className="modal-body">
                 <div className="modal-aside">
                     <div onClick={() => modalHandler('prev')} className="modal-icon">
-                        <FontAwesomeIcon
-                            icon={faArrowAltCircleLeft}
-                            style={{ color: id >= 1 ? '#000' : 'lightgrey' }}
-                        />
+                        <FontAwesomeIcon icon={faArrowAltCircleLeft} style={{ color: id >= 1 ? '#000' : 'lightgrey' }} />
                     </div>
                 </div>
                 <div className="modal-image-wrapper no-user-select">
-                    <Image
-                        style={{ objectFit: 'contain' }}
-                        src={`/images/modal-images/${selectedGalleryItem.modalImage}`}
-                        alt={name}
-                        fill
-                    />
+                    <Image style={{ objectFit: 'contain' }} src={`/images/modal-images/${selectedGalleryItem.modalImage}`} alt={name} fill />
                 </div>
                 <div className="modal-aside">
                     <div onClick={() => modalHandler('next')} className="modal-icon">
-                        <FontAwesomeIcon
-                            icon={faArrowAltCircleRight}
-                            style={{ color: id < modalLimit ? '#000' : 'lightgrey' }}
-                        />
+                        <FontAwesomeIcon icon={faArrowAltCircleRight} style={{ color: id < modalLimit ? '#000' : 'lightgrey' }} />
                     </div>
                 </div>
             </div>

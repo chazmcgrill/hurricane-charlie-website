@@ -1,8 +1,8 @@
 import React from 'react';
-import ShopItem from '@components/shop-item';
 import Layout from '@components/layout';
 import shop from '@content/shop';
 import { PageMeta } from '@components/head';
+import ShopItem from '@components/shop/shop-item';
 
 const PAGE_META: PageMeta = {
     titleSuffix: 'Shop',

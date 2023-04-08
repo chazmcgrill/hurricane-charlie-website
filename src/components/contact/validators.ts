@@ -10,7 +10,8 @@ interface FormValidatorReturn {
 }
 
 function emailCheck(email: string) {
-    const rgx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const rgx =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return email.match(rgx);
 }
 
@@ -26,9 +27,9 @@ function messageCheck(msg: string) {
 
 export function validateEmail(email: string): string {
     switch (true) {
-        case (email.length === 0):
+        case email.length === 0:
             return 'email is required';
-        case (!emailCheck(email)):
+        case !emailCheck(email):
             return 'incorrect email format';
         default:
             return '';
@@ -37,7 +38,11 @@ export function validateEmail(email: string): string {
 
 export function formValidator(data: FormValidatorData): FormValidatorReturn {
     const { name, email, message } = data;
-    const errorMessages = { name: '', email: '', message: '' } as FormValidatorData;
+    const errorMessages = {
+        name: '',
+        email: '',
+        message: '',
+    } as FormValidatorData;
 
     // check name
     if (name.length === 0) {
@@ -57,10 +62,10 @@ export function formValidator(data: FormValidatorData): FormValidatorReturn {
     if (message.length < 10) {
         errorMessages.message = 'message is too short min length 10 characters';
     } else if (!messageCheck(message)) {
-        errorMessages.message = 'invalid characters entered'
+        errorMessages.message = 'invalid characters entered';
     }
 
-    const isValid = Object.values(errorMessages).every(errorMessage => errorMessage === '');
+    const isValid = Object.values(errorMessages).every((errorMessage) => errorMessage === '');
 
     return { errorMessages, isValid };
 }

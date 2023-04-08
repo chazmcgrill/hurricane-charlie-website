@@ -48,13 +48,7 @@ const Gallery = () => {
         }
     };
 
-    const modalComponent = () => (
-        <Modal
-            selectedGalleryItem={gallery[selectedGalleryItemId]}
-            modalHandler={modalHandler}
-            modalLimit={modalLimit}
-        />
-    );
+    const modalComponent = () => <Modal selectedGalleryItem={gallery[selectedGalleryItemId]} modalHandler={modalHandler} modalLimit={modalLimit} />;
 
     return (
         <Layout isModalOpen={isModalShowing} modalComponent={modalComponent()} onOutsideClick={modalHandler}>
