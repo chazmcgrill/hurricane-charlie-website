@@ -1,6 +1,7 @@
 # Hurricane Charlie Website
 
-[![CircleCI](https://circleci.com/gh/chazmcgrill/hurricane-charlie-website/tree/master.svg?style=svg)](https://circleci.com/gh/chazmcgrill/hurricane-charlie-website/tree/master)
+<!-- TODO: add vercel deploy badge -->
+
 [![GitHub Release](https://img.shields.io/github/v/release/chazmcgrill/hurricane-charlie-website)](https://github.com/chazmcgrill/hurricane-charlie-website/releases)
 [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
 
@@ -11,10 +12,9 @@ https://hurricanecharlie.co.uk
 Features a gallery of illustrations, about page with contact form and a shop.
 
 #### Tech Stack
-- [Gatsby](https://www.gatsbyjs.org/)
+- [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
-- [Graphql](https://graphql.org/)
 - [Sass](https://sass-lang.com/)
 
 #### To Run Locally
