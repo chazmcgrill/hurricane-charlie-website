@@ -7,8 +7,8 @@ const CallToAction = (): JSX.Element => {
         <>
             <div className="shop-cta">
                 <Image
-                    // style={{ backgroundPosition: 'top center' }}
-                    alt="TODO: emdcskmcksc"
+                    style={{ backgroundPosition: 'top center' }}
+                    alt="Shop hero image lumberjack"
                     src="/images/hero.jpg"
                     fill
                 />

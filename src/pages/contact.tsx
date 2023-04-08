@@ -1,29 +1,14 @@
 import React, { useState } from 'react';
-import CallToAction from '@components/call-to-action';
-import { formValidator } from '@helpers/validators';
+import CallToAction from '@components/shop/call-to-action';
+import { formValidator } from '@components/contact/validators';
 import Layout from '@components/layout';
 import SocialIcons from '@components/social-icons';
 import LoadingSpinner from '@components/loading-spinner';
-import ContactForm from '@components/contact-form';
+import ContactForm from '@components/contact/contact-form';
 import { PageMeta } from '@components/head';
+import { FormEventType, MessageState, MessageStatus, MouseEventType } from '@components/contact/types';
 
 const DEFAULT_MESSAGE_STATE = { name: '', email: '', message: '' };
-
-export interface MessageState {
-    name: string;
-    email: string;
-    message: string;
-}
-
-export interface MessageStatus {
-    msg: string;
-    status: string;
-    isLoading?: boolean;
-}
-
-export type FormEventType = React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>;
-export type MouseEventType = React.MouseEvent<HTMLButtonElement, MouseEvent>;
-
 const PAGE_META: PageMeta = {
     titleSuffix: 'Contact',
     description: 'Hurricane Charlie contact page - please get in touch.',
@@ -48,7 +33,7 @@ const Contact = () => {
             let newMessageStatus = { ...messageStatus };
 
             try {
-                const { ok } = await fetch('https://ct-core-api.herokuapp.com/hc-contact', {
+                const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -56,10 +41,15 @@ const Contact = () => {
                     body: JSON.stringify(messageData),
                 });
 
-                if (ok) {
+                if (response.status === 200) {
                     newMessageStatus = {
                         msg: 'message sent, speak to you soon...',
                         status: 'green',
+                    };
+                } else {
+                    newMessageStatus = {
+                        msg: 'message failed! please retry.',
+                        status: 'red',
                     };
                 }
             } catch (err) {

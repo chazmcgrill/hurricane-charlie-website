@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import CallToAction from '@components/call-to-action';
-import GalleryItem from '@components/gallery-item';
-import Modal from '@components/gallery-modal-content';
+import CallToAction from '@components/shop/call-to-action';
+import GalleryItem from '@components/gallery/gallery-item';
+import Modal from '@components/gallery/gallery-modal-content';
 import Layout from '@components/layout';
 import gallery from '@content/gallery';
 

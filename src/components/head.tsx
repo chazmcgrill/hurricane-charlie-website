@@ -39,14 +39,14 @@ const HeadComponent = ({ pageMeta }: PageContainerProps) => {
             <meta property="og:site_name" content={SITE_TITLE} />
             <meta property="og:description" content={siteDescription} />
             <meta property="og:title" content={siteTitle} />
-            {/* <meta property="og:image" content={config.meta.socialIconSrc} /> */}
+            {/* TODO: <meta property="og:image" content={config.meta.socialIconSrc} /> */}
 
             {/* twitter card meta data for social links */}
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:site" content="@charlietdev" />
             <meta name="twitter:title" content={siteTitle} />
             <meta name="twitter:description" content={siteDescription} />
-            {/* <meta name="twitter:image" content={config.meta.socialIconSrc} /> */}
+            {/* TODO: <meta name="twitter:image" content={config.meta.socialIconSrc} /> */}
 
             {/* for use if we have dated articles (optional) */}
             {articleDate && <meta property="article:published_time" content={articleDate} />}
