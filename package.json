@@ -10,11 +10,6 @@
         "@fortawesome/free-solid-svg-icons": "^6.4.0",
         "@fortawesome/react-fontawesome": "^0.2.0",
         "@next/font": "13.1.6",
-        "@types/node": "18.11.18",
-        "@types/react": "18.0.27",
-        "@types/react-dom": "18.0.10",
-        "eslint": "8.33.0",
-        "eslint-config-next": "13.1.6",
         "framer-motion": "^10.11.2",
         "next": "13.1.6",
         "nodemailer": "^6.9.1",
@@ -50,7 +45,12 @@
         "url": "https://github.com/chazmcgrill/hurricane-charlie-website/issues"
     },
     "devDependencies": {
+        "@types/node": "^18.11.18",
         "@types/nodemailer": "^6.4.7",
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "eslint": "^8.33.0",
+        "eslint-config-next": "^13.1.6",
         "husky": "^8.0.3",
         "prettier": "^2.8.7",
         "sass": "^1.58.0"
