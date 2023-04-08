@@ -1,65 +1,62 @@
 {
-  "name": "hurricane-charlie-website",
-  "private": true,
-  "description": "Hurricane Charlie Website",
-  "version": "2.6.0",
-  "author": "Charlie Taylor",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-brands-svg-icons": "^5.12.1",
-    "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.9",
-    "gatsby": "^2.19.45",
-    "gatsby-background-image": "^0.10.2",
-    "gatsby-image": "^2.2.44",
-    "gatsby-plugin-manifest": "^2.2.48",
-    "gatsby-plugin-offline": "^3.0.41",
-    "gatsby-plugin-react-helmet": "^3.1.24",
-    "gatsby-plugin-sass": "^2.2.0",
-    "gatsby-plugin-sharp": "^2.4.13",
-    "gatsby-plugin-typescript": "^2.2.5",
-    "gatsby-source-filesystem": "^2.1.56",
-    "gatsby-transformer-sharp": "^2.3.19",
-    "gatsby-transformer-yaml": "^2.3.0",
-    "node-sass": "^4.13.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-spring": "^8.0.27"
-  },
-  "devDependencies": {
-    "@types/node": "^13.9.1",
-    "@types/react": "^16.9.23",
-    "@types/react-dom": "^16.9.5",
-    "@types/react-helmet": "^5.0.15",
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
-    "eslint": "^6.8.0",
-    "eslint-loader": "^3.0.3",
-    "eslint-plugin-react": "^7.19.0",
-    "gatsby-plugin-eslint": "^2.0.8",
-    "prettier": "^1.19.1",
-    "typescript": "^3.8.3"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chazmcgrill/hurricane-charlie-website"
-  },
-  "bugs": {
-    "url": "https://github.com/chazmcgrill/hurricane-charlie-website/issues"
-  }
+    "name": "hurricane-charlie-website",
+    "private": true,
+    "description": "Hurricane Charlie Website",
+    "version": "2.6.0",
+    "author": "Charlie Taylor",
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.4.0",
+        "@fortawesome/free-brands-svg-icons": "^6.4.0",
+        "@fortawesome/free-solid-svg-icons": "^6.4.0",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "@next/font": "13.1.6",
+        "framer-motion": "^10.11.2",
+        "next": "13.1.6",
+        "nodemailer": "^6.9.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "typescript": "4.9.5"
+    },
+    "keywords": [
+        "nextjs",
+        "portfolio",
+        "react",
+        "gallery",
+        "shop"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "build": "next build",
+        "check-types": "npx tsc --noEmit",
+        "dev": "next dev",
+        "format": "npm run prettier -- --write",
+        "lint": "next lint",
+        "prepare": "husky install",
+        "prettier": "prettier --ignore-path .gitignore --ignore-path .prettierignore \"**/*.+(js|json|ts|tsx)\"",
+        "start": "next start",
+        "test": "echo \"add some tests\"",
+        "validate": "npm run check-types && npm run lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chazmcgrill/hurricane-charlie-website"
+    },
+    "bugs": {
+        "url": "https://github.com/chazmcgrill/hurricane-charlie-website/issues"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.18",
+        "@types/nodemailer": "^6.4.7",
+        "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
+        "eslint": "^8.33.0",
+        "eslint-config-next": "^13.1.6",
+        "husky": "^8.0.3",
+        "prettier": "^2.8.7",
+        "sass": "^1.58.0"
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": "eslint --cache --fix",
+        "*.{js,ts,tsx,json}": "prettier --write"
+    }
 }

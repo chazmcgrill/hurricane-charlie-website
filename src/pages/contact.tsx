@@ -1,37 +1,34 @@
 import React, { useState } from 'react';
-import CallToAction from '../components/call-to-action';
-import { formValidator } from '../helpers/validators';
-import Layout from '../components/layout';
-import SocialIcons from '../components/social-icons';
-import SEO from '../components/seo';
-import LoadingSpinner from '../components/loading-spinner';
-import ContactForm from '../components/contact-form';
+import CallToAction from '@components/shop/call-to-action';
+import { formValidator } from '@components/contact/validators';
+import Layout from '@components/layout';
+import SocialIcons from '@components/social-icons';
+import LoadingSpinner from '@components/loading-spinner';
+import ContactForm from '@components/contact/contact-form';
+import { PageMeta } from '@components/head';
+import { FormEventType, MessageState, MessageStatus, MouseEventType } from '@components/contact/types';
 
 const DEFAULT_MESSAGE_STATE = { name: '', email: '', message: '' };
-
-export interface MessageState {
-    name: string;
-    email: string;
-    message: string;
-}
-
-export interface MessageStatus {
-    msg: string;
-    status: string;
-    isLoading?: boolean;
-}
-
-export type FormEventType = React.FormEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>;
-export type MouseEventType = React.MouseEvent<HTMLButtonElement, MouseEvent>;
+const PAGE_META: PageMeta = {
+    titleSuffix: 'Contact',
+    description: 'Hurricane Charlie contact page - please get in touch.',
+};
 
 const Contact = () => {
     const [messageData, setMessageData] = useState<MessageState>(DEFAULT_MESSAGE_STATE);
     const [errorMessages, setErrorMessages] = useState<MessageState>(DEFAULT_MESSAGE_STATE);
-    const [messageStatus, setMessageStatus] = useState<MessageStatus>({ msg: '', status: '', isLoading: false });
+    const [messageStatus, setMessageStatus] = useState<MessageStatus>({
+        msg: '',
+        status: '',
+        isLoading: false,
+    });
 
     const handleInput = (e: FormEventType): void => {
-        setMessageData({ ...messageData, [e.currentTarget.name]: e.currentTarget.value });
-    }
+        setMessageData({
+            ...messageData,
+            [e.currentTarget.name]: e.currentTarget.value,
+        });
+    };
 
     const handleSubmit = async (e: MouseEventType): Promise<void> => {
         e.preventDefault();
@@ -43,7 +40,7 @@ const Contact = () => {
             let newMessageStatus = { ...messageStatus };
 
             try {
-                const { ok } = await fetch('https://ct-core-api.herokuapp.com/hc-contact', {
+                const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -51,10 +48,15 @@ const Contact = () => {
                     body: JSON.stringify(messageData),
                 });
 
-                if (ok) {
+                if (response.status === 200) {
                     newMessageStatus = {
                         msg: 'message sent, speak to you soon...',
                         status: 'green',
+                    };
+                } else {
+                    newMessageStatus = {
+                        msg: 'message failed! please retry.',
+                        status: 'red',
                     };
                 }
             } catch (err) {
@@ -67,17 +69,15 @@ const Contact = () => {
             setMessageData(DEFAULT_MESSAGE_STATE);
             setMessageStatus({ ...newMessageStatus, isLoading: false });
         }
-        
+
         setErrorMessages(errorMessages);
-    }
+    };
 
     return (
-        <Layout>
-            <SEO title="Contact" />
-
+        <Layout pageMeta={PAGE_META}>
             <div className="contact-box">
                 <div className="contact-item">
-                    { messageStatus.isLoading ? (
+                    {messageStatus.isLoading ? (
                         <LoadingSpinner text="Sending message, please wait." />
                     ) : (
                         <ContactForm
@@ -99,14 +99,19 @@ const Contact = () => {
                             <SocialIcons />
                         </div>
                         <h2>coding</h2>
-                        <p>I designed and coded this website. For more information please visit my web development portfolio <a target="_blank" rel="noopener noreferrer" href="http://charlietaylorcoder.com">here</a></p>
+                        <p>
+                            I designed and coded this website. For more information please visit my web development portfolio{' '}
+                            <a target="_blank" rel="noopener noreferrer" href="http://charlietaylorcoder.com">
+                                here
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
-        
+
             <CallToAction />
         </Layout>
     );
-}
+};
 
 export default Contact;

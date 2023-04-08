@@ -1,13 +1,8 @@
-import React, { useEffect, Fragment } from "react";
-import Header from "./header";
-import Footer from "./footer";
-import "../styles/main.sass";
-
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import Modal from "./modal";
-
-library.add(fab);
+import React, { useEffect, Fragment } from 'react';
+import Header from '@components/header';
+import Footer from '@components/footer';
+import Modal from '@components/modal';
+import HeadComponent, { PageMeta } from '@components/head';
 
 export type ChildrenType = JSX.Element | JSX.Element[];
 
@@ -16,28 +11,25 @@ interface LayoutProps {
     modalComponent?: ChildrenType;
     isModalOpen?: boolean;
     onOutsideClick?: () => void;
+    pageMeta?: PageMeta;
 }
 
-const Layout = ({
-    children,
-    modalComponent,
-    isModalOpen,
-    onOutsideClick,
-}: LayoutProps): JSX.Element => {
+const Layout = ({ children, modalComponent, isModalOpen, onOutsideClick, pageMeta }: LayoutProps): JSX.Element => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     return (
         <Fragment>
+            <HeadComponent pageMeta={pageMeta} />
             <Header />
             <main>{children}</main>
             <Footer />
             <Modal isModalOpen={isModalOpen} onOutsideClick={onOutsideClick}>
                 {modalComponent}
             </Modal>
-        </ Fragment>
+        </Fragment>
     );
-}
+};
 
 export default Layout;

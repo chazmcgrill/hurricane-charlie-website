@@ -7,7 +7,7 @@ interface LoadingSpinnerProps {
 const LoadingSpinner = ({ text }: LoadingSpinnerProps) => (
     <div className="loader-wrapper">
         <div className="loader" />
-        <body>{text}</body>
+        <p>{text}</p>
     </div>
 );
 

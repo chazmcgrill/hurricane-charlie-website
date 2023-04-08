@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from './navbar';
-import SocialIcons from './social-icons';
+import Navbar from '@components/navbar';
+import SocialIcons from '@components/social-icons';
 
 const Footer = () => (
     <footer>
@@ -10,7 +10,9 @@ const Footer = () => (
             <SocialIcons />
         </div>
 
-        <p><span>&copy;</span> 2018 Charlie Taylor all rights reserved.</p>
+        <p>
+            <span>&copy;</span> 2018 Charlie Taylor all rights reserved.
+        </p>
     </footer>
 );
 

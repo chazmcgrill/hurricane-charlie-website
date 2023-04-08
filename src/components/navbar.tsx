@@ -1,5 +1,7 @@
+import nav from '@/content/nav';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import React from 'react';
-import { Link, graphql, useStaticQuery } from "gatsby";
 
 interface NavData {
     id: number;
@@ -7,32 +9,19 @@ interface NavData {
     url: string;
 }
 
-const activeNav = { borderBottom: "3px solid #FF2E63" };
+const activeNav = { borderBottom: '3px solid #FF2E63' };
 
 const Navbar = () => {
-    const { data } = useStaticQuery(graphql`
-        query {
-            data: navYaml {
-                nav {
-                    id
-                    name
-                    url
-                }
-            }
-        }
-    `);
-
+    const { pathname } = useRouter();
     return (
         <nav>
-            {data.nav.map((item: NavData) => (
-                <li key={item.id}>
-                    <Link to={item.url} activeStyle={activeNav} partiallyActive>
-                        {item.name}
-                    </Link>
+            {nav.map((item: NavData) => (
+                <li key={item.id} style={pathname === item.url ? activeNav : undefined}>
+                    <Link href={item.url}>{item.name}</Link>
                 </li>
             ))}
         </nav>
     );
-}
+};
 
 export default Navbar;

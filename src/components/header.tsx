@@ -1,23 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Navbar from './navbar';
-import { useStaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
 
 const Header = (): JSX.Element => {
     const [burgerOpen, setBurgerOpen] = useState(false);
     const [width, setWidth] = useState(640);
-
-    const { image } = useStaticQuery(graphql`
-        query {
-            image: file(relativePath: { eq: "hclogo.png" }) {
-                childImageSharp {
-                    fixed(width: 45) {
-                        ...GatsbyImageSharpFixed
-                    }
-                }
-            }
-        }
-    `);
 
     useEffect(() => {
         const updateWindowSize = () => setWidth(window.innerWidth);
@@ -34,7 +21,7 @@ const Header = (): JSX.Element => {
 
     return (
         <header>
-            <Img fixed={image.childImageSharp.fixed} alt="Hurricane Charlie Icon" />
+            <Image alt="Hurricane Charlie Icon" src={'/images/hclogo.png'} width={50} height={50} />
 
             {showHamburger && (
                 <div onClick={() => setBurgerOpen(!burgerOpen)} className="hamburger-container">
@@ -48,7 +35,7 @@ const Header = (): JSX.Element => {
 
             {showNavBar && <Navbar />}
         </header>
-    )
-}
+    );
+};
 
 export default Header;

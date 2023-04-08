@@ -1,17 +1,16 @@
-import React from "react"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import React from 'react';
+import Layout from '@components/layout';
 
 const NotFoundPage = () => (
     <Layout>
-        <SEO title="404: Not found" />
         <div className="error-page">
             <div className="error-text-box">
-                <h2><span>404 Error: </span>Page does not exist!</h2>
+                <h2>
+                    <span>404 Error: </span>Page does not found!
+                </h2>
             </div>
         </div>
     </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
