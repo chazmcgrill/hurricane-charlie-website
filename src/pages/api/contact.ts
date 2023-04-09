@@ -1,8 +1,29 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
+import { z } from 'zod';
+
+interface ValidatedRequestBody {
+    name: string;
+    email: string;
+    message: string;
+}
+
+const requestBodySchema = z.object({
+    name: z.string().min(2),
+    email: z.string().email(),
+    message: z.string().min(10),
+});
+
+const validateRequestBody = (body: ValidatedRequestBody) => {
+    const validatedBody = requestBodySchema.parse(body);
+    return validatedBody;
+};
+
+const cleanString = (dirtyString: string) => dirtyString.replace(/[|&;$%@"<>()+,]/g, '');
 
 export default async function contact(request: NextApiRequest, response: NextApiResponse) {
-    const output = `Name: ${request.body.name}\n Email: ${request.body.email}\n Message: ${request.body.message}`;
+    const requestBody = validateRequestBody(request.body);
+    const output = `Name: ${cleanString(requestBody.name)}\n Email: ${requestBody.email}\n Message: ${cleanString(requestBody.message)}`;
 
     const mailOptions = {
         from: `"HC Website" ${process.env.HC_MAIL_ADDRESS}`,
@@ -21,8 +42,8 @@ export default async function contact(request: NextApiRequest, response: NextApi
         },
     });
 
+    // important to await the mail sending when using serverless functions
     await new Promise((resolve, reject) => {
-        // send mail with defined transport object
         transport.sendMail(mailOptions, (error, info) => {
             if (error) {
                 console.error(error);
