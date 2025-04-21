@@ -9,12 +9,12 @@ export interface SocialItem {
 }
 
 const social: SocialItem[] = [
-    {
-        id: 0,
-        url: 'http://twitter.com/hurricanechaz',
-        name: 'twitter',
-        icon: faTwitter,
-    },
+    // {
+    //     id: 0,
+    //     url: 'http://twitter.com/hurricanechaz',
+    //     name: 'twitter',
+    //     icon: faTwitter,
+    // },
     {
         id: 2,
         url: 'http://www.instagram.com/hurricane.charlie',
