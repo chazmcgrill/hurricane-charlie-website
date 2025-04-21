@@ -36,5 +36,3 @@ Feel free to contribute, just fork this repo and raise a PR.
 If you find any bugs or issues feel free to raise them in the issues section of this repo.
 
 [Visit Site](https://hurricanecharlie.co.uk)
-
-[![Twitter Follow](https://img.shields.io/twitter/follow/hurricanechaz.svg?style=social)](https://twitter.com/hurricanechaz)
