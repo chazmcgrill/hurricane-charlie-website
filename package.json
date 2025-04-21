@@ -46,7 +46,7 @@
         "url": "https://github.com/chazmcgrill/hurricane-charlie-website/issues"
     },
     "devDependencies": {
-        "@types/node": "^18.11.18",
+        "@types/node": "^22.14.1",
         "@types/nodemailer": "^6.4.7",
         "@types/react": "^18.0.27",
         "@types/react-dom": "^18.0.10",
