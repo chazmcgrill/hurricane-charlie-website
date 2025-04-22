@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/chazmcgrill/hurricane-charlie-website/compare/v3.1.1...v3.1.2) (2025-04-22)
+
+
+### Bug Fixes
+
+* upgrade node to v22 and audit fixes ([#22](https://github.com/chazmcgrill/hurricane-charlie-website/issues/22)) ([a7b4476](https://github.com/chazmcgrill/hurricane-charlie-website/commit/a7b447665c17941c36fedf5484d66889f97d0ab3))
+
 ## [3.1.1](https://github.com/chazmcgrill/hurricane-charlie-website/compare/v3.1.0...v3.1.1) (2023-04-09)
 
 
