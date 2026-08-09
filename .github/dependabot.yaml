@@ -1,0 +1,38 @@
+# Raise PR's to update github actions and npm dependencies
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "Europe/London"
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: "ci"
+    pull-request-branch-name:
+      separator: "-"
+    cooldown:
+      default-days: 7
+  # - package-ecosystem: "npm"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"
+  #     day: "monday"
+  #     time: "08:00"
+  #     timezone: "Europe/London"
+  #   groups:
+  #     npm:
+  #       patterns: ["*"]
+  #   commit-message:
+  #     prefix: "fix"
+  #   pull-request-branch-name:
+  #     separator: "-"
+  #   cooldown:
+  #     default-days: 7
+  #   ignore:
+  #     # newest eslint not compatible with next 16
+  #     - dependency-name: "eslint"
