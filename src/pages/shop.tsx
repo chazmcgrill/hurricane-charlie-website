@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type JSX } from 'react';
 import Layout from '@components/layout';
 import shop from '@content/shop';
 import { PageMeta } from '@components/head';
