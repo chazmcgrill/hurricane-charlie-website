@@ -1,70 +1,70 @@
 {
-  "name": "hurricane-charlie-website",
-  "private": true,
-  "description": "Hurricane Charlie Website",
-  "version": "2.6.0",
-  "author": "Charlie Taylor",
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^7.3.1",
-    "@fortawesome/free-brands-svg-icons": "^7.3.1",
-    "@fortawesome/free-solid-svg-icons": "^7.3.1",
-    "@fortawesome/react-fontawesome": "^3.5.0",
-    "framer-motion": "^12.7.4",
-    "next": "16.3.0",
-    "nodemailer": "^6.9.1",
-    "react": "19.2.8",
-    "react-dom": "19.2.8",
-    "typescript": "4.9.5",
-    "zod": "^3.21.4"
-  },
-  "keywords": [
-    "nextjs",
-    "portfolio",
-    "react",
-    "gallery",
-    "shop"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "next build",
-    "check-types": "npx tsc --noEmit",
-    "dev": "next dev",
-    "format": "npm run prettier -- --write",
-    "lint": "eslint .",
-    "prepare": "husky install",
-    "prettier": "prettier --ignore-path .gitignore --ignore-path .prettierignore \"**/*.+(js|json|ts|tsx)\"",
-    "start": "next start",
-    "test": "echo \"add some tests\"",
-    "validate": "npm run check-types && npm run lint"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chazmcgrill/hurricane-charlie-website"
-  },
-  "bugs": {
-    "url": "https://github.com/chazmcgrill/hurricane-charlie-website/issues"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.1",
-    "@types/nodemailer": "^6.4.7",
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
-    "eslint": "^9.39.5",
-    "eslint-config-next": "16.3.0",
-    "husky": "^8.0.3",
-    "prettier": "^2.8.7",
-    "sass": "^1.58.0"
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --cache --fix",
-    "*.{js,ts,tsx,json}": "prettier --write"
-  },
-  "engines": {
-    "node": "26",
-    "npm": "11"
-  },
-  "overrides": {
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4"
-  }
+    "name": "hurricane-charlie-website",
+    "private": true,
+    "description": "Hurricane Charlie Website",
+    "version": "2.6.0",
+    "author": "Charlie Taylor",
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^7.3.1",
+        "@fortawesome/free-brands-svg-icons": "^7.3.1",
+        "@fortawesome/free-solid-svg-icons": "^7.3.1",
+        "@fortawesome/react-fontawesome": "^3.5.0",
+        "framer-motion": "^12.7.4",
+        "next": "16.3.0",
+        "nodemailer": "^6.9.1",
+        "react": "19.2.8",
+        "react-dom": "19.2.8",
+        "typescript": "4.9.5",
+        "zod": "^3.21.4"
+    },
+    "keywords": [
+        "nextjs",
+        "portfolio",
+        "react",
+        "gallery",
+        "shop"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "build": "next build",
+        "check-types": "npx tsc --noEmit",
+        "dev": "next dev",
+        "format": "npm run prettier -- --write",
+        "lint": "eslint .",
+        "prepare": "husky install",
+        "prettier": "prettier --ignore-path .gitignore --ignore-path .prettierignore \"**/*.+(js|json|ts|tsx)\"",
+        "start": "next start",
+        "test": "echo \"add some tests\"",
+        "validate": "npm run check-types && npm run lint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/chazmcgrill/hurricane-charlie-website"
+    },
+    "bugs": {
+        "url": "https://github.com/chazmcgrill/hurricane-charlie-website/issues"
+    },
+    "devDependencies": {
+        "@types/node": "^22.14.1",
+        "@types/nodemailer": "^6.4.7",
+        "@types/react": "19.2.18",
+        "@types/react-dom": "19.2.4",
+        "eslint": "^9.39.5",
+        "eslint-config-next": "16.3.0",
+        "husky": "^8.0.3",
+        "prettier": "^2.8.7",
+        "sass": "^1.58.0"
+    },
+    "lint-staged": {
+        "*.{js,ts,tsx}": "eslint --cache --fix",
+        "*.{js,ts,tsx,json}": "prettier --write"
+    },
+    "engines": {
+        "node": "24",
+        "npm": "11"
+    },
+    "overrides": {
+        "@types/react": "19.2.18",
+        "@types/react-dom": "19.2.4"
+    }
 }
