@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from 'react';
+import React, { useEffect, Fragment, type JSX } from 'react';
 import Header from '@components/header';
 import Footer from '@components/footer';
 import Modal from '@components/modal';
