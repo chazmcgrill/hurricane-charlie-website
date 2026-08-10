@@ -19,4 +19,4 @@ jobs:
       - name: Generate release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx --package changelog-conventionalcommits semantic-release
+        run: npx --package conventional-changelog-conventionalcommits semantic-release
