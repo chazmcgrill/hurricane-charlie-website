@@ -17,22 +17,19 @@ updates:
       separator: "-"
     cooldown:
       default-days: 7
-  # - package-ecosystem: "npm"
-  #   directory: "/"
-  #   schedule:
-  #     interval: "weekly"
-  #     day: "monday"
-  #     time: "08:00"
-  #     timezone: "Europe/London"
-  #   groups:
-  #     npm:
-  #       patterns: ["*"]
-  #   commit-message:
-  #     prefix: "fix"
-  #   pull-request-branch-name:
-  #     separator: "-"
-  #   cooldown:
-  #     default-days: 7
-  #   ignore:
-  #     # newest eslint not compatible with next 16
-  #     - dependency-name: "eslint"
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "Europe/London"
+    groups:
+      npm:
+        patterns: ["*"]
+    commit-message:
+      prefix: "fix"
+    pull-request-branch-name:
+      separator: "-"
+    cooldown:
+      default-days: 7
