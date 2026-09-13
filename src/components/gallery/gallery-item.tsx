@@ -15,6 +15,7 @@ const GalleryItem = ({ galleryItemData, selectGalleryItem, isLarge }: GalleryIte
         <div className={itemClass} onClick={() => selectGalleryItem(galleryItemData.id)}>
             <Image
                 style={{ objectFit: 'cover' }}
+                // eslint-disable-next-line @typescript-eslint/no-require-imports
                 src={require(`../../../public/images/thumbs/${galleryItemData.src}`)}
                 alt={`Thumbnail - ${galleryItemData.name}`}
                 fill

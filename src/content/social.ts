@@ -1,5 +1,5 @@
 import { IconDefinition, IconName } from '@fortawesome/fontawesome-svg-core';
-import { faBehance, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faBehance, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 export interface SocialItem {
     id: number;

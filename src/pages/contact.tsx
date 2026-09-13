@@ -60,6 +60,7 @@ const Contact = () => {
                     };
                 }
             } catch (err) {
+                console.log(err);
                 newMessageStatus = {
                     msg: 'message failed! please retry.',
                     status: 'red',
