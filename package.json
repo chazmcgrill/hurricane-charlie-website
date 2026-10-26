@@ -11,10 +11,10 @@
         "@fortawesome/react-fontawesome": "^3.5.0",
         "framer-motion": "^13.5.1",
         "next": "^16.4.2",
-        "nodemailer": "^10.1.0",
-        "react": "19.3.0",
-        "react-dom": "19.3.0",
-        "zod": "^4.6.6"
+        "nodemailer": "^10.1.7",
+        "react": "19.3.1",
+        "react-dom": "19.3.1",
+        "zod": "^4.6.7"
     },
     "keywords": [
         "nextjs",
@@ -52,7 +52,7 @@
         "eslint-config-next": "^16.4.2",
         "husky": "^9.1.7",
         "prettier": "^3.9.10",
-        "sass": "^1.105.1",
+        "sass": "^1.105.2",
         "typescript": "^6.0.3"
     },
     "lint-staged": {
